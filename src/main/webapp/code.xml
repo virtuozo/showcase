@@ -1,0 +1,716 @@
+<codes>
+  <code id="alert">
+    new Alert().add(new Paragraph().html("{0}").css(Alert.Color.SUCCESS);
+    new Alert().add(new Paragraph().html("{1}").css(Alert.Color.INFO);
+    new Alert().add(new Paragraph().html("{2}").css(Alert.Color.WARNING);
+    new Alert().add(new Paragraph().html("{3}").css(Alert.Color.DANGER);
+  </code>
+  <code id="alert.dismissable">
+    new Alert().add(new Paragraph().html("{0}")).closeable().css(Alert.Color.SUCCESS);
+  </code>
+  <code id="badge">
+    new Badge().text("{0}");
+  </code>
+  <code id="badge.adapt.pill">
+    PillPanel pills = new PillPanel();
+    pills.addPill().text("{0}").addBadge().text("{1}");
+    pills.addPill().text("{2}");
+  </code>
+  <code id="breadcrumb">
+    Breadcrumb breadcrumb = new Breadcrumb();
+    breadcrumb.addItem().text("Home").onClick(new ClickHandler() {
+      @Override
+      public void onClick(ClickEvent event) {
+        Window.alert("Home item clicked");
+      }
+    });
+    breadcrumb.addItem().text("Profile");
+    breadcrumb.addItem().text("User");
+  </code>
+  <code id="button.color">
+    new Button().text("Default");
+    new Button().text("Primary").css(ButtonColor.PRIMARY);
+    new Button().text("Success").css(ButtonColor.SUCCESS);
+    new Button().text("Info").css(ButtonColor.INFO);
+    new Button().text("Warning").css(ButtonColor.WARNING);
+    new Button().text("Danger").css(ButtonColor.DANGER);
+    new Button().text("Link").css(ButtonColor.LINK);
+  </code>
+  <code id="button.size">
+    new Button().text("Large").css(Button.Size.LARGE);
+    new Button().text("Default");
+    new Button().text("Success").css(Button.Size.SMALL);
+    new Button().text("Info").css(ButtonColor.X_SMALL);
+  </code>
+  <code id="button.block">
+    new Button().text("Block").block();
+  </code>
+  <code id="button.active">
+    final Button btn = new Button().text("Block").activate();
+    btn.onClick(new ClickHandler() {
+      @Override
+      public void onClick(ClickEvent event) {
+        if(btn.active()){
+          btn.deactivate();
+          return;
+        }
+        btn.activate();
+      }
+    });
+  </code>
+  <code id="button.disable">
+    new Button().text("Block").disable().onClick(new ClickHandler() {
+      @Override
+      public void onClick(ClickEvent event) {
+        // It should not be called on a disabled button.
+        Window.alert("If this message is appearing, it is wrong... :|");
+      }
+    });
+  </code>
+  <code id="button.toggleable">
+    new Button().text("Toggle").toggleable();
+  </code>
+  <code id="button.dropdown">
+    DropButton btn = new DropButton();
+    btn.text("Primary").css(ButtonColor.PRIMARY);
+    btn.menu().addItem().text("Action");
+    btn.menu().addItem().text("Another Action");
+    btn.menu().addDivider();
+    btn.menu().addItem().text("Vituous
+    Action").onClick(new ClickHandler() {
+      @Override
+      public void onClick(ClickEvent event) {
+        Window.alert("You've got the power. Go virtuous. :)");
+      }
+    });
+  </code>
+  <code id="button.split">
+    SplitButton btn = new SplitButton();
+    btn.text("Primary").css(ButtonColor.PRIMARY);
+    btn.menu().addItem().text("Action");
+    btn.menu().addItem().text("Another Action");
+    btn.menu().addDivider();
+    btn.menu().addItem().text("Vituous Action").onClick(new ClickHandler() {
+      @Override
+      public void onClick(ClickEvent event) {
+        Window.alert("You've got the power. Go virtuous. :)");
+      }
+    });
+  </code>
+  <code id="button.dropup">
+    DropButton btn = new DropButton().up();
+    btn.text("Primary").css(ButtonColor.PRIMARY);
+    btn.menu().addItem().text("Action");
+    btn.menu().addItem().text("Another Action");
+    btn.menu().addDivider();
+    btn.menu().addItem().text("Vituous Action").onClick(new ClickHandler() {
+      @Override
+      public void onClick(ClickEvent event) {
+        Window.alert("You've got the power. Go virtuous. :)");
+      }
+    });
+
+    SplitButton split = new SplitButton().up();
+    split.text("Primary").css(ButtonColor.PRIMARY);
+    split.menu().addItem().text("Action");
+    split.menu().addItem().text("Another Action");
+    split.menu().addDivider();
+    split.menu().addItem().text("Vituous Action").onClick(new ClickHandler() {
+      @Override
+      public void onClick(ClickEvent event) {
+        Window.alert("You've got the power. Go virtuous. :)");
+      }
+    });
+  </code>
+  <code id="button.group">
+    new ButtonGroup().add(new Button().text("left"))
+    .add(new Button().text("middle"))
+    .add(new Button().text("right"));
+  </code>
+  <code id="button.group.sizing">
+    new ButtonGroup().add(new Button().text("left"))
+    .add(new Button().text("middle"))
+    .add(new Button().text("right")).css(ButtonGroup.Size.LARGE);
+  </code>
+  <code id="button.group.vertical">
+    new ButtonGroup().add(new Button().text("left"))
+    .add(new Button().text("middle"))
+    .add(new Button().text("right")).css(ButtonGroup.Orientation.VERTICAL);
+  </code>
+  <code id="button.group.block">
+    new ButtonGroup(ButtonGroup.Type.BLOCK).add(new Button().text("left"))
+    .add(new Button().text("middle"))
+    .add(new Button().text("right")).css(ButtonGroup.Orientation.VERTICAL);
+  </code>
+  <code id="button.group.checkbox">
+    new ButtonGroup().add(new Button().text("left"))
+    .add(new Button().text("middle"))
+    .add(new Button().text("right")).checkbox();
+  </code>
+  <code id="button.group.radio">
+    new ButtonGroup().add(new Button().text("left"))
+    .add(new Button().text("middle"))
+    .add(new Button().text("right")).radio();
+  </code>
+  <code id="client.maven.parent">
+    <dependencyManagement>
+      <dependencies>
+        <dependency>
+          <groupId>com.brazoft.virtuozo</groupId>
+          <artifactId>client</artifactId>
+          <version>{0}</version>
+          <type>pom</type>
+          <scope>import</scope>
+        </dependency>
+      </dependencies>
+    </dependencyManagement>
+  </code>
+  <code id="client.maven.dependencies">
+    <dependencies>
+      <dependency>
+        <groupId>com.google.gwt</groupId>
+        <artifactId>gwt-user</artifactId>
+        <scope>provided</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>com.google.gwt</groupId>
+        <artifactId>gwt-servlet</artifactId>
+        <version>${gwt.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.googlecode.gwtquery</groupId>
+        <artifactId>gwtquery</artifactId>
+        <scope>provided</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>org.fusesource.restygwt</groupId>
+        <artifactId>restygwt</artifactId>
+        <scope>provided</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>javax.validation</groupId>
+        <artifactId>validation-api</artifactId>
+        <scope>provided</scope>
+      </dependency>
+    </dependencies>
+  </code>
+  <code id="client.maven.archetype">
+    <pre>
+      <code>mvn archetype:generate
+        -DarchetypeGroupId=com.brazoft.virtuozo
+        -DarchetypeArtifactId=client-archetype -DarchetypeVersion={0}
+      </code>
+    </pre>
+  </code>
+  <code id="container.fixed">
+    new Container(Container.Type.FIXED);
+  </code>
+  <code id="container.fluid">
+    new Container(Container.Type.FLUID);
+  </code>
+  <code id="container.row">
+    Row row = new Container(Container.Type.FLUID).addRow();
+  </code>
+  <code id="container.column">
+    row.addColumn().add(new Text().text("It's a column"));
+  </code>
+  <code id="container.clearfix">
+    row.addColumn().clearfix(ViewPort.X_SMALL);
+  </code>
+  <code id="container.span">
+    row.addColumn().span(1, ViewPort.MEDIUM);
+    row.addColumn().span(2, ViewPort.MEDIUM).span(1, ViewPort.X_SMALL);
+  </code>
+  <code id="container.offset">
+    row.addColumn().offset(1, ViewPort.MEDIUM);
+    row.addColumn().offset(2, ViewPort.MEDIUM).offset(1,
+    ViewPort.X_SMALL);
+  </code>
+  <code id="icon">
+    new Button().text("Iconic").icon(Icon.LEAF);
+    new Button().text("Iconic").icon(Icon.CLOUD).css(ButtonColor.PRIMARY);
+  </code>
+  <code id="image">
+    new Image().src(Bundle.images.v()).css(Image.Shape.CIRCLE);
+    new Image().src(Bundle.images.v()).css(Image.Shape.ROUNDED);
+    new Image().src(Bundle.images.v()).css(Image.Shape.THUMBNAIL);
+  </code>
+  <code id="image.responsive">
+    new Image().src(Bundle.images.logo()).responsive()
+  </code>
+  <code id="jumbotron">
+    Jumbotron jumbotron = new Jumbotron();
+    jumbotron.header().text("Hi there!");
+    jumbotron.message().text("This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.");
+    jumbotron.button().text("Learn more");
+  </code>
+  <code id="label.heading">
+    for(Heading.Level level : Heading.Level.values()){
+      Heading heading = new Heading(level).text("Heading example");
+      new Label().text("Label").appendTo(heading);
+    }
+  </code>
+  <code id="label.variations">
+    new Label().text("Label").css(Label.Color.DEFAULT);
+    new Label().text("Label").css(Label.Color.PRIMARY);
+    new Label().text("Label").css(Label.Color.SUCCESS);
+    new Label().text("Label").css(Label.Color.INFO);
+    new Label().text("Label").css(Label.Color.WARNING);
+    new Label().text("Label").css(Label.Color.DANGER);
+  </code>
+  <code id="media">
+    Media media = new Media();
+    media.object().addImage().src(Bundle.images.favico());
+    media.body().addHeading().text("Media heading");
+    media.body().addText().text("Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.");
+
+    Media sub = media.body().addMedia();
+    sub.object().addImage().src(Bundle.images.favico());
+    sub.body().addHeading().text("Media heading");
+    sub.body().addText().text("Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.");
+  </code>
+  <code id="media.list">
+    //Consider construct Media using previous example. For each add() a new Media object should be created.
+    MediaList list = new MediaList();
+    list.add(media);
+    media = new Media();
+    media.object().css(Floating.RIGHT);
+    media.body().add(sub);
+    list.add(media);
+    list.add(media);
+  </code>
+  <code id="modal">
+    final Modal modal = new Modal();
+    modal.header().text("Modal title");
+    modal.body().add(new Paragraph().text("One fine body. You can put here, everything you want."));
+    ButtonGroup group = new ButtonGroup();
+    group.css(Floating.RIGHT);
+    group.addButton().text("Cancel").onClick(new ClickHandler() {
+      @Override
+      public void onClick(ClickEvent event) {
+        modal.hide();
+      }
+    });
+    Button save = group.addButton().text("Save Changes");
+    save.css(ButtonColor.PRIMARY);
+    modal.footer().add(group);
+  </code>
+  <code id="modal.events">
+    modal.onHide(new EventHandler&lt;Void&gt;() {
+      @Override
+      public void onEvent(Event&lt;Void&gt; e) {
+        Window.alert("Modal is hidding");
+      }
+    }).onShow(new EventHandler&lt;Void&gt;() {
+      @Override
+      public void onEvent(Event&lt;Void&gt; e) {
+        Window.alert("Modal. is showing");
+      }
+    });
+  </code>
+  <code id="modal.events">
+    modal.animate().show();
+  </code>
+  <code id="navbar">
+    Navbar navbar = new Navbar();
+    navbar.brand().text("Brand");
+    navbar.leftFacet().addItem().text("Link");
+    navbar.leftFacet().addText().text("Text");
+    navbar.leftFacet().addButton().text("Button");
+    DropItem button = navbar.rightFacet().addDropItem();
+    button.text("Dropdown");
+    button.menu().addItem().text("Link");
+  </code>
+  <code id="navbar.top.snippet">
+    body { padding-top: 70px; }
+  </code>
+  <code id="navbar.bottom.snippet">
+    body { padding-bottom: 70px; }
+  </code>
+  <code id="navbar.inverse">
+    navbar = new Navbar();
+    navbar.css(Navbar.Type.INVERSE);
+    navbar.brand().text("Brand");
+    navbar.leftFacet().addItem().text("Link");
+    navbar.leftFacet().addText().text("Text");
+    navbar.leftFacet().addButton().text("Button");
+    button = navbar.rightFacet().addDropItem();
+    button.text("Dropdown");
+    button.menu().addItem().text("Link");
+  </code>
+  <code id="navs.tabs">
+    TabPanel tabs = new TabPanel();
+    tabs.addTab().text("Home").panel().add(new Paragraph().html("Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.<br/><br/>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.<br/><br/>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."));
+    tabs.addTab().text("Profile").panel().add(new Paragraph().html("Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus."));
+  </code>
+  <code id="navs.pills">
+    PillPanel pills = new PillPanel();
+    pills.addPill().text("Home");
+    pills.addPill().text("Profile");
+  </code>
+  <code id="navs.pills.stacked">
+    PillPanel pills = new PillPanel();
+    pills.css(PillPanel.Type.STACKED);
+    pills.addPill().text("Home");
+    pills.addPill().text("Profile");
+  </code>
+  <code id="navs.justified">
+    TabPanel tabs = new TabPanel();
+    tabs.css(TabPanel.Type.BLOCK);
+    tabs.addTab().text("Home").panel().add(new Paragraph().html("Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.<br/><br/>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.<br/><br/>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."));
+    tabs.addTab().text("Profile").panel().add(new Paragraph().html("Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus."));
+    
+    PillPanel pills = new PillPanel();
+    pills.css(PillPanel.Type.BLOCK);
+    pills.addPill().text("Home");
+    pills.addPill().text("Profile");
+  </code>
+  <code id="navs.droppable.tabs">
+    TabPanel tabs = new TabPanel();
+    tabs.addTab().text("Home").panel().add(new Paragraph().html("Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.<br/><br/>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.<br/><br/>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."));
+    tabs.addTab().text("Profile").panel().add(new Paragraph().html("Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus."));
+    TabDroppable dropTab = tabs.addDropTab().text("Dropdown");
+    dropTab.addItem().text("Action").panel().add(new Image().src(Bundle.images.favico()));
+    dropTab.addItem().text("Another Action").panel().add(new Paragraph().html("Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr."));
+  </code>
+  <code id="navs.droppable.pills">
+    PillPanel pills = new PillPanel();
+    pills.addPill().text("Home");
+    pills.addPill().text("Profile");
+    PillDroppable dropPill = pills.addDropItem().text("Dropdown");
+    dropPill.addItem().text("Action");
+    dropPill.addItem().text("Another Action");
+  </code>
+  <code id="pagination">
+    final Tag message = Tag.asDiv();
+    Pagination pagination = new Pagination();
+    pagination.pages(10).onPageChange(new EventHandler&lt;Integer&gt;() {
+      @Override
+      public void onEvent(Event&lt;Integer&gt; e) {
+        message.text("Current poge is " + e.data());
+      }
+    });
+  </code>
+  <code id="pagination.sizing">
+    Pagination pagination = new Pagination();
+    pagination.pages(10).css(Pagination.Size.LARGE);
+    example = this.addExample();
+    example.sample().add(pagination);
+    pagination = new Pagination();
+    pagination.pages(10).css(Pagination.Size.SMALL);
+  </code>
+  <code id="pager">
+    new Pager().pages(10);
+  </code>
+  <code id="pageheader">
+    new PageHeader().text("Example page header").subText(" Subtext for header")
+  </code>
+  <code id="panel">
+    Panel panel = new Panel();
+    panel.body().add(new Paragraph().text("Basic panel example"));
+  </code>
+  <code id="panel.header">
+    Panel panel = new Panel();
+    panel.header().heading().text("Panel title");
+    panel.body().add(new Paragraph().text("Basic panel example"));
+  </code>
+  <code id="panel.footer">
+    Panel panel = new Panel();
+    panel.footer().add(new Button().text("Button"));
+    panel.body().add(new Paragraph().text("Basic panel example"));
+  </code>
+  <code id="panel.colors">
+    Panel panel = new Panel();
+    panel.css(Panel.Color.DANGER);
+    panel.header().heading().text("Panel title");
+    panel.body().add(new Paragraph().text("Basic panel example"));
+    panel.footer().add(new Button().text("Button"));
+    
+    panel = new Panel();
+    panel.css(Panel.Color.INFO);
+    panel.header().heading().text("Panel title");
+    panel.body().add(new Paragraph().text("Basic panel example"));
+    panel.footer().add(new Button().text("Button"));
+    
+    panel = new Panel();
+    panel.css(Panel.Color.PRIMARY);
+    panel.header().heading().text("Panel title");
+    panel.body().add(new Paragraph().text("Basic panel example"));
+    panel.footer().add(new Button().text("Button"));
+    
+    panel = new Panel();
+    panel.css(Panel.Color.SUCCESS);
+    panel.header().heading().text("Panel title");
+    panel.body().add(new Paragraph().text("Basic panel example"));
+    panel.footer().add(new Button().text("Button"));
+    
+    panel = new Panel();
+    panel.css(Panel.Color.WARNING);
+    panel.header().heading().text("Panel title");
+    panel.body().add(new Paragraph().text("Basic panel example"));
+    panel.footer().add(new Button().text("Button"));
+  </code>
+  <code id="panel.table">
+    Panel panel = new Panel();
+    panel.header().heading().text("Panel title");
+    panel.body().add(Tag.asSpan().text("Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit."));
+    Table table = panel.addTable();
+    Row headerRow = table.header().addRow();
+    headerRow.addCell().text("First Name");
+    headerRow.addCell().text("Last Name");
+    headerRow.addCell().text("User Name");
+    Row bodyRow = table.body().addRow();
+    bodyRow.addCell().text("Anderson");
+    bodyRow.addCell().text("Braz");
+    bodyRow.addCell().text("@braz");
+  </code>
+  <code id="panel.table.header">
+    Panel panel = new Panel();
+    panel.header().heading().text("Panel title");
+    Table table = panel.addTable();
+    Row headerRow = table.header().addRow();
+    headerRow.addCell().text("First Name");
+    headerRow.addCell().text("Last Name");
+    headerRow.addCell().text("User Name");
+    Row bodyRow = table.body().addRow();
+    bodyRow.addCell().text("Anderson");
+    bodyRow.addCell().text("Braz");
+    bodyRow.addCell().text("@braz");
+  </code>
+  <code id="panel.listgroup">
+    Panel panel = new Panel();
+    panel.header().heading().text("Panel title");
+    ListGroup group = panel.addListGroup();
+    group.addItem().addText().text("Cras justo odio");
+    group.addItem().addText().text("Morbi leo risus");
+    group.addItem().addText().text("Dapibus ac facilisis in");
+  </code>
+  <code id="panelgroup">
+    PanelGroup group = new PanelGroup();
+    Panel panel = group.addPanel("Group #1");
+    panel.body().add(new Text().text("Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS."));
+    panel = group.addPanel("Group #2");
+    panel.body().add(new Text().text("Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS."));
+  </code>
+  <code id="popover">
+    ButtonGroup group = new ButtonGroup();
+    
+    Button btn = group.addButton().icon(Icon.CHEVRON_LEFT);
+    Popover popover = new Popover().title("Show on left").placement(Direction.LEFT).trigger(btn, Popover.Trigger.HOVER);
+    popover.body().add(new Text().text("Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."));
+
+    btn = group.addButton().icon(Icon.CHEVRON_UP);
+    popover = new Popover().title("Show on top").placement(Direction.TOP).trigger(btn, Popover.Trigger.HOVER);
+    popover.body().add(new Text().text("Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."));
+    
+    btn = group.addButton().icon(Icon.CHEVRON_RIGHT);
+    popover = new Popover().title("Show on right").placement(Direction.RIGHT).trigger(btn, Popover.Trigger.HOVER);
+    popover.body().add(new Text().text("Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."));
+    
+    btn = group.addButton().icon(Icon.CHEVRON_DOWN);
+    popover = new Popover().title("Show on bottom").placement(Direction.BOTTOM).trigger(btn, Popover.Trigger.HOVER);
+    popover.body().add(new Text().text("Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."));
+  </code>
+  <code id="popover.triggers">
+    ButtonGroup group = new ButtonGroup();
+    
+    Button btn = group.addButton().icon(Icon.INBOX).text("Click on me");
+    popover = new Popover().title("Show upon click").placement(Direction.BOTTOM).trigger(btn, Popover.Trigger.CLICK);
+    popover.body().add(new Text().text("Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."));
+    
+    btn = group.addButton().icon(Icon.MAGNET).text("Focus on me");
+    popover = new Popover().title("Show upon focus").placement(Direction.BOTTOM).trigger(btn, Popover.Trigger.FOCUS);
+    popover.body().add(new Text().text("Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."));
+    
+    btn = group.addButton().icon(Icon.PUSHPIN).text("Toggle on me");
+    final Popover manual = new Popover().title("Manual triggering").placement(Direction.BOTTOM).trigger(btn, Popover.Trigger.MANUAL);
+    popover.body().add(new Text().text("Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."));
+    
+    btn.toggleable().onActivate(new EventHandler&lt;Void&gt;() {
+      @Override
+      public void onEvent(Event&lt;Void&gt; e) {
+        manual.show();
+      }
+    }).onDeactivate(new EventHandler&lt;Void&gt;() {
+      @Override
+      public void onEvent(Event&lt;Void&gt; e) {
+        manual.hide();
+      }
+    });
+  </code>
+  <code id="progressbar">
+    Progress progress = new Progress().total(200);
+    progress.addBar().worked(120);
+  </code>
+  <code id="progressbar.worked">
+   Progress progress = new Progress().total(200);
+   final ProgressBar bar = progress.addBar();
+   final Button button = new Button().text("Run");
+   button.onClick(new ClickHandler() {
+    
+    @Override
+    public void onClick(ClickEvent event) {
+      for(int i = 1; i &lt;= 200; i++){
+        bar.worked(1);
+      }
+      button.disable();
+    }
+  });
+  </code>
+  <code id="progressbar.colors">
+    Progress progress = new Progress().total(200);
+    progress.addBar().worked(120).css(Progress.BarColor.DANGER);
+    
+    progress = new Progress().total(200);
+    progress.addBar().worked(20).css(Progress.BarColor.INFO);
+    
+    progress = new Progress().total(200);
+    progress.addBar().worked(60).css(Progress.BarColor.SUCCESS);
+    
+    progress = new Progress().total(200);
+    progress.addBar().worked(97).css(Progress.BarColor.WARNING);
+  </code>
+  <code id="progressbar.striped">
+    Progress progress = new Progress().total(200);
+    progress.addBar().worked(120).css(Progress.BarColor.SUCCESS);
+    progress.css(Progress.ProgressType.STRIPED);
+  </code>
+  <code id="progressbar.animated">
+    Progress progress = new Progress().total(200);
+    progress.addBar().worked(150).css(Progress.BarColor.INFO);
+    progress.css(Progress.ProgressType.STRIPED);
+  </code>
+  <code id="progressbar.stacked">
+    Progress progress = new Progress().total(200);
+    progress.addBar().worked(150).css(Progress.BarColor.SUCCESS);
+    progress.addBar().worked(20).css(Progress.BarColor.DANGER);
+    progress.addBar().worked(30).css(Progress.BarColor.INFO);
+  </code>
+  <code id="tooltip">
+    ButtonGroup group = new ButtonGroup();
+
+    Button btn = group.addButton().icon(Icon.CHEVRON_LEFT);
+    new Tooltip().text("Show on left").placement(Direction.LEFT).trigger(btn, Tooltip.Trigger.HOVER);
+
+    btn = group.addButton().icon(Icon.CHEVRON_UP);
+    new Tooltip().text("Show on top").placement(Direction.TOP).trigger(btn, Tooltip.Trigger.HOVER);
+    
+    btn = group.addButton().icon(Icon.CHEVRON_RIGHT);
+    new Tooltip().text("Show on right").placement(Direction.RIGHT).trigger(btn, Tooltip.Trigger.HOVER);
+    
+    btn = group.addButton().icon(Icon.CHEVRON_DOWN);
+    new Tooltip().text("Show on bottom").placement(Direction.BOTTOM).trigger(btn, Tooltip.Trigger.HOVER);
+  </code>
+  <code id="tooltip.triggers">
+    ButtonGroup group = new ButtonGroup();
+    
+    Button btn = group.addButton().icon(Icon.INBOX).text("Click on me");
+    new Tooltip().text("Show upon click").placement(Direction.BOTTOM).trigger(btn, Tooltip.Trigger.CLICK);
+    
+    btn = group.addButton().icon(Icon.MAGNET).text("Focus on me");
+    new Tooltip().text("Show upon focus").placement(Direction.BOTTOM).trigger(btn, Tooltip.Trigger.FOCUS);
+    
+    btn = group.addButton().icon(Icon.PUSHPIN).text("Toggle on me");
+    final Tooltip manual = new Tooltip().text("Manual triggering").placement(Direction.BOTTOM).trigger(btn, Tooltip.Trigger.MANUAL);
+    btn.toggleable().onActivate(new EventHandler&lt;Void&gt;() {
+      @Override
+      public void onEvent(Event&lt;Void&gt; e) {
+        manual.show();
+      }
+    }).onDeactivate(new EventHandler&lt;Void&gt;() {
+      @Override
+      public void onEvent(Event&lt;Void&gt; e) {
+        manual.hide();
+      }
+    });
+  </code>
+  <code id="typography.heading">
+    new Heading(Heading.Level.ONE).text("H1. Heading");
+    new Heading(Heading.Level.TWO).text("H2. Heading");
+    new Heading(Heading.Level.THREE).text("H3. Heading");
+    new Heading(Heading.Level.FOUR).text("H4. Heading");
+    new Heading(Heading.Level.FIVE).text("H5. Heading");
+    new Heading(Heading.Level.SIX).text("H6. Heading");
+  </code>
+  <code id="typography.heading.classes">
+    new Paragraph().text("H1. Heading").css().set(HeadingClass.LEVEL_ONE);
+    new Paragraph().text("H2. Heading").css().set(HeadingClass.LEVEL_TWO);
+    new Paragraph().text("H3. Heading").css().set(HeadingClass.LEVEL_THREE);
+    new Paragraph().text("H4. Heading").css().set(HeadingClass.LEVEL_FOUR);
+    new Paragraph().text("H5. Heading").css().set(HeadingClass.LEVEL_FIVE);
+    new Paragraph().text("H6. Heading").css().set(HeadingClass.LEVEL_SIX);
+  </code>
+  <code id="typography.heading.secondary">
+    new Heading(Heading.Level.ONE).text("H1. Heading").headline("Secondary Text");
+    new Heading(Heading.Level.TWO).text("H2. Heading").headline("Secondary Text");
+    new Heading(Heading.Level.THREE).text("H3. Heading").headline("Secondary Text");
+    new Heading(Heading.Level.FOUR).text("H4. Heading").headline("Secondary Text");
+    new Heading(Heading.Level.FIVE).text("H5. Heading").headline("Secondary Text");
+    new Heading(Heading.Level.SIX).text("H6. Heading").headline("Secondary Text");
+  </code>
+  <code id="typography.paragraph">
+    new Paragraph().html("{0}");
+  </code>
+  <code id="typography.paragraph.lead">
+    new Paragraph().html("{0}").lead();
+  </code>
+  <code id="typography.blockquote">
+    new Blockquote().text("{0}");
+  </code>
+  <code id="typography.blockquote.footer">
+    new Blockquote().text("{0}").footer("{1}");
+  </code>
+  <code id="typography.blockquote.reverse">
+    new Blockquote().text("{0}").footer("{1}").reverse();
+  </code>
+  <code id="typography.list.unordered">
+    OrderList list = new OrderList(OrderList.Type.UNORDERED);
+    list.addItem().text("Lorem ipsum dolor sit amet");
+    list.addItem().text("Consectetur adipiscing elit");
+    list.addItem().text("Integer molestie lorem at massa");
+  </code>
+  <code id="typography.list.ordered">
+    OrderList list = new OrderList(OrderList.Type.ORDERED);
+    list.addItem().text("Lorem ipsum dolor sit amet");
+    list.addItem().text("Consectetur adipiscing elit");
+    list.addItem().text("Integer molestie lorem at massa");
+  </code>
+  <code id="typography.list.unstyled">
+    list = new OrderList(OrderList.Type.ORDERED);
+    list.css(OrderList.Style.UNSTYLED);
+    list.addItem().text("Lorem ipsum dolor sit amet");
+    list.addItem().text("Consectetur adipiscing elit");
+    list.addItem().text("Integer molestie lorem at massa");
+  </code>
+  <code id="typography.list.inline">
+    list = new OrderList(OrderList.Type.ORDERED);
+    list.css(OrderList.Style.INLINE);
+    list.addItem().text("Lorem ipsum dolor sit amet");
+    list.addItem().text("Consectetur adipiscing elit");
+    list.addItem().text("Integer molestie lorem at massa");
+  </code>
+  <code id="typography.description">
+    DescriptionList description = new DescriptionList();
+    description.addItem("Description lists", "A description list is perfect for defining terms.");
+    description.addItem("Euismod", "Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit. Donec id elit non mi porta gravida at eget metus.");
+  </code>
+  <code id="typography.description.horizontal">
+    DescriptionList description = new DescriptionList().horizontal();
+    description.addItem("Description lists", "A description list is perfect for defining terms.");
+    description.addItem("Euismod", "Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit. Donec id elit non mi porta gravida at eget metus.");
+  </code>
+  <code id="well">
+    new Well().add(new Text().text("Look, I'm in a well!"));
+  </code>
+  <code id="well.sizes">
+    Well well = new Well().add(new Text().text("Look, I'm in a well!"));
+    well.css(Well.Size.LARGE);
+    
+    well = new Well().add(new Text().text("Look, I'm in a well!"));
+    well.css(Well.Size.SMALL);
+  </code>
+</codes>
