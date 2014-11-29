@@ -12,11 +12,11 @@
  * or implied. See the License for the specific language governing permissions and limitations under
  * the License.
  */
-package hitz.virtuozo.showcase.ui;
+package virtuozo.showcase.ui;
 
-import hitz.virtuozo.ui.Composite;
-import hitz.virtuozo.ui.Elements;
-import hitz.virtuozo.ui.Component;
+import virtuozo.ui.Component;
+import virtuozo.ui.Composite;
+import virtuozo.ui.Elements;
 
 public class Example extends Component<Example> {
   private Sample sample = new Sample().hide();

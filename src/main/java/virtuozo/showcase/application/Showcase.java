@@ -1,7 +1,7 @@
-package hitz.virtuozo.showcase.application;
+package virtuozo.showcase.application;
 
-import hitz.virtuozo.infra.PlaceRepository;
-import hitz.virtuozo.ui.HTML;
+import virtuozo.infra.PlaceRepository;
+import virtuozo.ui.HTML;
 
 import com.google.gwt.core.client.EntryPoint;
 

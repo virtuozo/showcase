@@ -1,4 +1,4 @@
-package hitz.virtuozo.showcase.server;
+package virtuozo.showcase.server;
 
 import java.io.IOException;
 import java.io.InputStream;

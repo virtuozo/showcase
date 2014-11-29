@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module rename-to='showcase'>
-  <inherits name='hitz.virtuozo.themes.Bootstrap' />
-  <inherits name='hitz.virtuozo.themes.FontAwesome' />
-  <inherits name='hitz.virtuozo.themes.Glyphicons' />
-  <inherits name='hitz.virtuozo.Widgets' />
-  <inherits name='hitz.virtuozo.Core' />
+  <inherits name='virtuozo.themes.Bootstrap' />
+  <inherits name='virtuozo.themes.FontAwesome' />
+  <inherits name='virtuozo.themes.Glyphicons' />
+  <inherits name='virtuozo.Widgets' />
+  <inherits name='virtuozo.Core' />
 
   <source path="showcase/ui" />
   <source path="showcase/infra" />
@@ -18,7 +18,7 @@
   <extend-property name="locale" values="en"/>
   <set-property-fallback name="locale" value="en"/>
 
-  <entry-point class='hitz.virtuozo.showcase.application.Showcase' />
+  <entry-point class='virtuozo.showcase.application.Showcase' />
   
   <!-- Syntax highlight -->
   <public path="showcase/highlight"/>

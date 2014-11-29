@@ -12,18 +12,18 @@
  * or implied. See the License for the specific language governing permissions and limitations under
  * the License.
  */
-package hitz.virtuozo.showcase.infra;
+package virtuozo.showcase.infra;
 
-import hitz.virtuozo.infra.BrowserStorage.StoreKey;
-import hitz.virtuozo.infra.Rest;
-import hitz.virtuozo.infra.Rest.PathBuilder;
-import hitz.virtuozo.infra.RestMethod.MediaType;
-import hitz.virtuozo.infra.api.RestException;
-import hitz.virtuozo.infra.api.TextCallback;
-import hitz.virtuozo.showcase.infra.events.CodeEvent;
-import hitz.virtuozo.showcase.infra.events.FailureEvent;
-import hitz.virtuozo.ui.Elements;
-import hitz.virtuozo.ui.Component;
+import virtuozo.infra.Rest;
+import virtuozo.infra.BrowserStorage.StoreKey;
+import virtuozo.infra.Rest.PathBuilder;
+import virtuozo.infra.RestMethod.MediaType;
+import virtuozo.infra.api.RestException;
+import virtuozo.infra.api.TextCallback;
+import virtuozo.showcase.infra.events.CodeEvent;
+import virtuozo.showcase.infra.events.FailureEvent;
+import virtuozo.ui.Component;
+import virtuozo.ui.Elements;
 
 public class CodeConsumer implements TextCallback {
   private static final CodeConsumer instance = new CodeConsumer();

@@ -1,9 +1,9 @@
-package hitz.virtuozo.showcase.ui;
+package virtuozo.showcase.ui;
 
-import hitz.virtuozo.infra.Presenter;
-import hitz.virtuozo.infra.View;
-import hitz.virtuozo.showcase.ui.HomePagePresenter.HomeView;
-import hitz.virtuozo.showcase.ui.pages.HomePage;
+import virtuozo.infra.Presenter;
+import virtuozo.infra.View;
+import virtuozo.showcase.ui.HomePagePresenter.HomeView;
+import virtuozo.showcase.ui.pages.HomePage;
 
 public class HomePagePresenter extends Presenter<HomeView>{
   private static final HomePagePresenter instance = new HomePagePresenter(new HomePage());

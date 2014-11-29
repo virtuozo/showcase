@@ -1,8 +1,8 @@
-package hitz.virtuozo.showcase.application;
+package virtuozo.showcase.application;
 
-import hitz.virtuozo.infra.Place;
-import hitz.virtuozo.infra.Presenter;
-import hitz.virtuozo.showcase.ui.HomePagePresenter;
+import virtuozo.infra.Place;
+import virtuozo.infra.Presenter;
+import virtuozo.showcase.ui.HomePagePresenter;
 
 public enum Places implements Place {
   HOME{

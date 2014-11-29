@@ -12,15 +12,15 @@
  * or implied. See the License for the specific language governing permissions and limitations under
  * the License.
  */
-package hitz.virtuozo.showcase.ui;
+package virtuozo.showcase.ui;
 
-import hitz.virtuozo.ui.CssClass;
-import hitz.virtuozo.ui.Elements;
-import hitz.virtuozo.ui.Heading;
-import hitz.virtuozo.ui.Paragraph;
-import hitz.virtuozo.ui.StyleChooser;
-import hitz.virtuozo.ui.Component;
-import hitz.virtuozo.ui.api.UIComponent;
+import virtuozo.ui.Component;
+import virtuozo.ui.CssClass;
+import virtuozo.ui.Elements;
+import virtuozo.ui.Heading;
+import virtuozo.ui.Paragraph;
+import virtuozo.ui.StyleChooser;
+import virtuozo.ui.api.UIComponent;
 
 public class Callout extends Component<Callout> {
   

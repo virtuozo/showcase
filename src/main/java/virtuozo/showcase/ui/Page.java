@@ -12,15 +12,15 @@
  * or implied. See the License for the specific language governing permissions and limitations under
  * the License.
  */
-package hitz.virtuozo.showcase.ui;
+package virtuozo.showcase.ui;
 
-import hitz.virtuozo.ui.Composite;
-import hitz.virtuozo.ui.Elements;
-import hitz.virtuozo.ui.Heading;
-import hitz.virtuozo.ui.ListGroup.ListGroupItem;
-import hitz.virtuozo.ui.PageHeader;
-import hitz.virtuozo.ui.Paragraph;
-import hitz.virtuozo.ui.Component;
+import virtuozo.ui.Component;
+import virtuozo.ui.Composite;
+import virtuozo.ui.Elements;
+import virtuozo.ui.Heading;
+import virtuozo.ui.PageHeader;
+import virtuozo.ui.Paragraph;
+import virtuozo.ui.ListGroup.ListGroupItem;
 
 public abstract class Page extends Component<Page> {
   private PageHeader header = new PageHeader();
