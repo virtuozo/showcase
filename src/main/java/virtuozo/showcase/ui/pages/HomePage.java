@@ -181,7 +181,7 @@ public class HomePage implements HomeView {
       media.object().addImage().src(Bundle.images().logo());
       media.body().addHeading().text("Virtuozo Kick Start Application");
       media.body().addText().css(TextAlignment.JUSTIFY).text("This application has the base skeleton required to make application works. Take a look over readme file and get project done in minutes.");
-      media.body().add(this.focusText().value("git clone https://github.com/brazoft/hitz-appz.git"));
+      media.body().add(this.focusText().value("git clone https://github.com/virtuozo/kickstart.git"));
       
       list = new MediaList();
       row.addColumn().span(6, ViewPort.SMALL).add(list);
@@ -189,7 +189,7 @@ public class HomePage implements HomeView {
       media.object().addImage().src(Bundle.images().forge());
       media.body().addHeading().text("Virtuozo Forge Add-On");
       media.body().addText().css(TextAlignment.JUSTIFY).text("Forge is a code framework that can generate code and configurations for Java projects. Using this method is easier because all the code is generated following your instructions.");
-      media.body().add(this.focusText().value("addon-install-from-git --url https://github.com/brazoft/virtuozo.git --coordinate hitz:virtuozo-forge-addon"));
+      media.body().add(this.focusText().value("addon-install-from-git --url https://github.com/virtuozo/spa-framework.git --coordinate com.github.virtuozo:forge-addon"));
       
       step = wizard.addStep().text("Module running");
       step.add(new Paragraph().text("The next step is compiling, since GWT is a Java-to-Javascript compiler, the final code actually is a Javascript file. Because of its nature, Virtuozo has no dependency on Java Runtime Environment to run into the browser, it is not an applet :). That it said, take the following steps to compile and run."));
@@ -213,7 +213,7 @@ public class HomePage implements HomeView {
     private void buildCommunity(Section section){
       Row row = new Container(Container.Type.FLUID).attachTo(section).addRow();
       
-      this.createCommunityLink(row, "https://github.com/brazoft/virtuozo", FontAwesome.GITHUB);
+      this.createCommunityLink(row, "https://github.com/virtuozo", FontAwesome.GITHUB);
       
       String twitterUrl = "http://twitter.com/intent/tweet?url=" + GWT.getHostPageBaseURL() + "&text=A opinionated SPA framework for Java Lovers, check it out :)";
       this.createCommunityLink(row, twitterUrl, FontAwesome.TWITTER);
