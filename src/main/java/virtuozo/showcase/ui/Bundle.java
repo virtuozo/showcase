@@ -26,38 +26,38 @@ public class Bundle {
   }
   
   public static interface Images extends ClientBundle{
-    @Source("hitz/virtuozo/showcase/images/author.jpg")
+    @Source("virtuozo/showcase/images/author.jpg")
     ImageResource author();
     
-    @Source("hitz/virtuozo/showcase/images/bootstrap.jpg")
+    @Source("virtuozo/showcase/images/bootstrap.jpg")
     ImageResource bootstrap();
     
     
-    @Source("hitz/virtuozo/showcase/images/bootswatch.png")
+    @Source("virtuozo/showcase/images/bootswatch.png")
     ImageResource bootswatch();
     
-    @Source("hitz/virtuozo/showcase/images/fontawesome.png")
+    @Source("virtuozo/showcase/images/fontawesome.png")
     ImageResource fontawesome();
     
-    @Source("hitz/virtuozo/showcase/images/forge.png")
+    @Source("virtuozo/showcase/images/forge.png")
     ImageResource forge();
     
-    @Source("hitz/virtuozo/showcase/images/eclipse.png")
+    @Source("virtuozo/showcase/images/eclipse.png")
     ImageResource eclipse();
     
-    @Source("hitz/virtuozo/showcase/images/gwt.png")
+    @Source("virtuozo/showcase/images/gwt.png")
     ImageResource gwt();
     
-    @Source("hitz/virtuozo/showcase/images/html5.png")
+    @Source("virtuozo/showcase/images/html5.png")
     ImageResource html5();
     
-    @Source("hitz/virtuozo/showcase/images/logo.png")
+    @Source("virtuozo/showcase/images/logo.png")
     ImageResource logo();
     
-    @Source("hitz/virtuozo/showcase/images/maven.png")
+    @Source("virtuozo/showcase/images/maven.png")
     ImageResource maven();
     
-    @Source("hitz/virtuozo/showcase/images/terminal.png")
+    @Source("virtuozo/showcase/images/terminal.png")
     ImageResource terminal();
   }
 }
