@@ -11,6 +11,7 @@
   <source path="showcase/application" />
   <source path="showcase/i18n" />
   <resource path="showcase/images" />
+  
   <public path="showcase/css"/>
   
   <stylesheet src="showcase.css"/>
@@ -28,7 +29,6 @@
   
   <!-- Dev Settings 
   -->
-  <add-linker name="xsiframe"/>
   <collapse-all-properties />
   
   <set-property name="compiler.useSourceMaps" value="true" />

@@ -14,6 +14,9 @@
  */
 package virtuozo.showcase.ui;
 
+import virtuozo.showcase.i18n.Constants;
+import virtuozo.showcase.i18n.Messages;
+
 import com.google.gwt.core.shared.GWT;
 import com.google.gwt.resources.client.ClientBundle;
 import com.google.gwt.resources.client.ImageResource;
@@ -21,8 +24,20 @@ import com.google.gwt.resources.client.ImageResource;
 public class Bundle {
   private static final Images images = GWT.create(Images.class);
   
+  private static final Constants contants = GWT.create(Constants.class);
+  
+  private static final Messages messages = GWT.create(Messages.class);
+  
   public static Images images(){
     return Bundle.images;
+  }
+  
+  public static Constants constants(){
+    return Bundle.contants;
+  }
+  
+  public static Messages messages() {
+    return messages;
   }
   
   public static interface Images extends ClientBundle{

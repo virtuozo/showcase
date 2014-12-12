@@ -4,7 +4,7 @@
 
   <groupId>com.github.virtuozo</groupId>
   <artifactId>showcase</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.0-SNAPSHOT</version>
   <name>Virtuozo Showcase</name>
   <packaging>war</packaging>
 
@@ -28,7 +28,7 @@
       <dependency>
         <groupId>com.github.virtuozo</groupId>
         <artifactId>parent</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.0-SNAPSHOT</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -83,6 +83,7 @@
     <dependency>
       <groupId>com.github.virtuozo</groupId>
       <artifactId>commons</artifactId>
+      <scope>provided</scope>
     </dependency>
   </dependencies>
 
@@ -108,7 +109,7 @@
             <!-- Plugin configuration. There are many available options, 
               see gwt-maven-plugin documentation at codehaus.org -->
             <configuration>
-              <module>com.github.virtuozo.virtuozo.Showcase</module>
+              <module>virtuozo.Showcase</module>
               <runTarget>index.html</runTarget>
               
               <precompile>false</precompile>
@@ -150,10 +151,11 @@
         <artifactId>maven-war-plugin</artifactId>
         <version>2.4</version>
         <configuration>
+          <failOnMissingWebXml>false</failOnMissingWebXml>
           <webResources>
             <resource>
               <directory>src/main/java</directory>
-              <targetPath>WEB-INF/classes</targetPath>
+              <targetPath>code-server</targetPath>
               <includes>
                 <include>**/*.java</include>
               </includes>

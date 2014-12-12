@@ -14,26 +14,39 @@
  */
 package virtuozo.showcase.ui;
 
+import virtuozo.showcase.infra.CodeConsumer;
+import virtuozo.showcase.infra.CodeConsumer.CodeCallback;
+import virtuozo.showcase.ui.sample.Fragment;
+import virtuozo.showcase.ui.sample.Sampler;
 import virtuozo.ui.Component;
-import virtuozo.ui.Composite;
 import virtuozo.ui.Elements;
+import virtuozo.ui.Tag;
+
+import com.google.gwt.dom.client.DivElement;
 
 public class Example extends Component<Example> {
-  private Sample sample = new Sample().hide();
+  private Tag<DivElement> sample = Tag.asDiv().css("bs-example");
+  private Tag<DivElement> code = Tag.asDiv().css("highlight");
 
-  public Example() {
+  private Example() {
     super(Elements.div());
-    this.addChild(this.sample);
+    this.addChild(this.sample).addChild(this.code);
+  }
+  
+  public static Example create(Sampler target){
+    Example example = new Example();
+    target.add(example);
+    return example;
   }
 
-  public Sample sample() {
-    return this.sample.show();
-  }
-
-  public class Sample extends Composite<Sample> {
-    public Sample() {
-      super(Elements.div());
-      this.css().set("bs-example");
-    }
+  public Example load(Fragment target){
+    CodeConsumer.get().load(target.getClass(), new CodeCallback() {
+      @Override
+      public void onCodeResponse(String code) {
+        Example.this.code.html(SyntaxHighlighter.get().java(code));
+      }
+    });
+    target.render(this.sample);
+    return this;
   }
 }

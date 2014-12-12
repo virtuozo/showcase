@@ -16,12 +16,7 @@ public class HomePagePresenter extends Presenter<HomeView>{
     super(view);
   }
   
-  @Override
-  protected void unbind() {
-    this.view().detach();
-  }
-  
   public interface HomeView extends View {
-    void detach();
+    
   }
 }

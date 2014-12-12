@@ -14,40 +14,39 @@
  */
 package virtuozo.showcase.infra;
 
-import virtuozo.infra.Rest;
 import virtuozo.infra.BrowserStorage.StoreKey;
+import virtuozo.infra.Rest;
 import virtuozo.infra.Rest.PathBuilder;
 import virtuozo.infra.RestMethod.MediaType;
 import virtuozo.infra.api.RestException;
 import virtuozo.infra.api.TextCallback;
-import virtuozo.showcase.infra.events.CodeEvent;
 import virtuozo.showcase.infra.events.FailureEvent;
 import virtuozo.ui.Component;
 import virtuozo.ui.Elements;
 
-public class CodeConsumer implements TextCallback {
+public class CodeConsumer {
   private static final CodeConsumer instance = new CodeConsumer();
 
   public static CodeConsumer get() {
     return instance;
   }
 
-  public CodeConsumer load(String code) {
-    Rest rest = new Rest(PathBuilder.get("code-server").addQueryParam("class", code));
-    rest.get().accept(MediaType.TEXT).send(this);
+  public CodeConsumer load(Class<?> target, final CodeCallback callback) {
+    String path = target.getName().replace(".", "/").concat(".java");
+    Rest rest = new Rest(PathBuilder.get("code-server").append(path));
+    rest.get().accept(MediaType.TEXT).send(new TextCallback(){
+      @Override
+      public void onFailure(RestException exception) {
+        FailureEvent event = new FailureEvent();
+        event.publish().with(exception).fire();
+      }
+
+      @Override
+      public void onSuccess(String response) {
+        callback.onCodeResponse(response);
+      }    
+    });
     return this;
-  }
-
-  @Override
-  public void onFailure(RestException exception) {
-    FailureEvent event = new FailureEvent();
-    event.publish().with(exception).fire();
-  }
-
-  @Override
-  public void onSuccess(String response) {
-    CodeEvent event = new CodeEvent();
-    event.publish().with(response).fire();
   }
   
   public static class Code extends Component<Code> {
@@ -56,10 +55,14 @@ public class CodeConsumer implements TextCallback {
       this.css().set("highlight");
     }
 
-    public Code add(String code) {
+    public Code set(String code) {
       this.element().setInnerHTML(code);
       return this;
     }
+  }
+  
+  public static interface CodeCallback{
+    void onCodeResponse(String code);
   }
 
   public static enum Key implements StoreKey {
