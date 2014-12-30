@@ -56,7 +56,7 @@ public class CodeConsumer {
     }
 
     public Code set(String code) {
-      this.element().setInnerHTML(code);
+      this.html(code);
       return this;
     }
   }

@@ -2,7 +2,7 @@ package virtuozo.showcase.application;
 
 import virtuozo.infra.Place;
 import virtuozo.infra.Presenter;
-import virtuozo.showcase.ui.ComponentsPresenter;
+import virtuozo.showcase.ui.DocsPresenter;
 import virtuozo.showcase.ui.HomePagePresenter;
 
 public enum Places implements Place {
@@ -11,10 +11,10 @@ public enum Places implements Place {
     public Presenter<?> presenter() {
       return HomePagePresenter.get();
     }
-  }, COMPONENTS{
+  }, DOCS{
     @Override
     public Presenter<?> presenter() {
-      return ComponentsPresenter.get();
+      return DocsPresenter.get();
     }
   };
   

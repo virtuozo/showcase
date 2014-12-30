@@ -16,7 +16,6 @@ import virtuozo.ui.InputText;
 import virtuozo.ui.LandingPageLayout;
 import virtuozo.ui.LandingPageLayout.Intro.Slogan;
 import virtuozo.ui.LandingPageLayout.Section;
-import virtuozo.ui.LayoutPanel;
 import virtuozo.ui.Media;
 import virtuozo.ui.MediaList;
 import virtuozo.ui.Navbar;
@@ -24,7 +23,6 @@ import virtuozo.ui.Navbar.Facet.NavItem;
 import virtuozo.ui.Paragraph;
 import virtuozo.ui.Row;
 import virtuozo.ui.Row.Column;
-import virtuozo.ui.StackedIcon;
 import virtuozo.ui.Tag;
 import virtuozo.ui.Text;
 import virtuozo.ui.ViewPort;
@@ -33,7 +31,6 @@ import virtuozo.ui.Wizard.Step;
 import virtuozo.ui.api.HasComponents;
 import virtuozo.ui.api.Icon;
 import virtuozo.ui.css.TextAlignment;
-import virtuozo.ui.css.TextColor;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.AnchorElement;
@@ -80,8 +77,8 @@ public class HomePage implements HomeView {
     Section community = this.addSection(Bundle.constants().community()).css("color");
     this.buildCommunity(community);
     
-    NavItem components = this.layout.navbar().rightFacet().addItem().text(Bundle.constants().uiComponents());
-    Navigate.to(Places.COMPONENTS).through(components);
+    NavItem components = this.layout.navbar().rightFacet().addItem().text(Bundle.constants().documentation());
+    Navigate.to(Places.DOCS).through(components);
   }
 
   @Override
@@ -162,7 +159,7 @@ public class HomePage implements HomeView {
     Wizard wizard = new Wizard().hideControls();
     wizard.heading().css("heading").text(Bundle.constants().noWorries());
     section.addColumn().span(12, ViewPort.X_SMALL).add(wizard);
-    Step step = wizard.addStep().text("Maven");
+    Step step = wizard.addStep().text(Bundle.constants().gettingStartedStepOne());
     step.add(new Paragraph()
         .html(Bundle.constants().gettingStartedMaven()));
     step.add(new Paragraph()
@@ -186,7 +183,7 @@ public class HomePage implements HomeView {
     media.body().addText().css(TextAlignment.JUSTIFY).text(Bundle.constants().forgeAddOnDescription());
     media.body().add(this.focusText().value(Bundle.constants().commingSoon()));//addon-install-from-git --url https://github.com/virtuozo/spa-framework.git --coordinate com.github.virtuozo:forge-addon
 
-    step = wizard.addStep().text(Bundle.constants().moduleRunning());
+    step = wizard.addStep().text(Bundle.constants().gettingStartedStepTwo());
     step.add(new Paragraph()
         .text(Bundle.constants().moduleRunningDescription()));
 
@@ -196,14 +193,7 @@ public class HomePage implements HomeView {
     row.addColumn().span(4, ViewPort.SMALL).add(new Heading(Level.FIVE).css("heading").text(Bundle.constants().devModeRunning())).add(this.focusText().value("mvn gwt:run -P gwt"));
     row.addColumn().span(12, ViewPort.SMALL).add(new Text().css(TextAlignment.CENTER).text(Bundle.constants().noteOnDebugging())).style().paddingTop(10, Unit.PX);
 
-    LayoutPanel docs = LayoutPanel.horizontal();
-    wizard.addStep().text(Bundle.constants().inspectDocs()).add(docs);
-
-    this.createDocLink(docs, FontAwesome.CODE, Bundle.constants().apiDocs(), Bundle.constants().apiDocsDescription());
-    this.createDocLink(docs, FontAwesome.PAPER_PLANE_O, Bundle.constants().restRescue(), Bundle.constants().restRescueDescription());
-    Tag<AnchorElement> link = this.createDocLink(docs, FontAwesome.DASHBOARD, Bundle.constants().uiComponents(), Bundle.constants().uiComponentsDescription());
-    Navigate.to(Places.COMPONENTS).through(link);
-    docs.distribute();
+    wizard.addStep().text(Bundle.constants().gettingStartedStepThree()).add(new CallToDocs());
   }
 
   private void buildCommunity(Section section) {
@@ -228,18 +218,6 @@ public class HomePage implements HomeView {
     link.element().setHref(href);
     link.element().setTarget("_blank");
     row.addColumn().span(1, ViewPort.SMALL).css(FontAwesome.Styles.THREE_TIMES_LARGE).add(link.add(icon.asComponent()));
-  }
-
-  private Tag<AnchorElement> createDocLink(LayoutPanel docs, FontAwesome icon, String title, String description) {
-    LayoutPanel panel = LayoutPanel.vertical();
-    panel.style().width(100, Unit.PCT);
-    StackedIcon stack = new StackedIcon().css(FontAwesome.Styles.FOUR_TIMES_LARGE).regular(icon, FontAwesome.Styles.INVERSE).larger(FontAwesome.CIRCLE, TextColor.INFO);
-    Tag<AnchorElement> heading = Tag.asAnchor();
-    heading.add(new Heading(Level.FOUR).css("heading").text(title));
-    panel.add(stack).add(heading).add(new Paragraph().text(description));
-    docs.add(panel);
-    
-    return heading;
   }
 
   private InputGroup focusText() {

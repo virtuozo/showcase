@@ -1,0 +1,67 @@
+package virtuozo.showcase.ui.sample.navigation;
+
+import virtuozo.showcase.ui.sample.Fragment;
+import virtuozo.ui.ButtonGroup;
+import virtuozo.ui.InputPassword;
+import virtuozo.ui.InputText;
+import virtuozo.ui.RichForm;
+import virtuozo.ui.Wizard;
+import virtuozo.ui.api.HasComponents;
+import virtuozo.ui.css.ButtonColor;
+
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
+
+public class Wizards implements Fragment {
+
+  public void render(HasComponents<?, ?> target) {
+    final Wizard wizard = new Wizard().attachTo(target);
+    RichForm form = new RichForm(RichForm.Type.VERTICAL);
+    form.add(new InputText()).label().text("Username").show();
+    form.add(new InputPassword()).label().text("Password").show();
+    wizard.addStep().text("Step 1").add(form);
+    
+    form = new RichForm(RichForm.Type.VERTICAL);
+    form.add(new InputText()).label().text("Name").show();
+    form.add(new InputPassword()).label().text("E-mail").show();
+    wizard.addStep().text("Step 2").add(form);
+    
+    ButtonGroup group = new ButtonGroup().attachTo(target);
+    group.addButton().css(ButtonColor.PRIMARY).text("Default").onClick(new ClickHandler() {
+      
+      @Override
+      public void onClick(ClickEvent event) {
+        wizard.css(Wizard.Color.DEFAULT);
+      }
+    });
+    group.addButton().css(ButtonColor.INFO).text("INFO").onClick(new ClickHandler() {
+      
+      @Override
+      public void onClick(ClickEvent event) {
+        wizard.css(Wizard.Color.INFO);
+      }
+    });
+    group.addButton().css(ButtonColor.SUCCESS).text("SUCCESS").onClick(new ClickHandler() {
+      
+      @Override
+      public void onClick(ClickEvent event) {
+        wizard.css(Wizard.Color.SUCCESS);
+      }
+    });
+    group.addButton().css(ButtonColor.WARNING).text("WARNING").onClick(new ClickHandler() {
+      
+      @Override
+      public void onClick(ClickEvent event) {
+        wizard.css(Wizard.Color.WARNING);
+      }
+    });
+    group.addButton().css(ButtonColor.DANGER).text("DANGER").onClick(new ClickHandler() {
+      
+      @Override
+      public void onClick(ClickEvent event) {
+        wizard.css(Wizard.Color.DANGER);
+      }
+    });
+
+  }
+}

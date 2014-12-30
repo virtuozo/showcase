@@ -62,16 +62,6 @@ body {
 	background-color: #141d27;
 }
 
-.btn {
-	border-radius: 0;
-	text-transform: uppercase;
-	font-family: Montserrat, sans-serif;
-	font-weight: 400;
-	-webkit-transition: all .3s ease-in-out;
-	-moz-transition: all .3s ease-in-out;
-	transition: all .3s ease-in-out;
-}
-
 .btn-circle {
 	width: 70px;
 	height: 70px;
@@ -121,8 +111,9 @@ section.color * {
 }
 
 .layout-panel td:first-of-type, 
-.layout-panel td:first-of-type h4,
-.layout-panel td:first-of-type p {
+.layout-panel td:first-of-type *,
+.layout-panel td:first-of-type p,
+.layout-panel td:first-of-type .heading > * {
 	text-align: center;
 }
 
@@ -964,6 +955,10 @@ h1[id] {
 	border-radius: 0;
 	border-width: 0 0 1px;
 	margin: -15px -15px 15px;
+}
+
+.bs-example > .nav-pills {
+	margin-bottom: 20px;
 }
 
 @media ( min-width : 768px) {

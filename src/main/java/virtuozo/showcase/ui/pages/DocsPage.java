@@ -2,19 +2,20 @@ package virtuozo.showcase.ui.pages;
 
 import virtuozo.infra.Navigate;
 import virtuozo.showcase.application.Places;
-import virtuozo.showcase.ui.ComponentsPresenter.ComponentsView;
+import virtuozo.showcase.ui.DocsPresenter.DocsView;
+import virtuozo.showcase.ui.sample.Layouts;
+import virtuozo.showcase.ui.sample.Navigation;
 import virtuozo.showcase.ui.sample.Sample;
 import virtuozo.showcase.ui.sample.Sampler;
 import virtuozo.showcase.ui.sample.Typography;
 import virtuozo.ui.BareLayout;
-import virtuozo.ui.Breadcrumb;
-import virtuozo.ui.Breadcrumb.BreadcrumbItem;
 import virtuozo.ui.FontAwesome;
 import virtuozo.ui.Heading;
 import virtuozo.ui.Heading.Level;
 import virtuozo.ui.InputText;
 import virtuozo.ui.LayoutPanel;
 import virtuozo.ui.Navbar.Brand;
+import virtuozo.ui.PageHeader;
 import virtuozo.ui.Row;
 import virtuozo.ui.Row.Column;
 import virtuozo.ui.StackedIcon;
@@ -25,31 +26,37 @@ import virtuozo.ui.api.UIComponent;
 import virtuozo.ui.css.TextColor;
 
 import com.google.gwt.dom.client.DivElement;
+import com.google.gwt.dom.client.Style.Unit;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 
-public class ComponentsPage implements ComponentsView {
+public class DocsPage implements DocsView {
 
   private BareLayout layout = new BareLayout();
   
   private Tag<DivElement> samples = Tag.asDiv();
   
-  private BreadcrumbItem current;
+  private PageHeader header = new PageHeader();
   
   @Override
   public void render(HasComponents<?, ?> container) {
     this.layout.attach();
     
-    Brand brand = this.layout.navbar().brand().text("Vituozo");
+    Brand brand = this.layout.navbar().brand().text("Virtuozo");
     Navigate.to(Places.HOME).through(brand);
     
     this.layout.navbar().rightForm().addInput(new InputText().placeholder("Search..."));
 
     LayoutPanel main = LayoutPanel.horizontal().attachTo(this.layout.container());
-    this.current = new Breadcrumb().attachTo(this.layout.container()).hide().addItem();
+    this.header.attachTo(this.layout.container()).hide();
+    this.header.style().marginTop(10, Unit.PX);
     this.samples.attachTo(this.layout.container());
     
+    this.samples.add(new CallToDocs());
+    
     this.createSample(main, FontAwesome.FONT, new Typography());
+    this.createSample(main, FontAwesome.NEWSPAPER_O, new Layouts());
+    this.createSample(main, FontAwesome.NAVICON, new Navigation());
   }
   
   private void createSample(LayoutPanel main, FontAwesome icon, final Sample sample){
@@ -59,7 +66,7 @@ public class ComponentsPage implements ComponentsView {
       
       @Override
       public void onClick(ClickEvent event) {
-        ComponentsPage.this.switchTo(sample);
+        DocsPage.this.switchTo(sample);
       }
     }));
         
@@ -69,12 +76,13 @@ public class ComponentsPage implements ComponentsView {
   @Override
   public void detach() {
     this.layout.detach();
+    this.samples.detachChildren();
   }
   
   private void switchTo(Sample sample){
     SampleContainer sampler = new SampleContainer();
     this.samples.detachChildren().add(sampler.row);
-    this.current.text(sample.title()).parent().asComponent().show();
+    this.header.text(sample.title()).show();
     sample.attach(sampler);
   }
   
@@ -85,7 +93,7 @@ public class ComponentsPage implements ComponentsView {
     public void add(UIComponent component) {
       this.column().add(component);
       if(this.row.childrenCount() % 2 == 0){
-        this.row = new Row().attachTo(ComponentsPage.this.samples);
+        this.row = new Row().attachTo(DocsPage.this.samples);
       }
     }
     

@@ -31,6 +31,7 @@
   -->
   <collapse-all-properties />
   
+  <add-linker name="xsiframe" />
   <set-property name="compiler.useSourceMaps" value="true" />
   <set-property  name="gwt.logging.enabled" value="WARNING" />
 </module>

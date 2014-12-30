@@ -57,6 +57,9 @@ public class Bundle {
     @Source("virtuozo/showcase/images/forge.png")
     ImageResource forge();
     
+    @Source("virtuozo/showcase/images/husky.jpg")
+    ImageResource husky();
+    
     @Source("virtuozo/showcase/images/eclipse.png")
     ImageResource eclipse();
     
@@ -72,7 +75,13 @@ public class Bundle {
     @Source("virtuozo/showcase/images/maven.png")
     ImageResource maven();
     
+    @Source("virtuozo/showcase/images/sm-logo.png")
+    ImageResource smallLogo();
+    
     @Source("virtuozo/showcase/images/terminal.png")
     ImageResource terminal();
+    
+    @Source("virtuozo/showcase/images/xs-logo.png")
+    ImageResource xsmallLogo();
   }
 }
