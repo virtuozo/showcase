@@ -20,7 +20,7 @@ import virtuozo.ui.Elements;
 import virtuozo.ui.Heading;
 import virtuozo.ui.Paragraph;
 import virtuozo.ui.StyleChooser;
-import virtuozo.ui.api.UIComponent;
+import virtuozo.ui.interfaces.UIComponent;
 
 public class Callout extends Component<Callout> {
   
@@ -30,13 +30,13 @@ public class Callout extends Component<Callout> {
   }
   
   public Heading addHeading(){
-    Heading heading = new Heading(Heading.Level.FOUR);
+    Heading heading = Heading.four();
     this.addChild(heading);
     return heading;
   }
   
   public Paragraph addText(){
-    Paragraph text = new Paragraph();
+    Paragraph text = Paragraph.create();
     this.addChild(text);
     return text;
   }

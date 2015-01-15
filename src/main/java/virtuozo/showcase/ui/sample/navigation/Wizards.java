@@ -6,8 +6,8 @@ import virtuozo.ui.InputPassword;
 import virtuozo.ui.InputText;
 import virtuozo.ui.RichForm;
 import virtuozo.ui.Wizard;
-import virtuozo.ui.api.HasComponents;
 import virtuozo.ui.css.ButtonColor;
+import virtuozo.ui.interfaces.HasComponents;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
@@ -15,18 +15,18 @@ import com.google.gwt.event.dom.client.ClickHandler;
 public class Wizards implements Fragment {
 
   public void render(HasComponents<?, ?> target) {
-    final Wizard wizard = new Wizard().attachTo(target);
-    RichForm form = new RichForm(RichForm.Type.VERTICAL);
-    form.add(new InputText()).label().text("Username").show();
-    form.add(new InputPassword()).label().text("Password").show();
+    final Wizard wizard = Wizard.create().attachTo(target);
+    RichForm form = RichForm.vertical();
+    form.add(InputText.create()).label().text("Username").show();
+    form.add(InputPassword.create()).label().text("Password").show();
     wizard.addStep().text("Step 1").add(form);
     
-    form = new RichForm(RichForm.Type.VERTICAL);
-    form.add(new InputText()).label().text("Name").show();
-    form.add(new InputPassword()).label().text("E-mail").show();
+    form = RichForm.vertical();
+    form.add(InputText.create()).label().text("Name").show();
+    form.add(InputPassword.create()).label().text("E-mail").show();
     wizard.addStep().text("Step 2").add(form);
     
-    ButtonGroup group = new ButtonGroup().attachTo(target);
+    ButtonGroup group = ButtonGroup.horizontal().attachTo(target);
     group.addButton().css(ButtonColor.PRIMARY).text("Default").onClick(new ClickHandler() {
       
       @Override
@@ -63,5 +63,10 @@ public class Wizards implements Fragment {
       }
     });
 
+  }
+  
+  @Override
+  public String title() {
+    return "Wizard";
   }
 }

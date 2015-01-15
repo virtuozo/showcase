@@ -7,13 +7,13 @@ import virtuozo.ui.FontAwesome;
 import virtuozo.ui.Image;
 import virtuozo.ui.InputText;
 import virtuozo.ui.Navbar;
-import virtuozo.ui.api.HasComponents;
+import virtuozo.ui.interfaces.HasComponents;
 
 public class Navbars implements Fragment {
 
   public void render(HasComponents<?, ?> target) {
-    Navbar navbar = new Navbar().attachTo(target);
-    navbar.brand().image(new Image().src(Bundle.images().xsmallLogo()));
+    Navbar navbar = Navbar.create().attachTo(target);
+    navbar.brand().image(Image.create().src(Bundle.images().xsmallLogo()));
     navbar.leftFacet().addButton().text("Button");
     DropItem item = navbar.leftFacet().addDropItem().text("Click me");
     item.menu().addHeader("Header");
@@ -22,7 +22,7 @@ public class Navbars implements Fragment {
     navbar.leftFacet().addItem().text("Link");
     navbar.leftFacet().addText().text("Text");
     
-    navbar = new Navbar().attachTo(target);
+    navbar = Navbar.create().attachTo(target);
     navbar.brand().icon(FontAwesome.GLOBE);
     navbar.rightFacet().addButton().text("Button");
     item = navbar.rightFacet().addDropItem().text("Click me");
@@ -32,8 +32,13 @@ public class Navbars implements Fragment {
     navbar.rightFacet().addItem().text("Link");
     navbar.rightFacet().addText().text("Text");
     
-    navbar = new Navbar().attachTo(target).css(Navbar.Type.INVERSE);
+    navbar = Navbar.create().attachTo(target).css(Navbar.Type.INVERSE);
     navbar.brand().text("Virtuozo");
-    navbar.rightForm().addInput(new InputText().placeholder("Search...")).addButton().text("Go!");
+    navbar.rightForm().addInput(InputText.create().placeholder("Search...")).addButton().text("Go!");
+  }
+  
+  @Override
+  public String title() {
+    return "Navbar";
   }
 }

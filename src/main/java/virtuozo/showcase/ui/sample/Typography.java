@@ -11,12 +11,18 @@ import virtuozo.showcase.ui.sample.typography.InlineTexts;
 import virtuozo.showcase.ui.sample.typography.Lists;
 import virtuozo.showcase.ui.sample.typography.Paragraphs;
 import virtuozo.showcase.ui.sample.typography.TextColors;
+import virtuozo.ui.FontAwesome;
 
 public class Typography implements Sample {
   
   @Override
   public String title() {
     return "Typography";
+  }
+  
+  @Override
+  public FontAwesome icon() {
+    return FontAwesome.FONT;
   }
   
   @Override

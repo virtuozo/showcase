@@ -14,12 +14,18 @@ import virtuozo.showcase.ui.sample.layouts.Panels;
 import virtuozo.showcase.ui.sample.layouts.Tables;
 import virtuozo.showcase.ui.sample.layouts.Thumbnails;
 import virtuozo.showcase.ui.sample.layouts.Wells;
+import virtuozo.ui.FontAwesome;
 
-public class Layouts implements Sample {
+public class Decorations implements Sample {
   
   @Override
   public String title() {
-    return "Layouts";
+    return "Decorations";
+  }
+  
+  @Override
+  public FontAwesome icon() {
+    return FontAwesome.EYE;
   }
   
   @Override

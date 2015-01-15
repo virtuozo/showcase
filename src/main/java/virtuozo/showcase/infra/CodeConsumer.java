@@ -14,7 +14,6 @@
  */
 package virtuozo.showcase.infra;
 
-import virtuozo.infra.BrowserStorage.StoreKey;
 import virtuozo.infra.Rest;
 import virtuozo.infra.Rest.PathBuilder;
 import virtuozo.infra.RestMethod.MediaType;
@@ -23,6 +22,7 @@ import virtuozo.infra.api.TextCallback;
 import virtuozo.showcase.infra.events.FailureEvent;
 import virtuozo.ui.Component;
 import virtuozo.ui.Elements;
+import virtuozo.ui.BrowserStorage.StoreKey;
 
 public class CodeConsumer {
   private static final CodeConsumer instance = new CodeConsumer();

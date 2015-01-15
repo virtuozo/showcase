@@ -27,6 +27,7 @@ import com.google.gwt.dom.client.DivElement;
 public class Example extends Component<Example> {
   private Tag<DivElement> sample = Tag.asDiv().css("bs-example");
   private Tag<DivElement> code = Tag.asDiv().css("highlight");
+  private Sampler sampler;
 
   private Example() {
     super(Elements.div());
@@ -35,6 +36,7 @@ public class Example extends Component<Example> {
   
   public static Example create(Sampler target){
     Example example = new Example();
+    example.sampler = target;
     target.add(example);
     return example;
   }
@@ -47,6 +49,7 @@ public class Example extends Component<Example> {
       }
     });
     target.render(this.sample);
+    this.sampler.add(target, this);
     return this;
   }
 }

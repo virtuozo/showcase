@@ -3,7 +3,7 @@ package virtuozo.showcase.ui.sample.layouts;
 import virtuozo.showcase.ui.sample.Fragment;
 import virtuozo.ui.Table;
 import virtuozo.ui.Table.Row;
-import virtuozo.ui.api.HasComponents;
+import virtuozo.ui.interfaces.HasComponents;
 
 public class Tables implements Fragment {
 
@@ -16,7 +16,7 @@ public class Tables implements Fragment {
   }
   
   private Table createSample(String caption){
-	  Table table = new Table();
+	  Table table = Table.create();
 	  table.caption().text(caption);
 	  Row header = table.header().addRow();
 	  header.addCell().text("#");
@@ -31,5 +31,10 @@ public class Tables implements Fragment {
 	  body.addCell().text("@mrbraz");
 	  
 	  return table;
+  }
+  
+  @Override
+  public String title() {
+    return "Table";
   }
 }

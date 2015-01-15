@@ -10,14 +10,13 @@ import virtuozo.showcase.ui.HomePagePresenter.HomeView;
 import virtuozo.ui.Container;
 import virtuozo.ui.FontAwesome;
 import virtuozo.ui.Heading;
-import virtuozo.ui.Heading.Level;
 import virtuozo.ui.InputGroup;
 import virtuozo.ui.InputText;
 import virtuozo.ui.LandingPageLayout;
 import virtuozo.ui.LandingPageLayout.Intro.Slogan;
 import virtuozo.ui.LandingPageLayout.Section;
-import virtuozo.ui.Media;
 import virtuozo.ui.MediaList;
+import virtuozo.ui.MediaList.Media;
 import virtuozo.ui.Navbar;
 import virtuozo.ui.Navbar.Facet.NavItem;
 import virtuozo.ui.Paragraph;
@@ -28,9 +27,9 @@ import virtuozo.ui.Text;
 import virtuozo.ui.ViewPort;
 import virtuozo.ui.Wizard;
 import virtuozo.ui.Wizard.Step;
-import virtuozo.ui.api.HasComponents;
-import virtuozo.ui.api.Icon;
 import virtuozo.ui.css.TextAlignment;
+import virtuozo.ui.interfaces.HasComponents;
+import virtuozo.ui.interfaces.Icon;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.AnchorElement;
@@ -44,7 +43,7 @@ import com.google.gwt.event.dom.client.MouseOverHandler;
 import com.google.gwt.resources.client.ImageResource;
 
 public class HomePage implements HomeView {
-  private LandingPageLayout layout = new LandingPageLayout();
+  private LandingPageLayout layout = LandingPageLayout.create();
 
   @Override
   public void render(HasComponents<?, ?> container) {
@@ -60,8 +59,8 @@ public class HomePage implements HomeView {
     GithubButtons github = new GithubButtons("virtuozo", "spa-framework");
     github.add(Type.FOLLOW).add(Type.FORK).add(Type.WATCH);
 
-    Slogan slogan = this.layout.intro().slogan().add(new Heading(Level.TWO).css("heading").text("Virtuozo Showcase"));
-    slogan.add(new Heading(Level.FOUR).css("heading").text(Bundle.constants().virtuozo()));
+    Slogan slogan = this.layout.intro().slogan().add(Heading.two().css("heading").text("Virtuozo Showcase"));
+    slogan.add(Heading.four().css("heading").text(Bundle.constants().virtuozo()));
     slogan.add(github);
 
     Section about = this.addSection(Bundle.constants().aboutVirtuozo());
@@ -90,7 +89,7 @@ public class HomePage implements HomeView {
     Column left = section.addColumn().span(6, ViewPort.SMALL);
 
     Callout manifesto = new Callout().css(Callout.Color.WARNING);
-    left.add(new Heading(Level.FOUR).css("heading").text(Bundle.constants().manifesto())).add(manifesto);
+    left.add(Heading.four().css("heading").text(Bundle.constants().manifesto())).add(manifesto);
 
     manifesto.addHeading().css("heading").text(Bundle.constants().manifestoFirst()).style().marginTop(0, Unit.PX);
     manifesto.addText().text(Bundle.constants().manifestoFirstDescription());
@@ -111,7 +110,7 @@ public class HomePage implements HomeView {
     manifesto.addText().text(Bundle.constants().manifestoSixthDescription());
 
     Column right = section.addColumn().span(6, ViewPort.SMALL);
-    MediaList list = new MediaList();
+    MediaList list = MediaList.create();
     right.add(list);
 
     createAboutMedia(list, Bundle.images().gwt(), "Google Web Toolkit",Bundle.constants().aboutGwt());
@@ -154,19 +153,17 @@ public class HomePage implements HomeView {
 
   private void buildGettingStarted(Section section) {
     section.addColumn().span(12, ViewPort.X_SMALL)
-        .add(new Paragraph().lead().css(TextAlignment.CENTER).text(Bundle.constants().headline()));
+        .add(Paragraph.create().lead().css(TextAlignment.CENTER).text(Bundle.constants().headline()));
 
-    Wizard wizard = new Wizard().hideControls();
+    Wizard wizard = Wizard.create().hideControls();
     wizard.heading().css("heading").text(Bundle.constants().noWorries());
     section.addColumn().span(12, ViewPort.X_SMALL).add(wizard);
     Step step = wizard.addStep().text(Bundle.constants().gettingStartedStepOne());
-    step.add(new Paragraph()
-        .html(Bundle.constants().gettingStartedMaven()));
-    step.add(new Paragraph()
-        .text(Bundle.constants().gettingStartedSetup()));
+    step.add(Paragraph.create().html(Bundle.constants().gettingStartedMaven()));
+    step.add(Paragraph.create().text(Bundle.constants().gettingStartedSetup()));
 
-    Row row = new Container(Container.Type.FLUID).attachTo(step).addRow();
-    MediaList list = new MediaList();
+    Row row = Container.fluid().attachTo(step).addRow();
+    MediaList list = MediaList.create();
     row.addColumn().span(6, ViewPort.SMALL).add(list);
 
     Media media = list.addMedia();
@@ -175,7 +172,7 @@ public class HomePage implements HomeView {
     media.body().addText().css(TextAlignment.JUSTIFY).text(Bundle.constants().kickStartAppDescription());
     media.body().add(this.focusText().value("git clone https://github.com/virtuozo/kickstart.git"));
 
-    list = new MediaList();
+    list = MediaList.create();
     row.addColumn().span(6, ViewPort.SMALL).add(list);
     media = list.addMedia();
     media.object().addImage().src(Bundle.images().forge());
@@ -184,20 +181,19 @@ public class HomePage implements HomeView {
     media.body().add(this.focusText().value(Bundle.constants().commingSoon()));//addon-install-from-git --url https://github.com/virtuozo/spa-framework.git --coordinate com.github.virtuozo:forge-addon
 
     step = wizard.addStep().text(Bundle.constants().gettingStartedStepTwo());
-    step.add(new Paragraph()
-        .text(Bundle.constants().moduleRunningDescription()));
+    step.add(Paragraph.create().text(Bundle.constants().moduleRunningDescription()));
 
-    row = new Container(Container.Type.FLUID).attachTo(step).addRow();
-    row.addColumn().span(4, ViewPort.SMALL).add(new Heading(Level.FIVE).css("heading").text(Bundle.constants().compilationMaven())).add(this.focusText().value("mvn package -P gwt"));
-    row.addColumn().span(4, ViewPort.SMALL).add(new Heading(Level.FIVE).css("heading").text(Bundle.constants().jettyRunning())).add(this.focusText().value("mvn jetty:run -P gwt"));
-    row.addColumn().span(4, ViewPort.SMALL).add(new Heading(Level.FIVE).css("heading").text(Bundle.constants().devModeRunning())).add(this.focusText().value("mvn gwt:run -P gwt"));
-    row.addColumn().span(12, ViewPort.SMALL).add(new Text().css(TextAlignment.CENTER).text(Bundle.constants().noteOnDebugging())).style().paddingTop(10, Unit.PX);
+    row = Container.fluid().attachTo(step).addRow();
+    row.addColumn().span(4, ViewPort.SMALL).add(Heading.five().css("heading").text(Bundle.constants().compilationMaven())).add(this.focusText().value("mvn package -P gwt"));
+    row.addColumn().span(4, ViewPort.SMALL).add(Heading.five().css("heading").text(Bundle.constants().jettyRunning())).add(this.focusText().value("mvn jetty:run -P gwt"));
+    row.addColumn().span(4, ViewPort.SMALL).add(Heading.five().css("heading").text(Bundle.constants().devModeRunning())).add(this.focusText().value("mvn gwt:run -P gwt"));
+    row.addColumn().span(12, ViewPort.SMALL).add(Text.create().css(TextAlignment.CENTER).text(Bundle.constants().noteOnDebugging())).style().paddingTop(10, Unit.PX);
 
     wizard.addStep().text(Bundle.constants().gettingStartedStepThree()).add(new CallToDocs());
   }
 
   private void buildCommunity(Section section) {
-    Row row = new Container(Container.Type.FLUID).attachTo(section).addRow();
+    Row row = Container.fluid().attachTo(section).addRow();
 
     this.createCommunityLink(row, "https://github.com/virtuozo", FontAwesome.GITHUB);
 
@@ -210,7 +206,7 @@ public class HomePage implements HomeView {
     String googleUrl = "https://plus.google.com/share?url=" + GWT.getHostPageBaseURL();
     this.createCommunityLink(row, googleUrl, FontAwesome.GOOGLE_PLUS);
 
-    row.addColumn().span(8, ViewPort.SMALL).add(new Paragraph().text(Bundle.constants().showCaseNote()));
+    row.addColumn().span(8, ViewPort.SMALL).add(Paragraph.create().text(Bundle.constants().showCaseNote()));
   }
 
   private void createCommunityLink(Row row, String href, FontAwesome icon) {
@@ -221,7 +217,7 @@ public class HomePage implements HomeView {
   }
 
   private InputGroup focusText() {
-    final InputText input = new InputText();
+    final InputText input = InputText.create();
     input.onFocus(new FocusHandler() {
 
       @Override
@@ -236,15 +232,15 @@ public class HomePage implements HomeView {
       }
     });
 
-    InputGroup group = new InputGroup(input);
+    InputGroup group = InputGroup.create(input);
     group.style().width(100, Unit.PCT);
 
     return group;
   }
 
   private Paragraph addFeatureColumn(Section section, Icon icon, String title) {
-    Heading heading = new Heading(Level.FOUR).css("heading").text(" " + title);
-    Paragraph paragraph = new Paragraph().css(TextAlignment.JUSTIFY);
+    Heading heading = Heading.four().css("heading").text(" " + title);
+    Paragraph paragraph = Paragraph.create().css(TextAlignment.JUSTIFY);
     icon.attachTo(heading);
 
     section.addColumn().span(4, ViewPort.LARGE).span(6, ViewPort.SMALL).add(heading).add(paragraph);

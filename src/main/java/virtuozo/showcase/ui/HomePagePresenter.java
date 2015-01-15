@@ -1,7 +1,7 @@
 package virtuozo.showcase.ui;
 
 import virtuozo.infra.Presenter;
-import virtuozo.infra.View;
+import virtuozo.infra.interfaces.View;
 import virtuozo.showcase.ui.HomePagePresenter.HomeView;
 import virtuozo.showcase.ui.pages.HomePage;
 

@@ -13,7 +13,7 @@ public class GithubButtons extends Component<GithubButtons> {
 
   private String repository;
 
-  private OrderList list = new OrderList(OrderList.Type.UNORDERED).css("github-buttons");
+  private OrderList list = OrderList.unordered().css("github-buttons");
 
   public GithubButtons(String user, String repository) {
     this.user = user;

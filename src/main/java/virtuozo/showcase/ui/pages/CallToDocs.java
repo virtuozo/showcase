@@ -7,7 +7,6 @@ import virtuozo.ui.Component;
 import virtuozo.ui.Elements;
 import virtuozo.ui.FontAwesome;
 import virtuozo.ui.Heading;
-import virtuozo.ui.Heading.Level;
 import virtuozo.ui.LayoutPanel;
 import virtuozo.ui.Paragraph;
 import virtuozo.ui.StackedIcon;
@@ -38,10 +37,10 @@ public class CallToDocs extends Component<CallToDocs> {
   private Tag<AnchorElement> createDocLink(FontAwesome icon, String title, String description) {
     LayoutPanel panel = LayoutPanel.vertical();
     panel.style().width(100, Unit.PCT);
-    StackedIcon stack = new StackedIcon().css(FontAwesome.Styles.FOUR_TIMES_LARGE).regular(icon, FontAwesome.Styles.INVERSE).larger(FontAwesome.CIRCLE, TextColor.INFO);
+    StackedIcon stack = StackedIcon.create().css(FontAwesome.Styles.FOUR_TIMES_LARGE).regular(icon, FontAwesome.Styles.INVERSE).larger(FontAwesome.CIRCLE, TextColor.INFO);
     Tag<AnchorElement> heading = Tag.asAnchor();
-    heading.add(new Heading(Level.FOUR).css("heading").text(title));
-    panel.add(stack).add(heading).add(new Paragraph().text(description));
+    heading.add(Heading.four().css("heading").text(title));
+    panel.add(stack).add(heading).add(Paragraph.create().text(description));
     docs.add(panel);
     
     return heading;

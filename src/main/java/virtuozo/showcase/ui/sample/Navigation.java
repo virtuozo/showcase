@@ -7,12 +7,18 @@ import virtuozo.showcase.ui.sample.navigation.Paginations;
 import virtuozo.showcase.ui.sample.navigation.Pills;
 import virtuozo.showcase.ui.sample.navigation.Tabs;
 import virtuozo.showcase.ui.sample.navigation.Wizards;
+import virtuozo.ui.FontAwesome;
 
 public class Navigation implements Sample {
   
   @Override
   public String title() {
     return "Navigation";
+  }
+  
+  @Override
+  public FontAwesome icon() {
+    return FontAwesome.LINK;
   }
   
   @Override

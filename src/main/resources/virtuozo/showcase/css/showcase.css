@@ -1276,17 +1276,17 @@ h1[id] {
 	color: #468847;
 }
 
-.bs-glyphicons {
+.bs-icons {
 	margin: 0 -19px 20px -16px;
 	overflow: hidden;
 }
 
-.bs-glyphicons-list {
+.bs-icons-list {
 	list-style: none outside none;
 	padding-left: 0;
 }
 
-.bs-glyphicons li {
+.bs-icons li {
 	background-color: #F9F9F9;
 	border: 1px solid #FFFFFF;
 	float: left;
@@ -1296,31 +1296,32 @@ h1[id] {
 	padding: 10px;
 	text-align: center;
 	width: 25%;
+	
 }
 
-.bs-glyphicons .glyphicon {
+.bs-icons .glyphicon, .bs-icons .fa {
 	font-size: 24px;
 	margin-bottom: 10px;
 	margin-top: 5px;
 }
 
-.bs-glyphicons .glyphicon-class {
+.bs-icons .icon-class {
 	display: block;
 	text-align: center;
 	word-wrap: break-word;
 }
 
-.bs-glyphicons li:hover {
+.bs-icons li:hover {
 	background-color: #563D7C;
 	color: #FFFFFF;
 }
 
 @media ( min-width : 768px) {
-	.bs-glyphicons {
+	.bs-icons {
 		margin-left: 0;
 		margin-right: 0;
 	}
-	.bs-glyphicons li {
+	.bs-icons li {
 		font-size: 12px;
 		width: 12.5%;
 	}
