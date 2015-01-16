@@ -1,4 +1,4 @@
-package virtuozo.showcase.ui.sample.layouts;
+package virtuozo.showcase.ui.sample.decorations;
 
 import virtuozo.showcase.ui.Bundle;
 import virtuozo.showcase.ui.sample.Fragment;

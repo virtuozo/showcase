@@ -1,4 +1,4 @@
-package virtuozo.showcase.ui.sample.layouts;
+package virtuozo.showcase.ui.sample.decorations;
 
 import virtuozo.showcase.ui.Bundle;
 import virtuozo.showcase.ui.sample.Fragment;
@@ -27,13 +27,13 @@ public class Thumbnails implements Fragment {
   
   private Thumbnail createSample(){
 	  Thumbnail thumbnail = Thumbnail.create();
-	  thumbnail.image().src(Bundle.images().logo());
+	  thumbnail.image().src(Bundle.samples().largeHusky());
 	  return thumbnail;
   }
   
   private Thumbnail createCaption(){
 	  Thumbnail thumbnail = Thumbnail.create();
-	  thumbnail.image().src(Bundle.images().logo());
+	  thumbnail.image().src(Bundle.samples().largeYork());
 	  thumbnail.caption().add(Heading.three().text("Virtuozo"))
 	  .add(Paragraph.create().text(Bundle.constants().headline()))
 	  .add(Button.create().text("More").css(ButtonColor.PRIMARY));

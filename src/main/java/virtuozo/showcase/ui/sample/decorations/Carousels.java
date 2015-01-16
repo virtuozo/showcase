@@ -1,4 +1,4 @@
-package virtuozo.showcase.ui.sample.layouts;
+package virtuozo.showcase.ui.sample.decorations;
 
 import virtuozo.showcase.ui.Bundle;
 import virtuozo.showcase.ui.sample.Fragment;
@@ -14,10 +14,11 @@ public class Carousels implements Fragment {
 
   public void render(HasComponents<?, ?> target) {
     final Carousel carousel = Carousel.create().attachTo(target);
-    Caption caption = carousel.addSlide().image(Bundle.images().author()).caption();
-    caption.addHeading().text("Mr. Braz");
-    caption.addText().text("Creator of Virtuozo, senior software engineer and Husky breeder");
-    carousel.addSlide().image(Bundle.images().husky());
+    Caption caption = carousel.addSlide().image(Bundle.samples().largeHusky()).caption();
+    caption.addHeading().text("Heading");
+    caption.addText().text("Put some text here");
+    
+    carousel.addSlide().image(Bundle.samples().largeYork());
     
     final Button play = Button.create().attachTo(target).text("Auto play");
     play.onClick(new ClickHandler() {

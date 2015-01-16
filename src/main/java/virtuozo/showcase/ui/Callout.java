@@ -26,7 +26,7 @@ public class Callout extends Component<Callout> {
   
   public Callout() {
     super(Elements.div());
-    this.css().set("bs-callout");
+    this.css().set("callout");
   }
   
   public Heading addHeading(){
@@ -55,9 +55,9 @@ public class Callout extends Component<Callout> {
       return STYLES;
     }
 
-    public static final Color INFO = new Color("bs-callout-info");
-    public static final Color DANGER = new Color("bs-callout-danger");
-    public static final Color WARNING = new Color("bs-callout-warning");
+    public static final Color INFO = new Color("callout-info");
+    public static final Color DANGER = new Color("callout-danger");
+    public static final Color WARNING = new Color("callout-warning");
     private static final StyleChooser STYLES = new StyleChooser(INFO, DANGER, WARNING);
   }
 }

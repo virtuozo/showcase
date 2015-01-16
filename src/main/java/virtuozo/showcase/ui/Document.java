@@ -16,40 +16,46 @@ package virtuozo.showcase.ui;
 
 import virtuozo.showcase.infra.CodeConsumer;
 import virtuozo.showcase.infra.CodeConsumer.CodeCallback;
-import virtuozo.showcase.ui.sample.Fragment;
 import virtuozo.showcase.ui.sample.Sampler;
+import virtuozo.showcase.ui.sample.Snippet;
 import virtuozo.ui.Component;
 import virtuozo.ui.Elements;
 import virtuozo.ui.Tag;
 
 import com.google.gwt.dom.client.DivElement;
 
-public class Example extends Component<Example> {
-  private Tag<DivElement> sample = Tag.asDiv().css("example");
+public class Document extends Component<Document> {
+  private Tag<DivElement> sample = Tag.asDiv().css("doc");
   private Tag<DivElement> code = Tag.asDiv().css("highlight");
   private Sampler sampler;
 
-  private Example() {
+  private Document() {
     super(Elements.div());
     this.addChild(this.sample).addChild(this.code);
   }
   
-  public static Example create(Sampler target){
-    Example example = new Example();
+  public static Document create(Sampler target){
+    Document example = new Document();
     example.sampler = target;
     target.add(example);
     return example;
   }
 
-  public Example load(Fragment target){
-    CodeConsumer.get().load(target.getClass(), new CodeCallback() {
+  public Document load(Snippet target){
+    CodeConsumer.get().load(target.snippet(), new CodeCallback() {
       @Override
       public void onCodeResponse(String code) {
-        Example.this.code.html(SyntaxHighlighter.get().java(code));
+        Document.this.code.html(SyntaxHighlighter.get().java(code));
       }
     });
+    
     target.render(this.sample);
     this.sampler.add(target, this);
+    return this;
+  }
+  
+  public Document code(String code){
+    Document.this.code.html(SyntaxHighlighter.get().java(code));
     return this;
   }
 }

@@ -1,4 +1,4 @@
-package virtuozo.showcase.ui.sample.layouts;
+package virtuozo.showcase.ui.sample.decorations;
 
 import virtuozo.showcase.ui.Bundle;
 import virtuozo.showcase.ui.sample.Fragment;
@@ -35,7 +35,7 @@ public class MediaLists implements Fragment {
   }
   
   private void configure(Media media){
-	  media.object().addImage().src(Bundle.images().smallLogo());
+	  media.object().addImage().src(Bundle.samples().smallHusky());
 	  media.body().addHeading().text("Virtuozo");
 	  media.body().addText().text(Bundle.constants().headline());
   }

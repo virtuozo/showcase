@@ -1,7 +1,6 @@
 package virtuozo.showcase.ui.sample.forms;
 
-import java.util.Date;
-
+import virtuozo.infra.Calendar;
 import virtuozo.showcase.ui.sample.Fragment;
 import virtuozo.ui.Checkbox;
 import virtuozo.ui.Combo;
@@ -33,7 +32,7 @@ public class Horizontal implements Fragment {
     password.label().text("Password").show();
     password.helpBlock().text("Fill out your password here").show();
     
-    FormGroup<Datepicker, Date> expiration = form.add(Datepicker.create().icon(FontAwesome.CALENDAR_O));
+    FormGroup<Datepicker, Calendar> expiration = form.add(Datepicker.create().icon(FontAwesome.CALENDAR_O));
     expiration.label().text("Expiration").show();
     
     FormGroup<Combo, Item> profile = form.add(Combo.create().placeholder("Please, select").resetable());

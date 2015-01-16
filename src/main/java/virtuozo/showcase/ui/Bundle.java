@@ -24,12 +24,18 @@ import com.google.gwt.resources.client.ImageResource;
 public class Bundle {
   private static final Images images = GWT.create(Images.class);
   
+  private static final Samples samples = GWT.create(Samples.class);
+  
   private static final Constants contants = GWT.create(Constants.class);
   
   private static final Messages messages = GWT.create(Messages.class);
   
   public static Images images(){
     return Bundle.images;
+  }
+  
+  public static Samples samples(){
+    return Bundle.samples;
   }
   
   public static Constants constants(){
@@ -40,13 +46,44 @@ public class Bundle {
     return messages;
   }
   
-  public static interface Images extends ClientBundle{
-    @Source("virtuozo/showcase/images/author.jpg")
-    ImageResource author();
+  public static interface Samples extends ClientBundle{
+    @Source("virtuozo/showcase/images/sample/layout-bare.png")
+    ImageResource bare();
     
+    @Source("virtuozo/showcase/images/sample/layout-landing.png")
+    ImageResource landing();
+    
+    @Source("virtuozo/showcase/images/sample/layout-hero.png")
+    ImageResource hero();
+    
+    @Source("virtuozo/showcase/images/sample/layout-sticky.png")
+    ImageResource sticky();
+    
+    @Source("virtuozo/showcase/images/sample/layout-side.png")
+    ImageResource side();
+    
+    @Source("virtuozo/showcase/images/sample/lg-husky.jpg")
+    ImageResource largeHusky();
+    
+    @Source("virtuozo/showcase/images/sample/lg-york.jpg")
+    ImageResource largeYork();
+    
+    @Source("virtuozo/showcase/images/sample/md-husky.jpg")
+    ImageResource mediumHusky();
+    
+    @Source("virtuozo/showcase/images/sample/md-york.jpg")
+    ImageResource mediumYork();
+
+    @Source("virtuozo/showcase/images/sample/sm-husky.jpg")
+    ImageResource smallHusky();
+
+    @Source("virtuozo/showcase/images/sample/sm-york.jpg")
+    ImageResource smallYork();
+  }
+  
+  public static interface Images extends ClientBundle{
     @Source("virtuozo/showcase/images/bootstrap.jpg")
     ImageResource bootstrap();
-    
     
     @Source("virtuozo/showcase/images/bootswatch.png")
     ImageResource bootswatch();
@@ -57,12 +94,6 @@ public class Bundle {
     @Source("virtuozo/showcase/images/forge.png")
     ImageResource forge();
     
-    @Source("virtuozo/showcase/images/husky.jpg")
-    ImageResource husky();
-    
-    @Source("virtuozo/showcase/images/eclipse.png")
-    ImageResource eclipse();
-    
     @Source("virtuozo/showcase/images/gwt.png")
     ImageResource gwt();
     
@@ -72,14 +103,8 @@ public class Bundle {
     @Source("virtuozo/showcase/images/logo.png")
     ImageResource logo();
     
-    @Source("virtuozo/showcase/images/maven.png")
-    ImageResource maven();
-    
     @Source("virtuozo/showcase/images/sm-logo.png")
     ImageResource smallLogo();
-    
-    @Source("virtuozo/showcase/images/terminal.png")
-    ImageResource terminal();
     
     @Source("virtuozo/showcase/images/xs-logo.png")
     ImageResource xsmallLogo();

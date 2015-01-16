@@ -17,6 +17,6 @@ public class Headlines implements Fragment {
   
   @Override
   public String title() {
-    return "Head line";
+    return "Headline";
   }
 }

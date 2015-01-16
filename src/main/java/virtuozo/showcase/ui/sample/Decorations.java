@@ -1,19 +1,19 @@
 package virtuozo.showcase.ui.sample;
 
 import virtuozo.showcase.ui.Example;
-import virtuozo.showcase.ui.sample.layouts.Badges;
-import virtuozo.showcase.ui.sample.layouts.Carousels;
-import virtuozo.showcase.ui.sample.layouts.Jumbotrons;
-import virtuozo.showcase.ui.sample.layouts.Labels;
-import virtuozo.showcase.ui.sample.layouts.LayoutPanels;
-import virtuozo.showcase.ui.sample.layouts.ListGroups;
-import virtuozo.showcase.ui.sample.layouts.MediaLists;
-import virtuozo.showcase.ui.sample.layouts.PageHeaders;
-import virtuozo.showcase.ui.sample.layouts.PanelGroups;
-import virtuozo.showcase.ui.sample.layouts.Panels;
-import virtuozo.showcase.ui.sample.layouts.Tables;
-import virtuozo.showcase.ui.sample.layouts.Thumbnails;
-import virtuozo.showcase.ui.sample.layouts.Wells;
+import virtuozo.showcase.ui.sample.decorations.Badges;
+import virtuozo.showcase.ui.sample.decorations.Carousels;
+import virtuozo.showcase.ui.sample.decorations.Jumbotrons;
+import virtuozo.showcase.ui.sample.decorations.Labels;
+import virtuozo.showcase.ui.sample.decorations.LayoutPanels;
+import virtuozo.showcase.ui.sample.decorations.ListGroups;
+import virtuozo.showcase.ui.sample.decorations.MediaLists;
+import virtuozo.showcase.ui.sample.decorations.PageHeaders;
+import virtuozo.showcase.ui.sample.decorations.PanelGroups;
+import virtuozo.showcase.ui.sample.decorations.Panels;
+import virtuozo.showcase.ui.sample.decorations.Tables;
+import virtuozo.showcase.ui.sample.decorations.Thumbnails;
+import virtuozo.showcase.ui.sample.decorations.Wells;
 import virtuozo.ui.FontAwesome;
 
 public class Decorations implements Sample {
