@@ -1,4 +1,4 @@
-package virtuozo.showcase.ui.sample.layout;
+package virtuozo.showcase.ui.sample.layouts;
 
 import virtuozo.ui.BarePageLayout;
 import virtuozo.ui.Paragraph;

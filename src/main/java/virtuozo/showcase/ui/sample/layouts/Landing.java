@@ -1,4 +1,4 @@
-package virtuozo.showcase.ui.sample.layout;
+package virtuozo.showcase.ui.sample.layouts;
 
 import virtuozo.showcase.ui.Bundle;
 import virtuozo.showcase.ui.sample.Snippet;
@@ -8,24 +8,25 @@ import virtuozo.ui.interfaces.HasComponents;
 
 import com.google.gwt.dom.client.Style.VerticalAlign;
 
-public class Hero implements Snippet {
+public class Landing implements Snippet {
 
   public void render(HasComponents<?, ?> target) {
     MediaList list = MediaList.create().attachTo(target);
     Media media = list.addMedia();
-    media.object().addImage().src(Bundle.samples().hero());
     media.body().style().verticalAlign(VerticalAlign.MIDDLE);
-    media.body().addHeading().text("Hero Page Layout");
-    media.body().addText().text("This layout provides a navigation bar, a master head (hero image) section and a fluid container into the body.");
+    media.object().addImage().src(Bundle.samples().landing());
+    media.body().addHeading().text("Landing Page Layout");
+    media.body().addText().text("This showcase home page uses the lading page layout.");
+    media.body().addText().text("This layout provides a navigation bar and a set of fluid containers into the body. All of the sections can be linked by a navigational item.");
   }
   
   @Override
   public Class<?> snippet() {
-    return HeroSnippet.class;
+    return LandingSnippet.class;
   }
   
   @Override
   public String title() {
-    return "Hero";
+    return "Landing Page";
   }
 }

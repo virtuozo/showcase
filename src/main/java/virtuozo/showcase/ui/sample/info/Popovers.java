@@ -16,15 +16,15 @@ import com.google.gwt.event.dom.client.KeyUpHandler;
 public class Popovers implements Fragment {
 
   public void render(HasComponents<?, ?> target) {
-    Button button = Button.create().text("Popover on bottom").attachTo(target);
-    Popover tip = Popover.create().placement(Direction.BOTTOM).trigger(button, Popover.Trigger.CLICK);
-    tip.heading().text(button.text());
-    tip.body().addText().text(button.text());
-    
     Label label = Label.create().attachTo(target).text("Popover on left");
-    tip = Popover.create().placement(Direction.LEFT).trigger(label, Popover.Trigger.HOVER);
+    Popover tip = Popover.create().placement(Direction.LEFT).trigger(label, Popover.Trigger.HOVER);
     tip.heading().text(label.text());
     tip.body().addText().text(label.text());
+    
+    Button button = Button.create().text("Popover on right").attachTo(target);
+    tip = Popover.create().placement(Direction.RIGHT).trigger(button, Popover.Trigger.CLICK);
+    tip.heading().text(button.text());
+    tip.body().addText().text(button.text());
     
     String placeholder = "Popover on top";
     InputText text = InputText.create().placeholder(placeholder).attachTo(target);
@@ -32,9 +32,9 @@ public class Popovers implements Fragment {
     tip.heading().text(placeholder);
     tip.body().addText().text(placeholder);
 
-    placeholder = "Popover on right";
-    text = InputText.create().placeholder("Type here to trigger Popover").attachTo(target);
-    final Popover popover = Popover.create().placement(Direction.RIGHT).trigger(text, Popover.Trigger.MANUAL);
+    placeholder = "Type here to trigger Popover";
+    text = InputText.create().placeholder(placeholder).attachTo(target);
+    final Popover popover = Popover.create().placement(Direction.BOTTOM).trigger(text, Popover.Trigger.MANUAL);
     popover.heading().text(placeholder);
     popover.body().addText().text(placeholder);
     

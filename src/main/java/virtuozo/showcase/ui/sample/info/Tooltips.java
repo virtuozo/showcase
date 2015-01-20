@@ -16,17 +16,19 @@ import com.google.gwt.event.dom.client.KeyUpHandler;
 public class Tooltips implements Fragment {
 
   public void render(HasComponents<?, ?> target) {
-    Button button = Button.create().text("Tooltip on bottom").attachTo(target);
-    Tooltip.create().placement(Direction.BOTTOM).trigger(button, Tooltip.Trigger.CLICK).text(button.text());
-    
     Label label = Label.create().attachTo(target).text("Tooltip on left");
     Tooltip.create().placement(Direction.LEFT).trigger(label, Tooltip.Trigger.HOVER).text(label.text());
     
-    InputText text = InputText.create().placeholder("Tooltip on top").attachTo(target);
-    Tooltip.create().placement(Direction.TOP).trigger(text, Tooltip.Trigger.FOCUS).text("Tooltip on top");
+    Button button = Button.create().text("Tooltip on right").attachTo(target);
+    Tooltip.create().placement(Direction.RIGHT).trigger(button, Tooltip.Trigger.CLICK).text(button.text());
     
-    text = InputText.create().placeholder("Type here to trigger tooltip").attachTo(target);
-    final Tooltip tip = Tooltip.create().placement(Direction.RIGHT).trigger(text, Tooltip.Trigger.MANUAL).text("Tooltip on right");
+    String placeholder = "Tooltip on top";
+    InputText text = InputText.create().placeholder(placeholder).attachTo(target);
+    Tooltip.create().placement(Direction.TOP).trigger(text, Tooltip.Trigger.FOCUS).text(placeholder);
+    
+    placeholder = "Type here to trigger tooltip on right";
+    text = InputText.create().placeholder(placeholder).attachTo(target);
+    final Tooltip tip = Tooltip.create().placement(Direction.BOTTOM).trigger(text, Tooltip.Trigger.MANUAL).text("Tooltip on bottom");
     text.onKeyUp(new KeyUpHandler() {
       
       @Override

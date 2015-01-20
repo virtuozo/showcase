@@ -5,5 +5,5 @@ import virtuozo.ui.interfaces.HasComponents;
 public interface Fragment {
   String title();
   
-  void render(HasComponents<?, ?> container);
+  void render(HasComponents<?, ?> target);
 }

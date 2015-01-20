@@ -1,4 +1,4 @@
-package virtuozo.showcase.ui.sample.layout;
+package virtuozo.showcase.ui.sample.layouts;
 
 import virtuozo.ui.FontAwesome;
 import virtuozo.ui.Heading;

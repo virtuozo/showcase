@@ -47,6 +47,7 @@ import com.google.gwt.dom.client.Style.Overflow;
 import com.google.gwt.dom.client.Style.Unit;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.user.client.Window;
 
 public class DocsPage implements DocsView {
 
@@ -71,7 +72,7 @@ public class DocsPage implements DocsView {
 
     Tag<DivElement> top = Tag.asDiv().attachTo(this.layout.body());
     top.style().overflow(Overflow.SCROLL).overflowY(Overflow.HIDDEN).marginBottom(5, Unit.PX);
-    LayoutPanel mainPanel = LayoutPanel.horizontal().attachTo(top);
+    LayoutPanel dockerPanel = LayoutPanel.horizontal().attachTo(top).css("docker");
     
     Container container = this.layout.body();
     Row mainRow = container.addRow();
@@ -79,20 +80,27 @@ public class DocsPage implements DocsView {
     this.samples = mainRow.addColumn().span(9, ViewPort.SMALL);
     
     this.leftPanel.attachTo(left).hide();
-    Affix.onMiddle().to(this.leftPanel);
+    this.leftPanel.footer().detachChildren().add(Tag.asAnchor().text("Back to top").onClick(new ClickHandler() {
+      
+      @Override
+      public void onClick(ClickEvent event) {
+        Window.scrollTo(0, 0);
+      }
+    }));
+    Affix.onTop().to(this.leftPanel);
     
-    this.createSample(mainPanel, new Typography());
-    this.createSample(mainPanel, new Decorations());
-    this.createSample(mainPanel, new Layouts());
-    this.createSample(mainPanel, new Navigation());
-    this.createSample(mainPanel, new Info());
-    this.createSample(mainPanel, new Actions());
-    this.createSample(mainPanel, new Icons());
-    this.createSample(mainPanel, new Forms());
-    this.createSample(mainPanel, new I18n());
-    this.createSample(mainPanel, new Events());
-    this.createSample(mainPanel, new Ajax());
-    this.createSample(mainPanel, new Storage());
+    this.createSample(dockerPanel, new Typography());
+    this.createSample(dockerPanel, new Decorations());
+    this.createSample(dockerPanel, new Layouts());
+    this.createSample(dockerPanel, new Navigation());
+    this.createSample(dockerPanel, new Info());
+    this.createSample(dockerPanel, new Actions());
+    this.createSample(dockerPanel, new Icons());
+    this.createSample(dockerPanel, new Forms());
+    this.createSample(dockerPanel, new Events());
+    this.createSample(dockerPanel, new I18n());
+    this.createSample(dockerPanel, new Ajax());
+    this.createSample(dockerPanel, new Storage());
     
     this.switchTo(new Typography());
   }
@@ -160,6 +168,7 @@ public class DocsPage implements DocsView {
           sample.asComponent().scrollTo();
         }
       });
+      
     }
     
     public Sampler detachChildren(){

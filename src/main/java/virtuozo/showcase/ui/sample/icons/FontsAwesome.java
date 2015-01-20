@@ -17,6 +17,6 @@ public class FontsAwesome implements Fragment {
   
   @Override
   public String title() {
-    return "Fontawesome";
+    return "FontAwesome";
   }
 }

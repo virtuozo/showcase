@@ -1,10 +1,10 @@
 package virtuozo.showcase.ui.sample.forms;
 
 import virtuozo.infra.Calendar;
+import virtuozo.infra.Item;
 import virtuozo.showcase.ui.sample.Fragment;
 import virtuozo.ui.Checkbox;
 import virtuozo.ui.Combo;
-import virtuozo.ui.Combo.Item;
 import virtuozo.ui.Datepicker;
 import virtuozo.ui.FontAwesome;
 import virtuozo.ui.FormGroup;
@@ -37,8 +37,8 @@ public class Horizontal implements Fragment {
     
     FormGroup<Combo, Item> profile = form.add(Combo.create().placeholder("Please, select").resetable());
     profile.label().text("Profile").show();
-    profile.control().item(Item.create("Administrator"));
-    profile.control().item(Item.create("Viewer"));
+    profile.control().add(Item.create("Administrator"));
+    profile.control().add(Item.create("Viewer"));
     
     FormGroup<InputFile, String> photo = form.add(InputFile.create());
     photo.label().text("Photo").show();
