@@ -7,6 +7,8 @@ import virtuozo.showcase.ui.Callout;
 import virtuozo.showcase.ui.GithubButtons;
 import virtuozo.showcase.ui.GithubButtons.Type;
 import virtuozo.showcase.ui.HomePagePresenter.HomeView;
+import virtuozo.ui.Anchor;
+import virtuozo.ui.Anchor.Target;
 import virtuozo.ui.Container;
 import virtuozo.ui.FontAwesome;
 import virtuozo.ui.Heading;
@@ -22,7 +24,6 @@ import virtuozo.ui.Navbar.Facet.NavItem;
 import virtuozo.ui.Paragraph;
 import virtuozo.ui.Row;
 import virtuozo.ui.Row.Column;
-import virtuozo.ui.Tag;
 import virtuozo.ui.Text;
 import virtuozo.ui.ViewPort;
 import virtuozo.ui.Wizard;
@@ -32,7 +33,6 @@ import virtuozo.ui.interfaces.HasComponents;
 import virtuozo.ui.interfaces.Icon;
 
 import com.google.gwt.core.client.GWT;
-import com.google.gwt.dom.client.AnchorElement;
 import com.google.gwt.dom.client.Style.Unit;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
@@ -88,7 +88,7 @@ public class HomePage implements HomeView {
   private void buildAbout(Section section) {
     Column left = section.addColumn().span(6, ViewPort.SMALL);
 
-    Callout manifesto = new Callout().css(Callout.Color.WARNING);
+    Callout manifesto = Callout.warning();
     left.add(Heading.four().css("heading").text(Bundle.constants().manifesto())).add(manifesto);
 
     manifesto.addHeading().css("heading").text(Bundle.constants().manifestoFirst()).style().marginTop(0, Unit.PX);
@@ -210,9 +210,7 @@ public class HomePage implements HomeView {
   }
 
   private void createCommunityLink(Row row, String href, FontAwesome icon) {
-    Tag<AnchorElement> link = Tag.asAnchor();
-    link.element().setHref(href);
-    link.element().setTarget("_blank");
+    Anchor link = Anchor.create().href(href).target(Target.BLANK);
     row.addColumn().span(1, ViewPort.SMALL).css(FontAwesome.Styles.THREE_TIMES_LARGE).add(link.add(icon.asComponent()));
   }
 

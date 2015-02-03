@@ -33,7 +33,7 @@ public class CodeConsumer {
 
   public CodeConsumer load(Class<?> target, final CodeCallback callback) {
     String path = target.getName().replace(".", "/").concat(".java");
-    Rest rest = new Rest(PathBuilder.get("code-server").append(path));
+    Rest rest = Rest.create(PathBuilder.get("code-server").append(path));
     rest.get().accept(MediaType.TEXT).send(new TextCallback(){
       @Override
       public void onFailure(RestException exception) {

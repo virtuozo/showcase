@@ -1,6 +1,6 @@
 package virtuozo.showcase.ui.sample.events;
 
-import virtuozo.ui.Tag;
+import virtuozo.ui.Anchor;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
@@ -11,7 +11,7 @@ import com.google.gwt.event.dom.client.DoubleClickHandler;
 public class ClickSnippet {
 
   public void eventHandling() {
-    Tag.asAnchor().onClick(new ClickHandler() {
+    Anchor.create().onClick(new ClickHandler() {
       
       @Override
       public void onClick(ClickEvent event) {

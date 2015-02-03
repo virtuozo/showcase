@@ -9,7 +9,7 @@ public class TextAreas implements Fragment {
   public void render(HasComponents<?, ?> target) {
     TextArea.create().attachTo(target).value("A simple text area");
     
-    TextArea.create().attachTo(target).value("A simple text area").rows(5).cols(2);
+    TextArea.create().attachTo(target).value("A simple text area").rows(5);
   }
   
   @Override

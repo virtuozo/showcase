@@ -188,9 +188,13 @@ section.color * {
 	padding: 20px;
 }
 
+.callout-top {
+	margin-top: 0px;
+}
+
 .callout h4 {
 	margin-bottom: 5px;
-	margin-top: 5%;
+	margin-top: 5px;
 }
 
 .callout p:last-child {
@@ -490,6 +494,7 @@ section.color * {
 
 .example > textarea {
 	width: 100%;
+	margin-bottom: 5px;
 }
 
 .example > input {
@@ -500,6 +505,10 @@ section.color * {
 
 .example > .autocomplete {
 	margin-bottom: 5px;
+}
+
+.example > .calendar {
+	width: 250px;
 }
 
 .docker .layout-horizontal{

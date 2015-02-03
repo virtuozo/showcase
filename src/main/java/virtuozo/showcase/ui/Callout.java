@@ -24,7 +24,19 @@ import virtuozo.ui.interfaces.UIComponent;
 
 public class Callout extends Component<Callout> {
   
-  public Callout() {
+  public static Callout danger(){
+    return new Callout().css(Callout.Color.DANGER);
+  }
+  
+  public static Callout info(){
+    return new Callout().css(Callout.Color.INFO);
+  }
+  
+  public static Callout warning(){
+    return new Callout().css(Callout.Color.WARNING);
+  }
+  
+  private Callout() {
     super(Elements.div());
     this.css().set("callout");
   }
@@ -45,7 +57,7 @@ public class Callout extends Component<Callout> {
     return this.addChild(widget);
   }
 
-  public static class Color extends CssClass {
+  static class Color extends CssClass {
     private Color(String name) {
       super(name);
     }

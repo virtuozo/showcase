@@ -5,7 +5,6 @@ import virtuozo.showcase.application.Places;
 import virtuozo.showcase.ui.Bundle;
 import virtuozo.showcase.ui.DocsPresenter.DocsView;
 import virtuozo.showcase.ui.sample.Actions;
-import virtuozo.showcase.ui.sample.Ajax;
 import virtuozo.showcase.ui.sample.Decorations;
 import virtuozo.showcase.ui.sample.Events;
 import virtuozo.showcase.ui.sample.Forms;
@@ -17,9 +16,9 @@ import virtuozo.showcase.ui.sample.Layouts;
 import virtuozo.showcase.ui.sample.Navigation;
 import virtuozo.showcase.ui.sample.Sample;
 import virtuozo.showcase.ui.sample.Sampler;
-import virtuozo.showcase.ui.sample.Storage;
 import virtuozo.showcase.ui.sample.Typography;
 import virtuozo.ui.Affix;
+import virtuozo.ui.Anchor;
 import virtuozo.ui.BarePageLayout;
 import virtuozo.ui.Container;
 import virtuozo.ui.FontAwesome;
@@ -71,7 +70,7 @@ public class DocsPage implements DocsView {
     this.layout.navbar().rightForm().addInput(InputText.create().placeholder("Search..."));
 
     Tag<DivElement> top = Tag.asDiv().attachTo(this.layout.body());
-    top.style().overflow(Overflow.SCROLL).overflowY(Overflow.HIDDEN).marginBottom(5, Unit.PX);
+    top.style().overflowX(Overflow.SCROLL).overflowY(Overflow.HIDDEN).overflow(Overflow.HIDDEN).marginBottom(5, Unit.PX);
     LayoutPanel dockerPanel = LayoutPanel.horizontal().attachTo(top).css("docker");
     
     Container container = this.layout.body();
@@ -80,7 +79,7 @@ public class DocsPage implements DocsView {
     this.samples = mainRow.addColumn().span(9, ViewPort.SMALL);
     
     this.leftPanel.attachTo(left).hide();
-    this.leftPanel.footer().detachChildren().add(Tag.asAnchor().text("Back to top").onClick(new ClickHandler() {
+    this.leftPanel.footer().detachChildren().add(Anchor.create().text("Back to top").onClick(new ClickHandler() {
       
       @Override
       public void onClick(ClickEvent event) {
@@ -99,8 +98,6 @@ public class DocsPage implements DocsView {
     this.createSample(dockerPanel, new Forms());
     this.createSample(dockerPanel, new Events());
     this.createSample(dockerPanel, new I18n());
-    this.createSample(dockerPanel, new Ajax());
-    this.createSample(dockerPanel, new Storage());
     
     this.switchTo(new Typography());
   }
@@ -115,8 +112,8 @@ public class DocsPage implements DocsView {
         DocsPage.this.switchTo(sample);
       }
     };
-    panel.add(Tag.asAnchor().add(icon).onClick(navigate));
-    panel.add(Tag.asAnchor().add(Heading.six().css("heading").text(sample.title())).onClick(navigate));
+    panel.add(Anchor.create().add(icon).onClick(navigate));
+    panel.add(Anchor.create().add(Heading.six().css("heading").text(sample.title())).onClick(navigate));
         
     main.add(panel);
   }
