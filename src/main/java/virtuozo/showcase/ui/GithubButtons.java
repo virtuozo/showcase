@@ -30,7 +30,7 @@ public class GithubButtons extends Component<GithubButtons> {
     button.attribute("src", src.toString());
     button.attribute("allowtransparency", "true");
     button.attribute("frameborder", "0");
-    button.attribute("scrolling", "0");
+    button.attribute("scrolling", "no");
     button.attribute("width", type.width());
     button.attribute("height", type.height());
 
