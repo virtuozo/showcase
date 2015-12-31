@@ -35,7 +35,7 @@ public class Thumbnails implements Fragment {
 	  Thumbnail thumbnail = Thumbnail.create();
 	  thumbnail.image().src(Bundle.samples().largeYork());
 	  thumbnail.caption().add(Heading.three().text("Virtuozo"))
-	  .add(Paragraph.create().text(Bundle.constants().headline()))
+	  .add(Paragraph.create().text(Bundle.words().headline()))
 	  .add(Button.create().text("More").css(ButtonColor.PRIMARY));
 	  return thumbnail;
   }

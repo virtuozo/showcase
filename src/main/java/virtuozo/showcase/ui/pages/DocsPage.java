@@ -5,6 +5,7 @@ import virtuozo.showcase.application.Places;
 import virtuozo.showcase.ui.Bundle;
 import virtuozo.showcase.ui.DocsPresenter.DocsView;
 import virtuozo.showcase.ui.sample.Actions;
+import virtuozo.showcase.ui.sample.DataSets;
 import virtuozo.showcase.ui.sample.Decorations;
 import virtuozo.showcase.ui.sample.Events;
 import virtuozo.showcase.ui.sample.Forms;
@@ -65,8 +66,8 @@ public class DocsPage implements DocsView {
     Brand brand = this.layout.navbar().brand().text("Virtuozo");
     Navigate.to(Places.HOME).through(brand);
     
-    this.layout.navbar().rightFacet().addItem().text(Bundle.constants().apiDocs());
-    this.layout.navbar().rightFacet().addItem().text(Bundle.constants().restRescue());
+    this.layout.navbar().rightFacet().addItem().text(Bundle.words().apiDocs());
+    this.layout.navbar().rightFacet().addItem().text(Bundle.words().restRescue());
     this.layout.navbar().rightForm().addInput(InputText.create().placeholder("Search..."));
 
     Tag<DivElement> top = Tag.asDiv().attachTo(this.layout.body());
@@ -96,6 +97,7 @@ public class DocsPage implements DocsView {
     this.createSample(dockerPanel, new Actions());
     this.createSample(dockerPanel, new Icons());
     this.createSample(dockerPanel, new Forms());
+    this.createSample(dockerPanel, new DataSets());
     this.createSample(dockerPanel, new Events());
     this.createSample(dockerPanel, new I18n());
     

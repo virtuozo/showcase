@@ -13,11 +13,11 @@ public class PanelGroups implements Fragment {
     PanelGroup panels = PanelGroup.create().attachTo(target);
     CollapsePanel panel = panels.addPanel();
     panel.header().text("Virtuozo");
-    panel.body().add(Paragraph.create().text(Bundle.constants().headline()));
+    panel.body().add(Paragraph.create().text(Bundle.words().headline()));
     
     panel = panels.addPanel();
     panel.header().text("Home");
-    panel.body().add(Paragraph.create().text(Bundle.constants().sampleLongText()));
+    panel.body().add(Paragraph.create().text(Bundle.words().sampleLongText()));
   }
   
   @Override

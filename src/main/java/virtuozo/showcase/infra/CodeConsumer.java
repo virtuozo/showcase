@@ -14,10 +14,10 @@
  */
 package virtuozo.showcase.infra;
 
-import virtuozo.infra.Rest;
-import virtuozo.infra.Rest.PathBuilder;
-import virtuozo.infra.RestMethod.MediaType;
-import virtuozo.infra.api.RestException;
+import virtuozo.infra.HttpClient;
+import virtuozo.infra.HttpClient.PathBuilder;
+import virtuozo.infra.HttpMethod.MediaType;
+import virtuozo.infra.api.AsyncException;
 import virtuozo.infra.api.TextCallback;
 import virtuozo.showcase.infra.events.FailureEvent;
 import virtuozo.ui.Component;
@@ -33,10 +33,10 @@ public class CodeConsumer {
 
   public CodeConsumer load(Class<?> target, final CodeCallback callback) {
     String path = target.getName().replace(".", "/").concat(".java");
-    Rest rest = Rest.create(PathBuilder.get("code-server").append(path));
-    rest.get().accept(MediaType.TEXT).send(new TextCallback(){
+    HttpClient client = HttpClient.create(PathBuilder.get("code-server").append(path));
+    client.get().accept(MediaType.TEXT).send(new TextCallback(){
       @Override
-      public void onFailure(RestException exception) {
+      public void onFailure(AsyncException exception) {
         FailureEvent event = new FailureEvent();
         event.publish().with(exception).fire();
       }

@@ -38,7 +38,7 @@ public class Bundle {
     return Bundle.samples;
   }
   
-  public static Constants constants(){
+  public static Constants words(){
     return Bundle.contants;
   }
   

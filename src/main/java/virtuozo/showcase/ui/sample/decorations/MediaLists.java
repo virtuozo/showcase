@@ -23,21 +23,21 @@ public class MediaLists implements Fragment {
 	  
 	  media = list.addMedia();
 	  this.configure(media);
-	  media.body().addText().text(Bundle.constants().sampleLongText());
+	  media.body().addText().text(Bundle.words().sampleLongText());
 	  
 	  media = list.addMedia().css(Alignment.MIDDLE);
 	  this.configure(media);
-	  media.body().addText().text(Bundle.constants().sampleLongText());
+	  media.body().addText().text(Bundle.words().sampleLongText());
 	  
 	  media = list.addMedia().css(Alignment.BOTTOM);
 	  this.configure(media);
-	  media.body().addText().text(Bundle.constants().sampleLongText());
+	  media.body().addText().text(Bundle.words().sampleLongText());
   }
   
   private void configure(Media media){
 	  media.object().addImage().src(Bundle.samples().smallHusky());
 	  media.body().addHeading().text("Virtuozo");
-	  media.body().addText().text(Bundle.constants().headline());
+	  media.body().addText().text(Bundle.words().headline());
   }
   
   @Override

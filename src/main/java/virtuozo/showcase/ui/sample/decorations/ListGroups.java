@@ -42,11 +42,11 @@ public class ListGroups implements Fragment {
     group = ListGroup.create().attachTo(target);
     item = group.addItem();
     item.addHeading().text("Virtuozo");
-    item.addText().text(Bundle.constants().headline());
+    item.addText().text(Bundle.words().headline());
     item = group.addItem();
     item.addBadge().text("2");
     item.addHeading().text("Virtuozo");
-    item.addText().text(Bundle.constants().headline());
+    item.addText().text(Bundle.words().headline());
   }
   
   @Override

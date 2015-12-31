@@ -25,10 +25,10 @@ public class CallToDocs extends Component<CallToDocs> {
   
   private void init(){
     this.addChild(this.docs);
-    this.createDocLink(FontAwesome.CODE, Bundle.constants().apiDocs(), Bundle.constants().apiDocsDescription());
-    this.createDocLink(FontAwesome.PAPER_PLANE_O, Bundle.constants().restRescue(), Bundle.constants().restRescueDescription());
+    this.createDocLink(FontAwesome.CODE, Bundle.words().apiDocs(), Bundle.words().apiDocsDescription());
+    this.createDocLink(FontAwesome.PAPER_PLANE_O, Bundle.words().restRescue(), Bundle.words().restRescueDescription());
     
-    Anchor link = this.createDocLink(FontAwesome.DASHBOARD, Bundle.constants().uiComponents(), Bundle.constants().uiComponentsDescription());
+    Anchor link = this.createDocLink(FontAwesome.DASHBOARD, Bundle.words().uiComponents(), Bundle.words().uiComponentsDescription());
     Navigate.to(Places.DOCS).through(link);
     this.docs.distribute();
   }

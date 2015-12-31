@@ -60,23 +60,23 @@ public class HomePage implements HomeView {
     github.add(Type.FOLLOW).add(Type.FORK).add(Type.WATCH);
 
     Slogan slogan = this.layout.intro().slogan().add(Heading.two().css("heading").text("Virtuozo Showcase"));
-    slogan.add(Heading.four().css("heading").text(Bundle.constants().virtuozo()));
+    slogan.add(Heading.four().css("heading").text(Bundle.words().virtuozo()));
     slogan.add(github);
 
-    Section about = this.addSection(Bundle.constants().aboutVirtuozo());
+    Section about = this.addSection(Bundle.words().aboutVirtuozo());
     this.buildAbout(about);
     this.layout.intro().scrollTo(about, FontAwesome.ANGLE_DOUBLE_DOWN);
 
-    Section features = this.addSection(Bundle.constants().features()).css("color", "zig-zag-separator");
+    Section features = this.addSection(Bundle.words().features()).css("color", "zig-zag-separator");
     this.buildFeatures(features);
 
-    Section getStarted = this.addSection(Bundle.constants().gettingStarted()).css("boxes-separator");
+    Section getStarted = this.addSection(Bundle.words().gettingStarted()).css("boxes-separator");
     this.buildGettingStarted(getStarted);
 
-    Section community = this.addSection(Bundle.constants().community()).css("color");
+    Section community = this.addSection(Bundle.words().community()).css("color");
     this.buildCommunity(community);
     
-    NavItem components = this.layout.navbar().rightFacet().addItem().text(Bundle.constants().documentation());
+    NavItem components = this.layout.navbar().rightFacet().addItem().text(Bundle.words().documentation());
     Navigate.to(Places.DOCS).through(components);
   }
 
@@ -89,35 +89,35 @@ public class HomePage implements HomeView {
     Column left = section.addColumn().span(6, ViewPort.SMALL);
 
     Callout manifesto = Callout.warning();
-    left.add(Heading.four().css("heading").text(Bundle.constants().manifesto())).add(manifesto);
+    left.add(Heading.four().css("heading").text(Bundle.words().manifesto())).add(manifesto);
 
-    manifesto.addHeading().css("heading").text(Bundle.constants().manifestoFirst()).style().marginTop(0, Unit.PX);
-    manifesto.addText().text(Bundle.constants().manifestoFirstDescription());
+    manifesto.addHeading().css("heading").text(Bundle.words().manifestoFirst()).style().marginTop(0, Unit.PX);
+    manifesto.addText().text(Bundle.words().manifestoFirstDescription());
 
-    manifesto.addHeading().css("heading").text(Bundle.constants().manifestoSecond());
-    manifesto.addText().text(Bundle.constants().manifestoSecondDescription());
+    manifesto.addHeading().css("heading").text(Bundle.words().manifestoSecond());
+    manifesto.addText().text(Bundle.words().manifestoSecondDescription());
 
-    manifesto.addHeading().css("heading").text(Bundle.constants().manifestoThird());
-    manifesto.addText().text(Bundle.constants().manifestoThirdDescription());
+    manifesto.addHeading().css("heading").text(Bundle.words().manifestoThird());
+    manifesto.addText().text(Bundle.words().manifestoThirdDescription());
 
-    manifesto.addHeading().css("heading").text(Bundle.constants().manifestoFourth());
-    manifesto.addText().text(Bundle.constants().manifestoFourthDescription());
+    manifesto.addHeading().css("heading").text(Bundle.words().manifestoFourth());
+    manifesto.addText().text(Bundle.words().manifestoFourthDescription());
 
-    manifesto.addHeading().css("heading").text(Bundle.constants().manifestoFifth());
-    manifesto.addText().text(Bundle.constants().manifestoFifthDescription());
+    manifesto.addHeading().css("heading").text(Bundle.words().manifestoFifth());
+    manifesto.addText().text(Bundle.words().manifestoFifthDescription());
 
-    manifesto.addHeading().css("heading").text(Bundle.constants().manifestoSixth());
-    manifesto.addText().text(Bundle.constants().manifestoSixthDescription());
+    manifesto.addHeading().css("heading").text(Bundle.words().manifestoSixth());
+    manifesto.addText().text(Bundle.words().manifestoSixthDescription());
 
     Column right = section.addColumn().span(6, ViewPort.SMALL);
     MediaList list = MediaList.create();
     right.add(list);
 
-    createAboutMedia(list, Bundle.images().gwt(), "Google Web Toolkit",Bundle.constants().aboutGwt());
-    createAboutMedia(list, Bundle.images().bootstrap(), "Twitter Bootstrap",Bundle.constants().aboutBootstrap());  
-    createAboutMedia(list, Bundle.images().fontawesome(), "Font Awesome", Bundle.constants().aboutFontAwesome());
-    createAboutMedia(list, Bundle.images().html5(), Bundle.constants().tunningStandards(), Bundle.constants().aboutTunningStandards());
-    Media themes = this.createAboutMedia(list, Bundle.images().bootswatch(), "Bootswatch Themes", Bundle.constants().aboutThemes());
+    createAboutMedia(list, Bundle.images().gwt(), "Google Web Toolkit",Bundle.words().aboutGwt());
+    createAboutMedia(list, Bundle.images().bootstrap(), "Twitter Bootstrap",Bundle.words().aboutBootstrap());  
+    createAboutMedia(list, Bundle.images().fontawesome(), "Font Awesome", Bundle.words().aboutFontAwesome());
+    createAboutMedia(list, Bundle.images().html5(), Bundle.words().tunningStandards(), Bundle.words().aboutTunningStandards());
+    Media themes = this.createAboutMedia(list, Bundle.images().bootswatch(), "Bootswatch Themes", Bundle.words().aboutThemes());
     themes.object().css("theme-logo");
   }
 
@@ -132,35 +132,35 @@ public class HomePage implements HomeView {
   }
 
   private void buildFeatures(Section section) {
-    this.addFeatureColumn(section, FontAwesome.FLASH, Bundle.constants().featureOne()).text(Bundle.constants().featureOneDescription());
+    this.addFeatureColumn(section, FontAwesome.FLASH, Bundle.words().featureOne()).text(Bundle.words().featureOneDescription());
 
-    this.addFeatureColumn(section, FontAwesome.GLOBE, Bundle.constants().featureTwo()).text(Bundle.constants().featureTwoDescription());
+    this.addFeatureColumn(section, FontAwesome.GLOBE, Bundle.words().featureTwo()).text(Bundle.words().featureTwoDescription());
 
-    this.addFeatureColumn(section, FontAwesome.BULLHORN, Bundle.constants().featureThree()).text(Bundle.constants().featureThreeDescription());
+    this.addFeatureColumn(section, FontAwesome.BULLHORN, Bundle.words().featureThree()).text(Bundle.words().featureThreeDescription());
 
-    this.addFeatureColumn(section, FontAwesome.CUBES, Bundle.constants().featureFour()).text(Bundle.constants().featureFourDescription());
+    this.addFeatureColumn(section, FontAwesome.CUBES, Bundle.words().featureFour()).text(Bundle.words().featureFourDescription());
 
-    this.addFeatureColumn(section, FontAwesome.PLUG, Bundle.constants().featureFive()).text(Bundle.constants().featureFiveDescription());
+    this.addFeatureColumn(section, FontAwesome.PLUG, Bundle.words().featureFive()).text(Bundle.words().featureFiveDescription());
 
-    this.addFeatureColumn(section, FontAwesome.HISTORY, Bundle.constants().featureSix()).text(Bundle.constants().featureSixDescription());
+    this.addFeatureColumn(section, FontAwesome.HISTORY, Bundle.words().featureSix()).text(Bundle.words().featureSixDescription());
 
-    this.addFeatureColumn(section, FontAwesome.DATABASE, Bundle.constants().featureSeven()).text(Bundle.constants().featureSevenDescription());
+    this.addFeatureColumn(section, FontAwesome.DATABASE, Bundle.words().featureSeven()).text(Bundle.words().featureSevenDescription());
 
-    this.addFeatureColumn(section, FontAwesome.BUS, Bundle.constants().featureEight()).text(Bundle.constants().featureEightDescription());
+    this.addFeatureColumn(section, FontAwesome.BUS, Bundle.words().featureEight()).text(Bundle.words().featureEightDescription());
 
-    this.addFeatureColumn(section, FontAwesome.MAGIC, Bundle.constants().featureNine()).text(Bundle.constants().featureNineDescription());
+    this.addFeatureColumn(section, FontAwesome.MAGIC, Bundle.words().featureNine()).text(Bundle.words().featureNineDescription());
   }
 
   private void buildGettingStarted(Section section) {
     section.addColumn().span(12, ViewPort.X_SMALL)
-        .add(Paragraph.create().lead().css(TextAlignment.CENTER).text(Bundle.constants().headline()));
+        .add(Paragraph.create().lead().css(TextAlignment.CENTER).text(Bundle.words().headline()));
 
     Wizard wizard = Wizard.create().hideControls();
-    wizard.heading().css("heading").text(Bundle.constants().noWorries());
+    wizard.heading().css("heading").text(Bundle.words().noWorries());
     section.addColumn().span(12, ViewPort.X_SMALL).add(wizard);
-    Step step = wizard.addStep().text(Bundle.constants().gettingStartedStepOne());
-    step.add(Paragraph.create().html(Bundle.constants().gettingStartedMaven()));
-    step.add(Paragraph.create().text(Bundle.constants().gettingStartedSetup()));
+    Step step = wizard.addStep().text(Bundle.words().gettingStartedStepOne());
+    step.add(Paragraph.create().html(Bundle.words().gettingStartedMaven()));
+    step.add(Paragraph.create().text(Bundle.words().gettingStartedSetup()));
 
     Row row = Container.fluid().attachTo(step).addRow();
     MediaList list = MediaList.create();
@@ -168,28 +168,28 @@ public class HomePage implements HomeView {
 
     Media media = list.addMedia();
     media.object().addImage().src(Bundle.images().logo());
-    media.body().addHeading().css("heading").text(Bundle.constants().kickStartApp());
-    media.body().addText().css(TextAlignment.JUSTIFY).text(Bundle.constants().kickStartAppDescription());
+    media.body().addHeading().css("heading").text(Bundle.words().kickStartApp());
+    media.body().addText().css(TextAlignment.JUSTIFY).text(Bundle.words().kickStartAppDescription());
     media.body().add(this.focusText().value("git clone https://github.com/virtuozo/kickstart.git"));
 
     list = MediaList.create();
     row.addColumn().span(6, ViewPort.SMALL).add(list);
     media = list.addMedia();
     media.object().addImage().src(Bundle.images().forge());
-    media.body().addHeading().css("heading").text(Bundle.constants().forgeAddOn());
-    media.body().addText().css(TextAlignment.JUSTIFY).text(Bundle.constants().forgeAddOnDescription());
-    media.body().add(this.focusText().value(Bundle.constants().commingSoon()));//addon-install-from-git --url https://github.com/virtuozo/spa-framework.git --coordinate com.github.virtuozo:forge-addon
+    media.body().addHeading().css("heading").text(Bundle.words().forgeAddOn());
+    media.body().addText().css(TextAlignment.JUSTIFY).text(Bundle.words().forgeAddOnDescription());
+    media.body().add(this.focusText().value(Bundle.words().commingSoon()));//addon-install-from-git --url https://github.com/virtuozo/spa-framework.git --coordinate com.github.virtuozo:forge-addon
 
-    step = wizard.addStep().text(Bundle.constants().gettingStartedStepTwo());
-    step.add(Paragraph.create().text(Bundle.constants().moduleRunningDescription()));
+    step = wizard.addStep().text(Bundle.words().gettingStartedStepTwo());
+    step.add(Paragraph.create().text(Bundle.words().moduleRunningDescription()));
 
     row = Container.fluid().attachTo(step).addRow();
-    row.addColumn().span(4, ViewPort.SMALL).add(Heading.five().css("heading").text(Bundle.constants().compilationMaven())).add(this.focusText().value("mvn package -P gwt"));
-    row.addColumn().span(4, ViewPort.SMALL).add(Heading.five().css("heading").text(Bundle.constants().jettyRunning())).add(this.focusText().value("mvn jetty:run -P gwt"));
-    row.addColumn().span(4, ViewPort.SMALL).add(Heading.five().css("heading").text(Bundle.constants().devModeRunning())).add(this.focusText().value("mvn gwt:run -P gwt"));
-    row.addColumn().span(12, ViewPort.SMALL).add(Text.create().css(TextAlignment.CENTER).text(Bundle.constants().noteOnDebugging())).style().paddingTop(10, Unit.PX);
+    row.addColumn().span(4, ViewPort.SMALL).add(Heading.five().css("heading").text(Bundle.words().compilationMaven())).add(this.focusText().value("mvn package -P gwt"));
+    row.addColumn().span(4, ViewPort.SMALL).add(Heading.five().css("heading").text(Bundle.words().jettyRunning())).add(this.focusText().value("mvn jetty:run -P gwt"));
+    row.addColumn().span(4, ViewPort.SMALL).add(Heading.five().css("heading").text(Bundle.words().devModeRunning())).add(this.focusText().value("mvn gwt:run -P gwt"));
+    row.addColumn().span(12, ViewPort.SMALL).add(Text.create().css(TextAlignment.CENTER).text(Bundle.words().noteOnDebugging())).style().paddingTop(10, Unit.PX);
 
-    wizard.addStep().text(Bundle.constants().gettingStartedStepThree()).add(new CallToDocs());
+    wizard.addStep().text(Bundle.words().gettingStartedStepThree()).add(new CallToDocs());
   }
 
   private void buildCommunity(Section section) {
@@ -206,7 +206,7 @@ public class HomePage implements HomeView {
     String googleUrl = "https://plus.google.com/share?url=" + GWT.getHostPageBaseURL();
     this.createCommunityLink(row, googleUrl, FontAwesome.GOOGLE_PLUS);
 
-    row.addColumn().span(8, ViewPort.SMALL).add(Paragraph.create().text(Bundle.constants().showCaseNote()));
+    row.addColumn().span(8, ViewPort.SMALL).add(Paragraph.create().text(Bundle.words().showCaseNote()));
   }
 
   private void createCommunityLink(Row row, String href, FontAwesome icon) {

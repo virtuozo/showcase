@@ -1,6 +1,6 @@
 package virtuozo.showcase.ui;
 
-import virtuozo.infra.Rest.PathBuilder;
+import virtuozo.infra.HttpClient.PathBuilder;
 import virtuozo.ui.Component;
 import virtuozo.ui.Elements;
 import virtuozo.ui.OrderList;

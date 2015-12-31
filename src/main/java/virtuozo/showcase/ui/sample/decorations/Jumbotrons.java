@@ -11,7 +11,7 @@ public class Jumbotrons implements Fragment {
   public void render(HasComponents<?, ?> target) {
     Jumbotron hero = Jumbotron.create().attachTo(target);
     hero.addHeading().text("Virtuozo");
-    hero.addText().text(Bundle.constants().headline());
+    hero.addText().text(Bundle.words().headline());
     hero.addButton().css(ButtonColor.PRIMARY).text("Learn more");
   }
   

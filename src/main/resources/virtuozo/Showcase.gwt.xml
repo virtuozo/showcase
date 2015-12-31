@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module rename-to='showcase'>
-  <inherits name='virtuozo.themes.FontAwesome' />
   <inherits name='virtuozo.themes.Glyphicons' />
-  <inherits name='virtuozo.themes.Bootstrap' />
-  <inherits name='virtuozo.Widgets' />
+  <inherits name='virtuozo.themes.FontAwesome' />
+  <inherits name='virtuozo.Dataset' />
   <inherits name='virtuozo.Core' />
+  <inherits name='virtuozo.Http' />
 
   <source path="showcase/ui" />
   <source path="showcase/infra" />

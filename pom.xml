@@ -17,7 +17,7 @@
     <gwt.version>2.7.0</gwt.version>
     <gwt.style>PRETTY</gwt.style> <!-- OBF[USCATED], PRETTY, DETAILED default: OBF -->
     <messages.bundle>virtuozo.showcase.i18n.Messages</messages.bundle>
-    <constants.bundle>virtuozo.showcase.i18n.Constants</constants.bundle>
+    <constants.bundle>virtuozo.showcase.i18n.Words</constants.bundle>
     <log.level>TRACE</log.level>
     <optimization.level>9</optimization.level>
     <local.workers>2</local.workers>
@@ -36,13 +36,30 @@
   </dependencyManagement>
 
   <dependencies>
+    <!-- Superdev Mode -->
+    <dependency>
+      <groupId>org.ow2.asm</groupId>
+      <artifactId>asm</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.ow2.asm</groupId>
+      <artifactId>asm-util</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.ow2.asm</groupId>
+      <artifactId>asm-commons</artifactId>
+      <scope>provided</scope>
+    </dependency>
+
     <!-- GWT -->
     <dependency>
       <groupId>com.google.gwt</groupId>
       <artifactId>gwt-user</artifactId>
       <scope>provided</scope>
     </dependency>
-    
+
     <dependency>
       <groupId>javax.validation</groupId>
       <artifactId>validation-api</artifactId>
@@ -62,7 +79,7 @@
     </dependency>
     <dependency>
       <groupId>com.github.virtuozo</groupId>
-      <artifactId>rest-api</artifactId>
+      <artifactId>http-api</artifactId>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -80,54 +97,17 @@
       <artifactId>core</artifactId>
       <scope>provided</scope>
     </dependency>
+        <dependency>
+      <groupId>com.github.virtuozo</groupId>
+      <artifactId>dataset</artifactId>
+      <scope>provided</scope>
+    </dependency>
     <dependency>
       <groupId>com.github.virtuozo</groupId>
       <artifactId>commons</artifactId>
       <scope>provided</scope>
     </dependency>
   </dependencies>
-
-  <profiles>
-    <profile>
-      <id>gwt</id>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>gwt-maven-plugin</artifactId>
-            <version>${gwt.version}</version>
-            <executions>
-              <execution>
-                <goals>
-                  <goal>compile</goal>
-                  <goal>test</goal>
-                  <goal>i18n</goal>
-                  <goal>generateAsync</goal>
-                </goals>
-              </execution>
-            </executions>
-            <!-- Plugin configuration. There are many available options, 
-              see gwt-maven-plugin documentation at codehaus.org -->
-            <configuration>
-              <module>virtuozo.Showcase</module>
-              <runTarget>index.html</runTarget>
-              
-              <precompile>false</precompile>
-              <hostedWebapp>${webappDirectory}</hostedWebapp>
-              <warSourceDirectory>${webappDirectory}/showcase/target/showcase</warSourceDirectory>
-              <style>${gwt.style}</style>
-              <i18nMessagesBundle>${messages.bundle}</i18nMessagesBundle>
-              <i18nConstantsWithLookupBundle>${constants.bundle}</i18nConstantsWithLookupBundle>
-              <localWorkers>2</localWorkers>
-              <logLevel>${log.level}</logLevel>
-              <optimizationLevel>${optimization.level}</optimizationLevel>
-              <extraJvmArgs>-XX:MaxPermSize=1024m -Xms512m -Xmx2048m</extraJvmArgs>
-            </configuration>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-  </profiles>
 
   <build>
     <finalName>showcase</finalName>
@@ -161,6 +141,39 @@
               </includes>
             </resource>
           </webResources>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>gwt-maven-plugin</artifactId>
+        <version>${gwt.version}</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>compile</goal>
+              <goal>test</goal>
+              <goal>i18n</goal>
+              <goal>generateAsync</goal>
+            </goals>
+          </execution>
+        </executions>
+        <!-- Plugin configuration. There are many available options, see 
+          gwt-maven-plugin documentation at codehaus.org -->
+        <configuration>
+          <module>virtuozo.Showcase</module>
+          <runTarget>index.html</runTarget>
+
+          <precompile>false</precompile>
+          <hostedWebapp>${webappDirectory}</hostedWebapp>
+          <warSourceDirectory>${webappDirectory}/showcase/target/showcase</warSourceDirectory>
+          <style>${gwt.style}</style>
+          <i18nMessagesBundle>${messages.bundle}</i18nMessagesBundle>
+          <i18nConstantsWithLookupBundle>${constants.bundle}</i18nConstantsWithLookupBundle>
+          <localWorkers>2</localWorkers>
+          <logLevel>${log.level}</logLevel>
+          <optimizationLevel>${optimization.level}</optimizationLevel>
+          <extraJvmArgs>-XX:MaxPermSize=1024m -Xms512m -Xmx2048m</extraJvmArgs>
         </configuration>
       </plugin>
 
