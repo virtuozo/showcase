@@ -33,9 +33,9 @@ public class DataGrids implements Fragment {
   @Override
   public void render(final HasComponents<?, ?> target) {
     final Dataset<JSObject> dataset = Dataset.create();
-    dataset.withField(DataField.of(Type.STRING).bindingTo(Country.code));
-    dataset.withField(DataField.of(Type.STRING).bindingTo(Country.name));
-    dataset.withField(DataField.of(Type.STRING).bindingTo(Country.language));
+    dataset.add(DataField.of(Type.STRING).bindingTo(Country.code));
+    dataset.add(DataField.of(Type.STRING).bindingTo(Country.name));
+    dataset.add(DataField.of(Type.STRING).bindingTo(Country.language));
     
     DataGrid<JSObject> grid = DataGrid.create(dataset).attachTo(target);
     grid.header().text("Country data grid");
@@ -81,7 +81,7 @@ public class DataGrids implements Fragment {
     }
     
     protected void get(JSOCallback<JsArray<JSObject>> callback) {
-      super.get(PathBuilder.get("/countries.json"), callback);
+      super.get(PathBuilder.create("/countries.json"), callback);
     }
   }
 }

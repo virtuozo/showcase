@@ -33,7 +33,7 @@ public class CodeConsumer {
 
   public CodeConsumer load(Class<?> target, final CodeCallback callback) {
     String path = target.getName().replace(".", "/").concat(".java");
-    HttpClient client = HttpClient.create(PathBuilder.get("code-server").append(path));
+    HttpClient client = HttpClient.create(PathBuilder.create("code-server").append(path));
     client.get().accept(MediaType.TEXT).send(new TextCallback(){
       @Override
       public void onFailure(AsyncException exception) {

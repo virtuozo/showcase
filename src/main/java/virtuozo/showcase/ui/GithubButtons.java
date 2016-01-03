@@ -23,7 +23,7 @@ public class GithubButtons extends Component<GithubButtons> {
 
   public GithubButtons add(Type type) {
     Tag<Element> button = Tag.as(Elements.create("iframe")).css("github-btn");
-    PathBuilder src = PathBuilder.get("http://ghbtns.com/github-btn.html");
+    PathBuilder src = PathBuilder.create("http://ghbtns.com/github-btn.html");
     src.addQueryParam("user", this.user).addQueryParam("repo", this.repository);
     type.appendTo(src);
 
