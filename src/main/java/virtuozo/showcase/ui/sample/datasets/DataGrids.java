@@ -9,7 +9,6 @@ import virtuozo.infra.HttpClient.PathBuilder;
 import virtuozo.infra.HttpMethod.MediaType;
 import virtuozo.infra.JSObject;
 import virtuozo.infra.api.AsyncException;
-import virtuozo.infra.api.JSOCallback;
 import virtuozo.infra.api.JsArrayCallback;
 import virtuozo.showcase.ui.sample.Fragment;
 import virtuozo.ui.DataGrid;
@@ -68,20 +67,16 @@ public class DataGrids implements Fragment {
   
   private void load(JsArrayCallback<JSObject> callback){
     CountryConsumer loader = new CountryConsumer();
-    loader.get(callback);
+    loader.list(callback);
   }
   
   public static enum Country implements Attribute {
     code, name, language
   }
   
-  class CountryConsumer extends Consumer<JsArray<JSObject>> {
+  class CountryConsumer extends Consumer<JSObject> {
     public CountryConsumer() {
-      super(MediaType.JSON);
-    }
-    
-    protected void get(JSOCallback<JsArray<JSObject>> callback) {
-      super.get(PathBuilder.create("/countries.json"), callback);
+      super(PathBuilder.create("/countries.json"), MediaType.JSON);
     }
   }
 }
