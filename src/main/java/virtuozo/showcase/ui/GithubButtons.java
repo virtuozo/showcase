@@ -1,10 +1,10 @@
 package virtuozo.showcase.ui;
 
+import virtuozo.infra.Elements;
 import virtuozo.infra.HttpClient.PathBuilder;
-import virtuozo.ui.Component;
-import virtuozo.ui.Elements;
-import virtuozo.ui.OrderList;
-import virtuozo.ui.Tag;
+import virtuozo.interfaces.Component;
+import virtuozo.interfaces.OrderList;
+import virtuozo.interfaces.Tag;
 
 import com.google.gwt.dom.client.Element;
 

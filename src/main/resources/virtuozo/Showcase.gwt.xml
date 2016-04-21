@@ -6,7 +6,7 @@
   <inherits name='virtuozo.Core' />
   <inherits name='virtuozo.Http' />
 
-  <source path="showcase/ui" />
+  <source path="showcase/interfaces" />
   <source path="showcase/infra" />
   <source path="showcase/application" />
   <source path="showcase/i18n" />

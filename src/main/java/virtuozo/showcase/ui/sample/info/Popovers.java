@@ -1,12 +1,12 @@
 package virtuozo.showcase.ui.sample.info;
 
+import virtuozo.interfaces.Button;
+import virtuozo.interfaces.HasComponents;
+import virtuozo.interfaces.InputText;
+import virtuozo.interfaces.Label;
+import virtuozo.interfaces.Popover;
+import virtuozo.interfaces.css.Direction;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.Button;
-import virtuozo.ui.InputText;
-import virtuozo.ui.Label;
-import virtuozo.ui.Popover;
-import virtuozo.ui.css.Direction;
-import virtuozo.ui.interfaces.HasComponents;
 
 import com.google.gwt.event.dom.client.BlurEvent;
 import com.google.gwt.event.dom.client.BlurHandler;

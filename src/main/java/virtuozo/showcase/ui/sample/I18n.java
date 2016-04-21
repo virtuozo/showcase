@@ -1,12 +1,12 @@
 package virtuozo.showcase.ui.sample;
 
+import virtuozo.interfaces.Anchor;
+import virtuozo.interfaces.FontAwesome;
+import virtuozo.interfaces.Anchor.Target;
 import virtuozo.showcase.ui.Callout;
 import virtuozo.showcase.ui.Example;
 import virtuozo.showcase.ui.sample.i18n.DateFormats;
 import virtuozo.showcase.ui.sample.i18n.NumberFormats;
-import virtuozo.ui.Anchor;
-import virtuozo.ui.Anchor.Target;
-import virtuozo.ui.FontAwesome;
 
 
 public class I18n implements Sample {

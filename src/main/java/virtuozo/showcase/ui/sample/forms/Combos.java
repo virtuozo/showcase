@@ -4,15 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 import virtuozo.infra.Item;
+import virtuozo.interfaces.Combo;
+import virtuozo.interfaces.FontAwesome;
+import virtuozo.interfaces.HasComponents;
+import virtuozo.interfaces.LayoutPanel;
+import virtuozo.interfaces.Text;
+import virtuozo.interfaces.UIComponent;
+import virtuozo.interfaces.UIRenderer;
+import virtuozo.interfaces.Combo.Matchers;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.Combo;
-import virtuozo.ui.Combo.Matchers;
-import virtuozo.ui.FontAwesome;
-import virtuozo.ui.LayoutPanel;
-import virtuozo.ui.Text;
-import virtuozo.ui.interfaces.HasComponents;
-import virtuozo.ui.interfaces.UIComponent;
-import virtuozo.ui.interfaces.UIRenderer;
 
 public class Combos implements Fragment {
 

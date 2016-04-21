@@ -1,9 +1,9 @@
 package virtuozo.showcase.ui.sample.layouts;
 
-import virtuozo.ui.Navbar;
-import virtuozo.ui.OrderList;
-import virtuozo.ui.PageHeader;
-import virtuozo.ui.SidePageLayout;
+import virtuozo.interfaces.Navbar;
+import virtuozo.interfaces.OrderList;
+import virtuozo.interfaces.PageHeader;
+import virtuozo.interfaces.SidePageLayout;
 
 import com.google.gwt.core.client.EntryPoint;
 

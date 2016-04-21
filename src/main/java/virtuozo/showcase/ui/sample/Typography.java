@@ -1,5 +1,6 @@
 package virtuozo.showcase.ui.sample;
 
+import virtuozo.interfaces.FontAwesome;
 import virtuozo.showcase.ui.Example;
 import virtuozo.showcase.ui.sample.typography.Backgrounds;
 import virtuozo.showcase.ui.sample.typography.Blockquotes;
@@ -11,7 +12,6 @@ import virtuozo.showcase.ui.sample.typography.InlineTexts;
 import virtuozo.showcase.ui.sample.typography.Lists;
 import virtuozo.showcase.ui.sample.typography.Paragraphs;
 import virtuozo.showcase.ui.sample.typography.TextColors;
-import virtuozo.ui.FontAwesome;
 
 public class Typography implements Sample {
   

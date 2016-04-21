@@ -1,5 +1,6 @@
 package virtuozo.showcase.ui.sample;
 
+import virtuozo.interfaces.FontAwesome;
 import virtuozo.showcase.ui.Document;
 import virtuozo.showcase.ui.sample.events.ChangeHandlers;
 import virtuozo.showcase.ui.sample.events.ClickHandlers;
@@ -7,7 +8,6 @@ import virtuozo.showcase.ui.sample.events.FocusHandlers;
 import virtuozo.showcase.ui.sample.events.KeyHandlers;
 import virtuozo.showcase.ui.sample.events.MouseHandlers;
 import virtuozo.showcase.ui.sample.events.TouchHandlers;
-import virtuozo.ui.FontAwesome;
 
 
 public class Events implements Sample {

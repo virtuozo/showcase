@@ -1,6 +1,6 @@
 package virtuozo.showcase.ui.sample;
 
-import virtuozo.ui.FontAwesome;
+import virtuozo.interfaces.FontAwesome;
 
 public interface Sample {
   String title();

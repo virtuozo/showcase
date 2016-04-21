@@ -1,6 +1,6 @@
 package virtuozo.showcase.ui.sample.events;
 
-import virtuozo.ui.Anchor;
+import virtuozo.interfaces.Anchor;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;

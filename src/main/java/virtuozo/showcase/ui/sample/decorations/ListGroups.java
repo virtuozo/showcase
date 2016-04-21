@@ -1,10 +1,10 @@
 package virtuozo.showcase.ui.sample.decorations;
 
+import virtuozo.interfaces.HasComponents;
+import virtuozo.interfaces.ListGroup;
+import virtuozo.interfaces.ListGroup.ListGroupItem;
 import virtuozo.showcase.ui.Bundle;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.ListGroup;
-import virtuozo.ui.ListGroup.ListGroupItem;
-import virtuozo.ui.interfaces.HasComponents;
 
 public class ListGroups implements Fragment {
 

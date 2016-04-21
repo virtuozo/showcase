@@ -1,12 +1,12 @@
 package virtuozo.showcase.ui.sample.decorations;
 
+import virtuozo.interfaces.HasComponents;
+import virtuozo.interfaces.MediaList;
+import virtuozo.interfaces.MediaList.Media;
+import virtuozo.interfaces.MediaList.Media.Alignment;
+import virtuozo.interfaces.MediaList.Media.Floating;
 import virtuozo.showcase.ui.Bundle;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.MediaList;
-import virtuozo.ui.MediaList.Media;
-import virtuozo.ui.MediaList.Media.Alignment;
-import virtuozo.ui.MediaList.Media.Floating;
-import virtuozo.ui.interfaces.HasComponents;
 
 public class MediaLists implements Fragment {
 

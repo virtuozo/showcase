@@ -1,8 +1,8 @@
 package virtuozo.showcase.ui.sample.decorations;
 
+import virtuozo.interfaces.Badge;
+import virtuozo.interfaces.HasComponents;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.Badge;
-import virtuozo.ui.interfaces.HasComponents;
 
 public class Badges implements Fragment {
 

@@ -1,17 +1,17 @@
 package virtuozo.showcase.ui.pages;
 
+import virtuozo.infra.Elements;
 import virtuozo.infra.Navigate;
+import virtuozo.interfaces.Anchor;
+import virtuozo.interfaces.Component;
+import virtuozo.interfaces.FontAwesome;
+import virtuozo.interfaces.Heading;
+import virtuozo.interfaces.LayoutPanel;
+import virtuozo.interfaces.Paragraph;
+import virtuozo.interfaces.StackedIcon;
+import virtuozo.interfaces.css.TextColor;
 import virtuozo.showcase.application.Places;
 import virtuozo.showcase.ui.Bundle;
-import virtuozo.ui.Anchor;
-import virtuozo.ui.Component;
-import virtuozo.ui.Elements;
-import virtuozo.ui.FontAwesome;
-import virtuozo.ui.Heading;
-import virtuozo.ui.LayoutPanel;
-import virtuozo.ui.Paragraph;
-import virtuozo.ui.StackedIcon;
-import virtuozo.ui.css.TextColor;
 
 import com.google.gwt.dom.client.Style.Unit;
 

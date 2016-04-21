@@ -1,10 +1,10 @@
 package virtuozo.showcase.ui.sample.decorations;
 
+import virtuozo.interfaces.HasComponents;
+import virtuozo.interfaces.Jumbotron;
+import virtuozo.interfaces.css.ButtonColor;
 import virtuozo.showcase.ui.Bundle;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.Jumbotron;
-import virtuozo.ui.css.ButtonColor;
-import virtuozo.ui.interfaces.HasComponents;
 
 public class Jumbotrons implements Fragment {
 

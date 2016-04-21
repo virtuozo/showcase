@@ -1,5 +1,6 @@
 package virtuozo.showcase.ui.sample;
 
+import virtuozo.interfaces.FontAwesome;
 import virtuozo.showcase.ui.Example;
 import virtuozo.showcase.ui.sample.actions.ButtonGroups;
 import virtuozo.showcase.ui.sample.actions.Buttons;
@@ -7,7 +8,6 @@ import virtuozo.showcase.ui.sample.actions.DropDowns;
 import virtuozo.showcase.ui.sample.actions.Modals;
 import virtuozo.showcase.ui.sample.actions.SplitButtons;
 import virtuozo.showcase.ui.sample.actions.Toolbars;
-import virtuozo.ui.FontAwesome;
 
 public class Actions implements Sample {
   

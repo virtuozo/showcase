@@ -1,9 +1,9 @@
 package virtuozo.showcase.ui.sample.info;
 
+import virtuozo.interfaces.Alert;
+import virtuozo.interfaces.HasComponents;
+import virtuozo.interfaces.InlineText;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.Alert;
-import virtuozo.ui.InlineText;
-import virtuozo.ui.interfaces.HasComponents;
 
 public class Alerts implements Fragment {
 

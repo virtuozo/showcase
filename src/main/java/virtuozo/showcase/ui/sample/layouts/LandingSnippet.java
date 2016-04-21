@@ -1,11 +1,11 @@
 package virtuozo.showcase.ui.sample.layouts;
 
-import virtuozo.ui.FontAwesome;
-import virtuozo.ui.Heading;
-import virtuozo.ui.LandingPageLayout;
-import virtuozo.ui.LandingPageLayout.Intro.Slogan;
-import virtuozo.ui.LandingPageLayout.Section;
-import virtuozo.ui.Paragraph;
+import virtuozo.interfaces.FontAwesome;
+import virtuozo.interfaces.Heading;
+import virtuozo.interfaces.LandingPageLayout;
+import virtuozo.interfaces.Paragraph;
+import virtuozo.interfaces.LandingPageLayout.Section;
+import virtuozo.interfaces.LandingPageLayout.Intro.Slogan;
 
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.event.dom.client.ClickEvent;

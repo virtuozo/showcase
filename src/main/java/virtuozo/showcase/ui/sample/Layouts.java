@@ -1,12 +1,12 @@
 package virtuozo.showcase.ui.sample;
 
+import virtuozo.interfaces.FontAwesome;
 import virtuozo.showcase.ui.Document;
 import virtuozo.showcase.ui.sample.layouts.Bare;
 import virtuozo.showcase.ui.sample.layouts.Hero;
 import virtuozo.showcase.ui.sample.layouts.Landing;
 import virtuozo.showcase.ui.sample.layouts.Side;
 import virtuozo.showcase.ui.sample.layouts.Sticky;
-import virtuozo.ui.FontAwesome;
 
 public class Layouts implements Sample {
 

@@ -1,8 +1,8 @@
 package virtuozo.showcase.ui.sample.layouts;
 
-import virtuozo.ui.Heading;
-import virtuozo.ui.HeroPageLayout;
-import virtuozo.ui.Paragraph;
+import virtuozo.interfaces.Heading;
+import virtuozo.interfaces.HeroPageLayout;
+import virtuozo.interfaces.Paragraph;
 
 import com.google.gwt.core.client.EntryPoint;
 

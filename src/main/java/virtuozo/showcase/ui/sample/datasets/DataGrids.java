@@ -1,22 +1,22 @@
 package virtuozo.showcase.ui.sample.datasets;
 
+import virtuozo.infra.AsyncException;
 import virtuozo.infra.Consumer;
-import virtuozo.infra.DataBinding.Attribute;
 import virtuozo.infra.DataField;
+import virtuozo.infra.JsArrayCallback;
 import virtuozo.infra.DataField.Type;
 import virtuozo.infra.Dataset;
 import virtuozo.infra.HttpClient.PathBuilder;
 import virtuozo.infra.HttpMethod.MediaType;
-import virtuozo.infra.JSObject;
-import virtuozo.infra.api.AsyncException;
-import virtuozo.infra.api.JsArrayCallback;
+import virtuozo.infra.data.JSObject;
+import virtuozo.infra.data.DataBinding.Attribute;
+import virtuozo.infra.events.SelectionEvent;
+import virtuozo.infra.events.SelectionEvent.SelectionHandler;
+import virtuozo.interfaces.DataGrid;
+import virtuozo.interfaces.HasComponents;
+import virtuozo.interfaces.Notifier;
+import virtuozo.interfaces.Notifier.Notification;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.DataGrid;
-import virtuozo.ui.Notifier;
-import virtuozo.ui.Notifier.Notification;
-import virtuozo.ui.events.SelectionEvent;
-import virtuozo.ui.events.SelectionEvent.SelectionHandler;
-import virtuozo.ui.interfaces.HasComponents;
 
 import com.google.gwt.core.client.JsArray;
 import com.google.gwt.dom.client.Style.Unit;

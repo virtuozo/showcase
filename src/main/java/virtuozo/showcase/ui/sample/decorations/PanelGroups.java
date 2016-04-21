@@ -1,11 +1,11 @@
 package virtuozo.showcase.ui.sample.decorations;
 
+import virtuozo.interfaces.HasComponents;
+import virtuozo.interfaces.PanelGroup;
+import virtuozo.interfaces.Paragraph;
+import virtuozo.interfaces.PanelGroup.CollapsePanel;
 import virtuozo.showcase.ui.Bundle;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.PanelGroup;
-import virtuozo.ui.PanelGroup.CollapsePanel;
-import virtuozo.ui.Paragraph;
-import virtuozo.ui.interfaces.HasComponents;
 
 public class PanelGroups implements Fragment {
 

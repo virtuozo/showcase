@@ -4,15 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 import virtuozo.infra.MessageFormat;
+import virtuozo.interfaces.Autocomplete;
+import virtuozo.interfaces.FontAwesome;
+import virtuozo.interfaces.HasComponents;
+import virtuozo.interfaces.LayoutPanel;
+import virtuozo.interfaces.Text;
+import virtuozo.interfaces.UIComponent;
+import virtuozo.interfaces.UIRenderer;
+import virtuozo.interfaces.TypeAhead.ContentProvider;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.Autocomplete;
-import virtuozo.ui.FontAwesome;
-import virtuozo.ui.LayoutPanel;
-import virtuozo.ui.Text;
-import virtuozo.ui.TypeAhead.ContentProvider;
-import virtuozo.ui.interfaces.HasComponents;
-import virtuozo.ui.interfaces.UIComponent;
-import virtuozo.ui.interfaces.UIRenderer;
 
 public class Autocompletes implements Fragment {
 

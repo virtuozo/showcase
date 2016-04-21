@@ -1,11 +1,11 @@
 package virtuozo.showcase.ui.sample.navigation;
 
+import virtuozo.interfaces.HasComponents;
+import virtuozo.interfaces.Paragraph;
+import virtuozo.interfaces.TabPanel;
+import virtuozo.interfaces.TabPanel.TabDroppable;
 import virtuozo.showcase.ui.Bundle;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.Paragraph;
-import virtuozo.ui.TabPanel;
-import virtuozo.ui.TabPanel.TabDroppable;
-import virtuozo.ui.interfaces.HasComponents;
 
 public class Tabs implements Fragment {
 

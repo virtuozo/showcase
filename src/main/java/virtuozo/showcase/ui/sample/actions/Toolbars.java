@@ -1,10 +1,10 @@
 package virtuozo.showcase.ui.sample.actions;
 
+import virtuozo.interfaces.ButtonGroup;
+import virtuozo.interfaces.FontAwesome;
+import virtuozo.interfaces.HasComponents;
+import virtuozo.interfaces.Toolbar;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.ButtonGroup;
-import virtuozo.ui.FontAwesome;
-import virtuozo.ui.Toolbar;
-import virtuozo.ui.interfaces.HasComponents;
 
 public class Toolbars implements Fragment {
 

@@ -1,5 +1,6 @@
 package virtuozo.showcase.ui.sample;
 
+import virtuozo.interfaces.FontAwesome;
 import virtuozo.showcase.ui.Example;
 import virtuozo.showcase.ui.sample.decorations.Badges;
 import virtuozo.showcase.ui.sample.decorations.Carousels;
@@ -14,7 +15,6 @@ import virtuozo.showcase.ui.sample.decorations.Panels;
 import virtuozo.showcase.ui.sample.decorations.Tables;
 import virtuozo.showcase.ui.sample.decorations.Thumbnails;
 import virtuozo.showcase.ui.sample.decorations.Wells;
-import virtuozo.ui.FontAwesome;
 
 public class Decorations implements Sample {
   

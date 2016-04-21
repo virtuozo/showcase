@@ -1,9 +1,9 @@
 package virtuozo.showcase.ui.sample.decorations;
 
+import virtuozo.interfaces.HasComponents;
+import virtuozo.interfaces.Paragraph;
+import virtuozo.interfaces.Well;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.Paragraph;
-import virtuozo.ui.Well;
-import virtuozo.ui.interfaces.HasComponents;
 
 public class Wells implements Fragment {
 

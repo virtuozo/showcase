@@ -1,7 +1,7 @@
 package virtuozo.showcase.ui.sample.events;
 
 import virtuozo.infra.Keyboard;
-import virtuozo.ui.InputText;
+import virtuozo.interfaces.InputText;
 
 import com.google.gwt.event.dom.client.KeyDownEvent;
 import com.google.gwt.event.dom.client.KeyDownHandler;

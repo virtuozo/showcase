@@ -1,8 +1,8 @@
 package virtuozo.showcase.ui.sample.decorations;
 
+import virtuozo.interfaces.HasComponents;
+import virtuozo.interfaces.PageHeader;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.PageHeader;
-import virtuozo.ui.interfaces.HasComponents;
 
 public class PageHeaders implements Fragment {
 

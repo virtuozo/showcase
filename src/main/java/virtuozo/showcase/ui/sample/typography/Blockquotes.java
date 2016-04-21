@@ -1,8 +1,8 @@
 package virtuozo.showcase.ui.sample.typography;
 
+import virtuozo.interfaces.Blockquote;
+import virtuozo.interfaces.HasComponents;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.Blockquote;
-import virtuozo.ui.interfaces.HasComponents;
 
 public class Blockquotes implements Fragment {
 

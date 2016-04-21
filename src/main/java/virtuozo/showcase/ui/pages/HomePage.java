@@ -1,36 +1,36 @@
 package virtuozo.showcase.ui.pages;
 
 import virtuozo.infra.Navigate;
+import virtuozo.interfaces.Anchor;
+import virtuozo.interfaces.Container;
+import virtuozo.interfaces.FontAwesome;
+import virtuozo.interfaces.HasComponents;
+import virtuozo.interfaces.Heading;
+import virtuozo.interfaces.Icon;
+import virtuozo.interfaces.InputGroup;
+import virtuozo.interfaces.InputText;
+import virtuozo.interfaces.LandingPageLayout;
+import virtuozo.interfaces.MediaList;
+import virtuozo.interfaces.Navbar;
+import virtuozo.interfaces.Paragraph;
+import virtuozo.interfaces.Row;
+import virtuozo.interfaces.Text;
+import virtuozo.interfaces.ViewPort;
+import virtuozo.interfaces.Wizard;
+import virtuozo.interfaces.Anchor.Target;
+import virtuozo.interfaces.LandingPageLayout.Section;
+import virtuozo.interfaces.LandingPageLayout.Intro.Slogan;
+import virtuozo.interfaces.MediaList.Media;
+import virtuozo.interfaces.Navbar.Facet.NavItem;
+import virtuozo.interfaces.Row.Column;
+import virtuozo.interfaces.Wizard.Step;
+import virtuozo.interfaces.css.TextAlignment;
 import virtuozo.showcase.application.Places;
 import virtuozo.showcase.ui.Bundle;
 import virtuozo.showcase.ui.Callout;
 import virtuozo.showcase.ui.GithubButtons;
 import virtuozo.showcase.ui.GithubButtons.Type;
 import virtuozo.showcase.ui.HomePagePresenter.HomeView;
-import virtuozo.ui.Anchor;
-import virtuozo.ui.Anchor.Target;
-import virtuozo.ui.Container;
-import virtuozo.ui.FontAwesome;
-import virtuozo.ui.Heading;
-import virtuozo.ui.InputGroup;
-import virtuozo.ui.InputText;
-import virtuozo.ui.LandingPageLayout;
-import virtuozo.ui.LandingPageLayout.Intro.Slogan;
-import virtuozo.ui.LandingPageLayout.Section;
-import virtuozo.ui.MediaList;
-import virtuozo.ui.MediaList.Media;
-import virtuozo.ui.Navbar;
-import virtuozo.ui.Navbar.Facet.NavItem;
-import virtuozo.ui.Paragraph;
-import virtuozo.ui.Row;
-import virtuozo.ui.Row.Column;
-import virtuozo.ui.Text;
-import virtuozo.ui.ViewPort;
-import virtuozo.ui.Wizard;
-import virtuozo.ui.Wizard.Step;
-import virtuozo.ui.css.TextAlignment;
-import virtuozo.ui.interfaces.HasComponents;
-import virtuozo.ui.interfaces.Icon;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.Style.Unit;
@@ -79,9 +79,14 @@ public class HomePage implements HomeView {
     NavItem components = this.layout.navbar().rightFacet().addItem().text(Bundle.words().documentation());
     Navigate.to(Places.DOCS).through(components);
   }
+  
+  @Override
+  public void bind() {
+    
+  }
 
   @Override
-  public void detach() {
+  public void unbind() {
     this.layout.detach();
   }
 

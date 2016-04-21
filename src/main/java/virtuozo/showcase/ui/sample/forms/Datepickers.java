@@ -1,12 +1,12 @@
 package virtuozo.showcase.ui.sample.forms;
 
-import virtuozo.infra.Calendar;
 import virtuozo.infra.DateFormat;
+import virtuozo.infra.data.Calendar;
+import virtuozo.interfaces.Datepicker;
+import virtuozo.interfaces.FontAwesome;
+import virtuozo.interfaces.HasComponents;
+import virtuozo.interfaces.MonthPanel;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.Datepicker;
-import virtuozo.ui.FontAwesome;
-import virtuozo.ui.MonthPanel;
-import virtuozo.ui.interfaces.HasComponents;
 
 public class Datepickers implements Fragment {
 

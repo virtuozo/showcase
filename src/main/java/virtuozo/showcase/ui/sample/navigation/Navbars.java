@@ -1,13 +1,13 @@
 package virtuozo.showcase.ui.sample.navigation;
 
+import virtuozo.interfaces.DropItem;
+import virtuozo.interfaces.FontAwesome;
+import virtuozo.interfaces.HasComponents;
+import virtuozo.interfaces.Image;
+import virtuozo.interfaces.InputText;
+import virtuozo.interfaces.Navbar;
 import virtuozo.showcase.ui.Bundle;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.DropItem;
-import virtuozo.ui.FontAwesome;
-import virtuozo.ui.Image;
-import virtuozo.ui.InputText;
-import virtuozo.ui.Navbar;
-import virtuozo.ui.interfaces.HasComponents;
 
 public class Navbars implements Fragment {
 

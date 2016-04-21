@@ -14,13 +14,13 @@
  */
 package virtuozo.showcase.ui;
 
+import virtuozo.infra.Elements;
+import virtuozo.interfaces.Component;
+import virtuozo.interfaces.Tag;
 import virtuozo.showcase.infra.CodeConsumer;
 import virtuozo.showcase.infra.CodeConsumer.CodeCallback;
 import virtuozo.showcase.ui.sample.Fragment;
 import virtuozo.showcase.ui.sample.Sampler;
-import virtuozo.ui.Component;
-import virtuozo.ui.Elements;
-import virtuozo.ui.Tag;
 
 import com.google.gwt.dom.client.DivElement;
 

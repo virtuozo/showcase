@@ -1,10 +1,10 @@
 package virtuozo.showcase.ui.sample.typography;
 
+import virtuozo.interfaces.HasComponents;
+import virtuozo.interfaces.InlineText;
+import virtuozo.interfaces.Paragraph;
+import virtuozo.interfaces.css.TextTransform;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.InlineText;
-import virtuozo.ui.Paragraph;
-import virtuozo.ui.css.TextTransform;
-import virtuozo.ui.interfaces.HasComponents;
 
 public class InlineTexts implements Fragment {
 

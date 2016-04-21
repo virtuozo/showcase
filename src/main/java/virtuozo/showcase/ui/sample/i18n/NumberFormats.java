@@ -2,12 +2,12 @@ package virtuozo.showcase.ui.sample.i18n;
 
 import virtuozo.infra.MessageFormat;
 import virtuozo.infra.NumberFormat;
+import virtuozo.interfaces.Button;
+import virtuozo.interfaces.HasComponents;
+import virtuozo.interfaces.Paragraph;
+import virtuozo.interfaces.Spinner;
+import virtuozo.interfaces.Tag;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.Button;
-import virtuozo.ui.Paragraph;
-import virtuozo.ui.Spinner;
-import virtuozo.ui.Tag;
-import virtuozo.ui.interfaces.HasComponents;
 
 import com.google.gwt.dom.client.DivElement;
 import com.google.gwt.event.dom.client.ChangeEvent;

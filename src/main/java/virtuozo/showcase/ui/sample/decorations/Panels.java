@@ -1,14 +1,14 @@
 package virtuozo.showcase.ui.sample.decorations;
 
+import virtuozo.interfaces.HasComponents;
+import virtuozo.interfaces.Heading;
+import virtuozo.interfaces.ListGroup;
+import virtuozo.interfaces.Panel;
+import virtuozo.interfaces.Paragraph;
+import virtuozo.interfaces.Table;
+import virtuozo.interfaces.ListGroup.ListGroupItem;
+import virtuozo.interfaces.Table.Row;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.Heading;
-import virtuozo.ui.ListGroup;
-import virtuozo.ui.ListGroup.ListGroupItem;
-import virtuozo.ui.Panel;
-import virtuozo.ui.Paragraph;
-import virtuozo.ui.Table;
-import virtuozo.ui.Table.Row;
-import virtuozo.ui.interfaces.HasComponents;
 
 public class Panels implements Fragment {
 

@@ -1,8 +1,8 @@
 package virtuozo.showcase.ui.sample.decorations;
 
+import virtuozo.interfaces.HasComponents;
+import virtuozo.interfaces.Label;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.Label;
-import virtuozo.ui.interfaces.HasComponents;
 
 public class Labels implements Fragment {
 

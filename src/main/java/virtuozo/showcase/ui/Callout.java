@@ -14,13 +14,13 @@
  */
 package virtuozo.showcase.ui;
 
-import virtuozo.ui.Component;
-import virtuozo.ui.CssClass;
-import virtuozo.ui.Elements;
-import virtuozo.ui.Heading;
-import virtuozo.ui.Paragraph;
-import virtuozo.ui.StyleChooser;
-import virtuozo.ui.interfaces.UIComponent;
+import virtuozo.infra.Elements;
+import virtuozo.infra.StyleChooser;
+import virtuozo.interfaces.Component;
+import virtuozo.interfaces.CssClass;
+import virtuozo.interfaces.Heading;
+import virtuozo.interfaces.Paragraph;
+import virtuozo.interfaces.UIComponent;
 
 public class Callout extends Component<Callout> {
   

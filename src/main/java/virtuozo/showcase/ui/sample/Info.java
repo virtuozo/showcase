@@ -1,12 +1,12 @@
 package virtuozo.showcase.ui.sample;
 
+import virtuozo.interfaces.FontAwesome;
 import virtuozo.showcase.ui.Example;
 import virtuozo.showcase.ui.sample.info.Alerts;
 import virtuozo.showcase.ui.sample.info.Notifications;
 import virtuozo.showcase.ui.sample.info.Popovers;
 import virtuozo.showcase.ui.sample.info.Progressbars;
 import virtuozo.showcase.ui.sample.info.Tooltips;
-import virtuozo.ui.FontAwesome;
 
 public class Info implements Sample {
   

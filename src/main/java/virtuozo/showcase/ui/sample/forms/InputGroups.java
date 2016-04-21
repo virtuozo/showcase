@@ -1,12 +1,12 @@
 package virtuozo.showcase.ui.sample.forms;
 
+import virtuozo.interfaces.Button;
+import virtuozo.interfaces.FontAwesome;
+import virtuozo.interfaces.HasComponents;
+import virtuozo.interfaces.InputGroup;
+import virtuozo.interfaces.InputText;
+import virtuozo.interfaces.Text;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.Button;
-import virtuozo.ui.FontAwesome;
-import virtuozo.ui.InputGroup;
-import virtuozo.ui.InputText;
-import virtuozo.ui.Text;
-import virtuozo.ui.interfaces.HasComponents;
 
 public class InputGroups implements Fragment {
 

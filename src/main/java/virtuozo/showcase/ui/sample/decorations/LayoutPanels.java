@@ -1,10 +1,10 @@
 package virtuozo.showcase.ui.sample.decorations;
 
+import virtuozo.interfaces.HasComponents;
+import virtuozo.interfaces.Image;
+import virtuozo.interfaces.LayoutPanel;
 import virtuozo.showcase.ui.Bundle;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.Image;
-import virtuozo.ui.LayoutPanel;
-import virtuozo.ui.interfaces.HasComponents;
 
 public class LayoutPanels implements Fragment {
 

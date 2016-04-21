@@ -1,9 +1,9 @@
 package virtuozo.showcase.ui.sample.decorations;
 
+import virtuozo.interfaces.HasComponents;
+import virtuozo.interfaces.Table;
+import virtuozo.interfaces.Table.Row;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.Table;
-import virtuozo.ui.Table.Row;
-import virtuozo.ui.interfaces.HasComponents;
 
 public class Tables implements Fragment {
 

@@ -1,8 +1,8 @@
 package virtuozo.showcase.ui.sample;
 
+import virtuozo.interfaces.FontAwesome;
 import virtuozo.showcase.ui.Example;
 import virtuozo.showcase.ui.sample.datasets.DataGrids;
-import virtuozo.ui.FontAwesome;
 
 public class DataSets implements Sample {
   

@@ -1,15 +1,15 @@
 package virtuozo.showcase.ui.sample.decorations;
 
+import virtuozo.interfaces.Button;
+import virtuozo.interfaces.HasComponents;
+import virtuozo.interfaces.Heading;
+import virtuozo.interfaces.Paragraph;
+import virtuozo.interfaces.Row;
+import virtuozo.interfaces.Thumbnail;
+import virtuozo.interfaces.ViewPort;
+import virtuozo.interfaces.css.ButtonColor;
 import virtuozo.showcase.ui.Bundle;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.Button;
-import virtuozo.ui.Heading;
-import virtuozo.ui.Paragraph;
-import virtuozo.ui.Row;
-import virtuozo.ui.Thumbnail;
-import virtuozo.ui.ViewPort;
-import virtuozo.ui.css.ButtonColor;
-import virtuozo.ui.interfaces.HasComponents;
 
 public class Thumbnails implements Fragment {
 

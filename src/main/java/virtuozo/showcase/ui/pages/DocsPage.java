@@ -1,6 +1,29 @@
 package virtuozo.showcase.ui.pages;
 
 import virtuozo.infra.Navigate;
+import virtuozo.infra.events.ScrollSpyEvent;
+import virtuozo.infra.events.ScrollSpyEvent.ScrollSpyHandler;
+import virtuozo.interfaces.Affix;
+import virtuozo.interfaces.Anchor;
+import virtuozo.interfaces.BarePageLayout;
+import virtuozo.interfaces.Container;
+import virtuozo.interfaces.FontAwesome;
+import virtuozo.interfaces.HasComponents;
+import virtuozo.interfaces.Heading;
+import virtuozo.interfaces.InputText;
+import virtuozo.interfaces.LayoutPanel;
+import virtuozo.interfaces.ListGroup;
+import virtuozo.interfaces.Panel;
+import virtuozo.interfaces.Row;
+import virtuozo.interfaces.ScrollSpy;
+import virtuozo.interfaces.StackedIcon;
+import virtuozo.interfaces.Tag;
+import virtuozo.interfaces.UIComponent;
+import virtuozo.interfaces.ViewPort;
+import virtuozo.interfaces.ListGroup.ListGroupItem;
+import virtuozo.interfaces.Navbar.Brand;
+import virtuozo.interfaces.Row.Column;
+import virtuozo.interfaces.css.TextColor;
 import virtuozo.showcase.application.Places;
 import virtuozo.showcase.ui.Bundle;
 import virtuozo.showcase.ui.DocsPresenter.DocsView;
@@ -18,29 +41,6 @@ import virtuozo.showcase.ui.sample.Navigation;
 import virtuozo.showcase.ui.sample.Sample;
 import virtuozo.showcase.ui.sample.Sampler;
 import virtuozo.showcase.ui.sample.Typography;
-import virtuozo.ui.Affix;
-import virtuozo.ui.Anchor;
-import virtuozo.ui.BarePageLayout;
-import virtuozo.ui.Container;
-import virtuozo.ui.FontAwesome;
-import virtuozo.ui.Heading;
-import virtuozo.ui.InputText;
-import virtuozo.ui.LayoutPanel;
-import virtuozo.ui.ListGroup;
-import virtuozo.ui.ListGroup.ListGroupItem;
-import virtuozo.ui.Navbar.Brand;
-import virtuozo.ui.Panel;
-import virtuozo.ui.Row;
-import virtuozo.ui.Row.Column;
-import virtuozo.ui.ScrollSpy;
-import virtuozo.ui.StackedIcon;
-import virtuozo.ui.Tag;
-import virtuozo.ui.ViewPort;
-import virtuozo.ui.css.TextColor;
-import virtuozo.ui.events.ScrollSpyEvent;
-import virtuozo.ui.events.ScrollSpyEvent.ScrollSpyHandler;
-import virtuozo.ui.interfaces.HasComponents;
-import virtuozo.ui.interfaces.UIComponent;
 
 import com.google.gwt.dom.client.DivElement;
 import com.google.gwt.dom.client.Style.Overflow;
@@ -61,8 +61,6 @@ public class DocsPage implements DocsView {
   
   @Override
   public void render(HasComponents<?, ?> parent) {
-    this.layout.attach();
-    
     Brand brand = this.layout.navbar().brand().text("Virtuozo");
     Navigate.to(Places.HOME).through(brand);
     
@@ -119,9 +117,14 @@ public class DocsPage implements DocsView {
         
     main.add(panel);
   }
+  
+  @Override
+  public void bind() {
+    this.layout.attach();
+  }
 
   @Override
-  public void detach() {
+  public void unbind() {
     this.layout.detach();
     this.leftPanel.detach();
     this.samples.detachChildren();

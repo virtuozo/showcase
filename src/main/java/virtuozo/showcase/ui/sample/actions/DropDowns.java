@@ -1,10 +1,10 @@
 package virtuozo.showcase.ui.sample.actions;
 
+import virtuozo.interfaces.Button;
+import virtuozo.interfaces.DropButton;
+import virtuozo.interfaces.HasComponents;
+import virtuozo.interfaces.css.ButtonColor;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.Button;
-import virtuozo.ui.DropButton;
-import virtuozo.ui.css.ButtonColor;
-import virtuozo.ui.interfaces.HasComponents;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;

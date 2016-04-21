@@ -1,8 +1,8 @@
 package virtuozo.showcase.ui.sample.layouts;
 
-import virtuozo.ui.PageHeader;
-import virtuozo.ui.Paragraph;
-import virtuozo.ui.StickyPageLayout;
+import virtuozo.interfaces.PageHeader;
+import virtuozo.interfaces.Paragraph;
+import virtuozo.interfaces.StickyPageLayout;
 
 import com.google.gwt.core.client.EntryPoint;
 

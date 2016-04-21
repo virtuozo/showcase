@@ -1,6 +1,6 @@
 package virtuozo.showcase.ui.sample.events;
 
-import virtuozo.ui.InputText;
+import virtuozo.interfaces.InputText;
 
 import com.google.gwt.event.dom.client.ChangeEvent;
 import com.google.gwt.event.dom.client.ChangeHandler;

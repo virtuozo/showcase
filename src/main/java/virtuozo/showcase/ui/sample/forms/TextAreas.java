@@ -1,8 +1,8 @@
 package virtuozo.showcase.ui.sample.forms;
 
+import virtuozo.interfaces.HasComponents;
+import virtuozo.interfaces.TextArea;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.TextArea;
-import virtuozo.ui.interfaces.HasComponents;
 
 public class TextAreas implements Fragment {
 

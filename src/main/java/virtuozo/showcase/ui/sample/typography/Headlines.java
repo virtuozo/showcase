@@ -1,8 +1,8 @@
 package virtuozo.showcase.ui.sample.typography;
 
+import virtuozo.interfaces.HasComponents;
+import virtuozo.interfaces.Heading;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.Heading;
-import virtuozo.ui.interfaces.HasComponents;
 
 public class Headlines implements Fragment {
 

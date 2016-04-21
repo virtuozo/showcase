@@ -1,6 +1,6 @@
 package virtuozo.showcase.ui.sample;
 
-import virtuozo.ui.interfaces.UIComponent;
+import virtuozo.interfaces.UIComponent;
 
 public interface Sampler {
   void add(UIComponent component);

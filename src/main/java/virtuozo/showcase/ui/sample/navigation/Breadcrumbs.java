@@ -1,8 +1,8 @@
 package virtuozo.showcase.ui.sample.navigation;
 
+import virtuozo.interfaces.Breadcrumb;
+import virtuozo.interfaces.HasComponents;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.Breadcrumb;
-import virtuozo.ui.interfaces.HasComponents;
 
 public class Breadcrumbs implements Fragment {
 

@@ -3,13 +3,14 @@ package virtuozo.showcase.ui.sample.forms;
 import virtuozo.infra.EmailValidator;
 import virtuozo.infra.LengthValidator;
 import virtuozo.infra.NotEmptyValidator;
+import virtuozo.interfaces.Button;
+import virtuozo.interfaces.FormGroup;
+import virtuozo.interfaces.HasComponents;
+import virtuozo.interfaces.InputPassword;
+import virtuozo.interfaces.InputText;
+import virtuozo.interfaces.RichForm;
+import virtuozo.interfaces.css.ButtonColor;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.FormGroup;
-import virtuozo.ui.InputPassword;
-import virtuozo.ui.InputText;
-import virtuozo.ui.RichForm;
-import virtuozo.ui.css.ButtonColor;
-import virtuozo.ui.interfaces.HasComponents;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
@@ -31,8 +32,7 @@ public class Validation implements Fragment {
     password.addValidator(NotEmptyValidator.<String>create());
     password.addValidator(LengthValidator.create().range(5, 10));
     
-    form.footer().addButton().text("Login").css(ButtonColor.PRIMARY).onClick(new ClickHandler() {
-      
+    Button.create().attachTo(target).text("Login").css(ButtonColor.PRIMARY).onClick(new ClickHandler() {
       @Override
       public void onClick(ClickEvent event) {
         form.validate();

@@ -1,12 +1,12 @@
 package virtuozo.showcase.ui.sample.info;
 
+import virtuozo.interfaces.ButtonGroup;
+import virtuozo.interfaces.HasComponents;
+import virtuozo.interfaces.Notifier;
+import virtuozo.interfaces.UIClass;
+import virtuozo.interfaces.Notifier.Notification;
+import virtuozo.interfaces.css.ButtonColor;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.ButtonGroup;
-import virtuozo.ui.Notifier;
-import virtuozo.ui.Notifier.Notification;
-import virtuozo.ui.css.ButtonColor;
-import virtuozo.ui.interfaces.HasComponents;
-import virtuozo.ui.interfaces.UIClass;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;

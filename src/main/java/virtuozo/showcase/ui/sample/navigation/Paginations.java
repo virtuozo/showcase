@@ -1,9 +1,9 @@
 package virtuozo.showcase.ui.sample.navigation;
 
+import virtuozo.interfaces.HasComponents;
+import virtuozo.interfaces.Pager;
+import virtuozo.interfaces.Pagination;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.Pager;
-import virtuozo.ui.Pagination;
-import virtuozo.ui.interfaces.HasComponents;
 
 public class Paginations implements Fragment {
 

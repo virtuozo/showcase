@@ -1,13 +1,13 @@
 package virtuozo.showcase.ui.sample.navigation;
 
+import virtuozo.interfaces.ButtonGroup;
+import virtuozo.interfaces.HasComponents;
+import virtuozo.interfaces.InputPassword;
+import virtuozo.interfaces.InputText;
+import virtuozo.interfaces.RichForm;
+import virtuozo.interfaces.Wizard;
+import virtuozo.interfaces.css.ButtonColor;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.ButtonGroup;
-import virtuozo.ui.InputPassword;
-import virtuozo.ui.InputText;
-import virtuozo.ui.RichForm;
-import virtuozo.ui.Wizard;
-import virtuozo.ui.css.ButtonColor;
-import virtuozo.ui.interfaces.HasComponents;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;

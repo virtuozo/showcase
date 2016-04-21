@@ -1,5 +1,6 @@
 package virtuozo.showcase.ui.sample;
 
+import virtuozo.interfaces.FontAwesome;
 import virtuozo.showcase.ui.Example;
 import virtuozo.showcase.ui.sample.forms.Autocompletes;
 import virtuozo.showcase.ui.sample.forms.Checkboxes;
@@ -15,7 +16,6 @@ import virtuozo.showcase.ui.sample.forms.Spinners;
 import virtuozo.showcase.ui.sample.forms.TextAreas;
 import virtuozo.showcase.ui.sample.forms.Validation;
 import virtuozo.showcase.ui.sample.forms.Vertical;
-import virtuozo.ui.FontAwesome;
 
 public class Forms implements Sample {
   

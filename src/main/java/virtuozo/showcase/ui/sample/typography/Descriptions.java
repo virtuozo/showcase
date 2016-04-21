@@ -1,8 +1,8 @@
 package virtuozo.showcase.ui.sample.typography;
 
+import virtuozo.interfaces.DescriptionList;
+import virtuozo.interfaces.HasComponents;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.DescriptionList;
-import virtuozo.ui.interfaces.HasComponents;
 
 public class Descriptions implements Fragment {
 

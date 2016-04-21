@@ -1,8 +1,8 @@
 package virtuozo.showcase.ui.sample.forms;
 
+import virtuozo.interfaces.HasComponents;
+import virtuozo.interfaces.InputFile;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.InputFile;
-import virtuozo.ui.interfaces.HasComponents;
 
 public class InputFiles implements Fragment {
 

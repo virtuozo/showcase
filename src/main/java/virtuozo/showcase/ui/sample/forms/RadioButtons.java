@@ -1,8 +1,8 @@
 package virtuozo.showcase.ui.sample.forms;
 
+import virtuozo.interfaces.HasComponents;
+import virtuozo.interfaces.RadioButton;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.RadioButton;
-import virtuozo.ui.interfaces.HasComponents;
 
 public class RadioButtons implements Fragment {
 

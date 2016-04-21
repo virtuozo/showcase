@@ -1,7 +1,7 @@
 package virtuozo.showcase.ui.sample.layouts;
 
-import virtuozo.ui.BarePageLayout;
-import virtuozo.ui.Paragraph;
+import virtuozo.interfaces.BarePageLayout;
+import virtuozo.interfaces.Paragraph;
 
 import com.google.gwt.core.client.EntryPoint;
 

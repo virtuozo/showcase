@@ -1,6 +1,6 @@
 package virtuozo.showcase.ui.sample;
 
-import virtuozo.ui.interfaces.HasComponents;
+import virtuozo.interfaces.HasComponents;
 
 public interface Fragment {
   String title();

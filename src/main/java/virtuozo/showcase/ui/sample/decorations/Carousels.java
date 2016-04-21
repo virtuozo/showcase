@@ -1,11 +1,11 @@
 package virtuozo.showcase.ui.sample.decorations;
 
+import virtuozo.interfaces.Button;
+import virtuozo.interfaces.Carousel;
+import virtuozo.interfaces.HasComponents;
+import virtuozo.interfaces.Carousel.Slide.Caption;
 import virtuozo.showcase.ui.Bundle;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.Button;
-import virtuozo.ui.Carousel;
-import virtuozo.ui.Carousel.Slide.Caption;
-import virtuozo.ui.interfaces.HasComponents;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;

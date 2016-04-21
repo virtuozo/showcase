@@ -1,8 +1,8 @@
 package virtuozo.showcase.ui.sample.actions;
 
+import virtuozo.interfaces.ButtonGroup;
+import virtuozo.interfaces.HasComponents;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.ButtonGroup;
-import virtuozo.ui.interfaces.HasComponents;
 
 public class ButtonGroups implements Fragment {
 

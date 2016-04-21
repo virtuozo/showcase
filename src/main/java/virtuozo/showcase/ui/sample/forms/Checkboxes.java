@@ -1,10 +1,10 @@
 package virtuozo.showcase.ui.sample.forms;
 
 import virtuozo.infra.Item;
+import virtuozo.interfaces.Checkbox;
+import virtuozo.interfaces.HasComponents;
+import virtuozo.interfaces.MultiCheckbox;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.Checkbox;
-import virtuozo.ui.MultiCheckbox;
-import virtuozo.ui.interfaces.HasComponents;
 
 public class Checkboxes implements Fragment {
 

@@ -1,9 +1,9 @@
 package virtuozo.showcase.ui.sample.icons;
 
+import virtuozo.interfaces.Glyphicon;
+import virtuozo.interfaces.HasComponents;
+import virtuozo.interfaces.Icon;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.Glyphicon;
-import virtuozo.ui.interfaces.HasComponents;
-import virtuozo.ui.interfaces.Icon;
 
 public class Glyphicons implements Fragment {
   public void render(HasComponents<?, ?> target) {

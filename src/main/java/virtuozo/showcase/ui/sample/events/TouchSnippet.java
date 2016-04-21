@@ -1,6 +1,6 @@
 package virtuozo.showcase.ui.sample.events;
 
-import virtuozo.ui.Tag;
+import virtuozo.interfaces.Tag;
 
 import com.google.gwt.event.dom.client.TouchCancelEvent;
 import com.google.gwt.event.dom.client.TouchCancelHandler;

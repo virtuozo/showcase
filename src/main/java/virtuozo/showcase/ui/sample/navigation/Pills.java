@@ -1,9 +1,9 @@
 package virtuozo.showcase.ui.sample.navigation;
 
+import virtuozo.interfaces.HasComponents;
+import virtuozo.interfaces.PillPanel;
+import virtuozo.interfaces.PillPanel.PillDroppable;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.PillPanel;
-import virtuozo.ui.PillPanel.PillDroppable;
-import virtuozo.ui.interfaces.HasComponents;
 
 public class Pills implements Fragment {
 

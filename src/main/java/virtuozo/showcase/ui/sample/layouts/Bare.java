@@ -1,10 +1,10 @@
 package virtuozo.showcase.ui.sample.layouts;
 
+import virtuozo.interfaces.HasComponents;
+import virtuozo.interfaces.MediaList;
+import virtuozo.interfaces.MediaList.Media;
 import virtuozo.showcase.ui.Bundle;
 import virtuozo.showcase.ui.sample.Snippet;
-import virtuozo.ui.MediaList;
-import virtuozo.ui.MediaList.Media;
-import virtuozo.ui.interfaces.HasComponents;
 
 import com.google.gwt.dom.client.Style.VerticalAlign;
 

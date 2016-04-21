@@ -1,8 +1,8 @@
 package virtuozo.showcase.ui.sample.events;
 
+import virtuozo.interfaces.Code;
+import virtuozo.interfaces.HasComponents;
 import virtuozo.showcase.ui.sample.Snippet;
-import virtuozo.ui.Code;
-import virtuozo.ui.interfaces.HasComponents;
 
 public class ChangeHandlers implements Snippet {
 

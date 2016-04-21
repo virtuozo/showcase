@@ -1,23 +1,22 @@
 package virtuozo.showcase.ui.sample.forms;
 
-import virtuozo.infra.Calendar;
 import virtuozo.infra.Item;
+import virtuozo.infra.data.Calendar;
+import virtuozo.interfaces.Checkbox;
+import virtuozo.interfaces.Combo;
+import virtuozo.interfaces.Datepicker;
+import virtuozo.interfaces.FontAwesome;
+import virtuozo.interfaces.FormGroup;
+import virtuozo.interfaces.HasComponents;
+import virtuozo.interfaces.InputFile;
+import virtuozo.interfaces.InputNumber;
+import virtuozo.interfaces.InputPassword;
+import virtuozo.interfaces.InputText;
+import virtuozo.interfaces.RadioButton;
+import virtuozo.interfaces.RichForm;
+import virtuozo.interfaces.Spinner;
+import virtuozo.interfaces.TextArea;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.Checkbox;
-import virtuozo.ui.Combo;
-import virtuozo.ui.Datepicker;
-import virtuozo.ui.FontAwesome;
-import virtuozo.ui.FormGroup;
-import virtuozo.ui.InputFile;
-import virtuozo.ui.InputNumber;
-import virtuozo.ui.InputPassword;
-import virtuozo.ui.InputText;
-import virtuozo.ui.RadioButton;
-import virtuozo.ui.RichForm;
-import virtuozo.ui.Spinner;
-import virtuozo.ui.TextArea;
-import virtuozo.ui.css.ButtonColor;
-import virtuozo.ui.interfaces.HasComponents;
 
 public class Vertical implements Fragment {
 
@@ -60,9 +59,6 @@ public class Vertical implements Fragment {
     
     FormGroup<RadioButton, String> disable = form.add(RadioButton.create("github"));
     disable.label().text("Disable github integration").show();
-    
-    form.footer().addButton().text("Save").css(ButtonColor.PRIMARY);
-    form.footer().addButton().text("Cancel");
   }
   
   @Override

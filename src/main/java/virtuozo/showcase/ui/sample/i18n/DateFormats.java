@@ -2,14 +2,14 @@ package virtuozo.showcase.ui.sample.i18n;
 
 import java.util.Date;
 
-import virtuozo.infra.Calendar;
 import virtuozo.infra.DateFormat;
 import virtuozo.infra.MessageFormat;
+import virtuozo.infra.data.Calendar;
+import virtuozo.interfaces.Datepicker;
+import virtuozo.interfaces.HasComponents;
+import virtuozo.interfaces.Paragraph;
+import virtuozo.interfaces.Tag;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.Datepicker;
-import virtuozo.ui.Paragraph;
-import virtuozo.ui.Tag;
-import virtuozo.ui.interfaces.HasComponents;
 
 import com.google.gwt.dom.client.DivElement;
 import com.google.gwt.event.dom.client.ChangeEvent;

@@ -1,5 +1,6 @@
 package virtuozo.showcase.ui.sample;
 
+import virtuozo.interfaces.FontAwesome;
 import virtuozo.showcase.ui.Example;
 import virtuozo.showcase.ui.sample.navigation.Breadcrumbs;
 import virtuozo.showcase.ui.sample.navigation.Navbars;
@@ -7,7 +8,6 @@ import virtuozo.showcase.ui.sample.navigation.Paginations;
 import virtuozo.showcase.ui.sample.navigation.Pills;
 import virtuozo.showcase.ui.sample.navigation.Tabs;
 import virtuozo.showcase.ui.sample.navigation.Wizards;
-import virtuozo.ui.FontAwesome;
 
 public class Navigation implements Sample {
   

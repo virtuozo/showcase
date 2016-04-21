@@ -1,10 +1,10 @@
 package virtuozo.showcase.ui.sample.info;
 
+import virtuozo.interfaces.HasComponents;
+import virtuozo.interfaces.Progress;
+import virtuozo.interfaces.Progress.BarColor;
+import virtuozo.interfaces.Progress.DefaultFormat;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.Progress;
-import virtuozo.ui.Progress.BarColor;
-import virtuozo.ui.Progress.DefaultFormat;
-import virtuozo.ui.interfaces.HasComponents;
 
 public class Progressbars implements Fragment {
 

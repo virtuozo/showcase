@@ -1,10 +1,10 @@
 package virtuozo.showcase.ui.sample.actions;
 
+import virtuozo.interfaces.Button;
+import virtuozo.interfaces.HasComponents;
+import virtuozo.interfaces.Modal;
+import virtuozo.interfaces.Paragraph;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.Button;
-import virtuozo.ui.Modal;
-import virtuozo.ui.Paragraph;
-import virtuozo.ui.interfaces.HasComponents;
 
 import com.google.gwt.dom.client.Style.Unit;
 import com.google.gwt.event.dom.client.ClickEvent;

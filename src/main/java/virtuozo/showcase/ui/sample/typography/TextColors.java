@@ -1,9 +1,9 @@
 package virtuozo.showcase.ui.sample.typography;
 
+import virtuozo.interfaces.HasComponents;
+import virtuozo.interfaces.Paragraph;
+import virtuozo.interfaces.css.TextColor;
 import virtuozo.showcase.ui.sample.Fragment;
-import virtuozo.ui.Paragraph;
-import virtuozo.ui.css.TextColor;
-import virtuozo.ui.interfaces.HasComponents;
 
 public class TextColors implements Fragment {
 
